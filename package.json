@@ -1,0 +1,13 @@
+{
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.4",
+        "autoprefixer": "^10.4.7",
+        "parcel": "^2.6.2",
+        "postcss": "^8.4.14",
+        "tailwindcss": "^3.1.6"
+    },
+    "scripts": {
+        "build": "parcel build parcel/main.css --dist-dir static/assets/css/generated --no-source-maps",
+        "watch": "parcel watch parcel/main.css --dist-dir static/assets/css/generated --no-hmr --no-source-maps"
+    }
+}

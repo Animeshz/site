@@ -1,0 +1,9 @@
+base_url = "https://animeshz.github.io/site"
+output_dir = ".build"
+build_search_index = true
+
+[markdown]
+highlight_code = true
+
+[extra]
+# Put all your custom variables here

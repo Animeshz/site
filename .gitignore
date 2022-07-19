@@ -1,0 +1,9 @@
+.vscode/
+.cache/
+.parcel-cache/
+
+node_modules/
+yarn.lock
+
+.build/
+static/assets/css/generated/
