@@ -2,14 +2,63 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./assets/css/generated/main.css" />
+        <link rel="stylesheet" href="{{ config.base_url }}/assets/css/generated/main.css" />
+
+        {% block extrahead %}
+        {% endblock %}
     </head>
-    <body>
-        <h1>Default Page</h1>
+
+    <body class="prose h-[10000px]">
+        {% block header %}
+        <div class="fixed top-8 right-8 not-prose">
+            <div class="flex flex-row items-center justify-end">
+                <ul class="list-none text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-300">
+                    {% set root_section = get_section(path="_index.md") %}
+                    <li><a href="{{root_section.permalink}}">{{ root_section.title }}</a></li>
+                    {% for subsection_path in root_section.subsections | reverse %}
+                        {% set subsection = get_section(path=subsection_path) %}
+                        <li><a href="{{subsection.permalink}}">{{ subsection.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                <button class="ml-3"><i class="fas fa-bars fa-lg text-pink-600"></i></button>
+            </div>
+            <div>
+                 <!-- Copy from: https://www.takuzen.me/hugo-theme-cactus/posts/code-block-test -->
+                <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                    <a class="icon" href="" aria-label="Previous">
+                        <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle()" onmouseout="$('#i-prev').toggle()"></i>
+                    </a>
+                    <a class="icon" href="#" onclick="$('html, body').animate({scrollTop:0},'fast')" aria-label="Top of Page">
+                        <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle()" onmouseout="$('#i-top').toggle()"></i>
+                    </a>
+                    <a class="icon" href="#" aria-label="Share">
+                        <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle()" onmouseout="$('#i-share').toggle()" onclick="return $('#share').toggle(),!1"></i>
+                    </a>
+                </div>
+                <span id="i-prev" class="info" style="display: none;">Previous post</span>
+                <span id="i-next" class="info" style="display:none">Next post</span>
+                <span id="i-top" class="info" style="display: none;">Back to top</span>
+                <span id="i-share" class="info" style="display:none">Share post</span>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block lsidebar %}
+        {% endblock %}
 
         {% block main %}
             <h1>My First Heading</h1>
             <p>My first paragraph.</p>
+        {% endblock %}
+            <!-- {{ __tera_context }} -->
+
+        {% block rsidebar %}
+        {% endblock %}
+
+        {% block footer %}
+        {% endblock %}
+
+        {% block extrascripts %}
         {% endblock %}
     </body>
 </html>
