@@ -1,7 +1,7 @@
 const config = {
     content: [
         './content/**/*.md',
-        './{templates,static}/**/*.html',
+        './{templates,static}/**/*.{html,js}',
     ],
 
     theme: {

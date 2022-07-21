@@ -1,66 +1,171 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="{{ config.base_url }}/assets/css/generated/main.css" />
-
-        {% block extrahead %}
-        {% endblock %}
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="{{ config.base_url }}/assets/css/generated/main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block extrahead %}{% endblock %}
     </head>
-
-    <body class="prose h-[10000px]">
-        {% block header %}
-        <div class="fixed top-8 right-8 not-prose">
-            <div class="flex flex-row items-center justify-end">
-                <ul class="list-none text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-300">
-                    {% set root_section = get_section(path="_index.md") %}
-                    <li><a href="{{root_section.permalink}}">{{ root_section.title }}</a></li>
-                    {% for subsection_path in root_section.subsections | reverse %}
-                        {% set subsection = get_section(path=subsection_path) %}
-                        <li><a href="{{subsection.permalink}}">{{ subsection.title }}</a></li>
-                    {% endfor %}
-                </ul>
-                <button class="ml-3"><i class="fas fa-bars fa-lg text-pink-600"></i></button>
+    <body class="h-[10000px] mt-20 flex flex-row">
+        {% block lsidebar %}
+            <div class="mx-8 grow">
+                <button aria-label="Table of Contents">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
             </div>
-            <div>
-                 <!-- Copy from: https://www.takuzen.me/hugo-theme-cactus/posts/code-block-test -->
-                <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
-                    <a class="icon" href="" aria-label="Previous">
-                        <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle()" onmouseout="$('#i-prev').toggle()"></i>
-                    </a>
-                    <a class="icon" href="#" onclick="$('html, body').animate({scrollTop:0},'fast')" aria-label="Top of Page">
-                        <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle()" onmouseout="$('#i-top').toggle()"></i>
-                    </a>
-                    <a class="icon" href="#" aria-label="Share">
-                        <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle()" onmouseout="$('#i-share').toggle()" onclick="return $('#share').toggle(),!1"></i>
-                    </a>
+        {% endblock %}
+        {% block main %}
+            <div id="main" class="prose prose-sm max-w-none w-[48rem]">
+                <h1>Home</h1>
+                <p>My first paragraph.</p>
+                {% if page %}
+                    {{ page.content }}
+                {% elif section %}
+                    {{ section.content }}
+                {% endif %}
+            </div>
+        {% endblock %}
+        <!-- Right sidebar space reserve -->
+        <div class="mx-8 grow"></div>
+        <div class="fixed top-8 right-8 z-10">
+            {% block header %}
+                <div class="flex flex-row items-center justify-end group">
+                    <!-- NavBar -->
+                    <nav class="overflow-hidden inline-block">
+                        <ul id="section-nav"
+                            class="list-none text-sm bg-white rounded-lg shadow py-1 child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition duration-300 ease-in-out translate-x-0">
+                            {% set root_section = get_section(path="_index.md") %}
+                            <li>
+                                <a href="{{ root_section.permalink }}">{{ root_section.title }}</a>
+                            </li>
+                            {% for subsection_path in root_section.subsections | reverse %}
+                                {% set subsection = get_section(path=subsection_path) %}
+                                <li>
+                                    <a href="{{ subsection.permalink }}">{{ subsection.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    <!-- Hamburger -->
+                    <button id="menu-toggle" class="ml-3">
+                        <i class="fas fa-bars fa-lg text-pink-600"></i>
+                    </button>
                 </div>
-                <span id="i-prev" class="info" style="display: none;">Previous post</span>
-                <span id="i-next" class="info" style="display:none">Next post</span>
-                <span id="i-top" class="info" style="display: none;">Back to top</span>
-                <span id="i-share" class="info" style="display:none">Share post</span>
+                <!-- Page Actions -->
+                <div class="overflow-hidden">
+                    <div id="action-nav"
+                         class="transition translate-y-0 duration-300 ease-in-out">
+                        <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                            <!-- Action Text -->
+                            <i id="action-text" class="text-sm"></i>  {# Previous post, Next post, Back to top, Share post #}
+                            <!-- Action Icons -->
+                            {% if page %}
+                                {% if page.lower %}
+                                    <a href="{{ page.lower.permalink }}" aria-label="Previous">
+                                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                    </a>
+                                {% endif %}
+                                {% if page.higher %}
+                                    <a href="{{ page.higher.permalink }}" aria-label="Next">
+                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                {% endif %}
+                            {% endif %}
+                            <a href="#" id="action-scroll-top" aria-label="Top of Page">
+                                <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" id="action-theme-switch" aria-label="Switch Theme">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" id="action-share-toggle" aria-label="Share">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Share Icons -->
+                <!-- <ul id="share-icons"> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Facebook"> -->
+                <!--             <i class="fab fa-facebook" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Twitter"> -->
+                <!--             <i class="fab fa-twitter" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Linkedin"> -->
+                <!--             <i class="fab fa-linkedin" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Pinterest"> -->
+                <!--             <i class="fab fa-pinterest" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="mailto:?subject=Algorithms%20-%20Graphs&amp;body=Check out this article: " -->
+                <!--            aria-label="Email"> -->
+                <!--             <i class="fas fa-envelope" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Pocket"> -->
+                <!--             <i class="fab fa-get-pocket" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="reddit"> -->
+                <!--             <i class="fab fa-reddit" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Tumblr"> -->
+                <!--             <i class="fab fa-tumblr" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!--     <li> -->
+                <!--         <a class="icon" -->
+                <!--            href="" -->
+                <!--            aria-label="Hacker News"> -->
+                <!--             <i class="fab fa-hacker-news" aria-hidden="true"></i> -->
+                <!--         </a> -->
+                <!--     </li> -->
+                <!-- </ul> -->
+            {% endblock %}
+            <!-- Unexpected higer width -->
+            <div style="width: calc((100vw - 48rem)/2 - 16px)"
+                 class="px-8 fixed right-0 overflow-auto">
+                <!-- TODO: overflow-auto not working atm -->
+                {% block rsidebar %}Right Sidebar{% endblock %}
             </div>
         </div>
-        {% endblock %}
-
-        {% block lsidebar %}
-        {% endblock %}
-
-        {% block main %}
-            <h1>My First Heading</h1>
-            <p>My first paragraph.</p>
-        {% endblock %}
-            <!-- {{ __tera_context }} -->
-
-        {% block rsidebar %}
-        {% endblock %}
-
-        {% block footer %}
-        {% endblock %}
-
-        {% block extrascripts %}
-        {% endblock %}
-    </body>
+    </div>
+    <!-- {{ __tera_context }} -->
+    {% block footer %}{% endblock %}
+    {% block extrascripts %}{% endblock %}
+    <script src="{{ config.base_url }}/assets/js/page.js"></script>
+</body>
 </html>
-
-
