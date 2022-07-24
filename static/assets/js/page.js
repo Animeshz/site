@@ -34,7 +34,7 @@ function resize_section_nav(event) {
     if (section_nav.classList.contains("translate-x-full")) return;
 
     let top = document.documentElement.scrollTop;
-    this.delta = top ? (main.offsetLeft + main.offsetWidth) - section_nav.parentElement.getBoundingClientRect().left : 0;
+    this.delta = top ? (main.offsetLeft + main.offsetWidth) - section_nav.parentElement.getBoundingClientRect().left + 16 : 0;
 
     if (this.delta || event.target === section_nav) {
         section_nav.style.setProperty("--tw-translate-x", this.delta + "px");
@@ -65,10 +65,11 @@ if (localStorage.theme === 'dark' ||
 }
 
 trigger.addEventListener('click', e => {
+    share_icons.classList.add("translate-y-[-100%]");
     action_nav.classList.toggle("translate-y-[-300%]");
 
     if (section_nav.classList.toggle("translate-x-full")) section_nav.style.removeProperty("--tw-translate-x");
-    else resize_section_nav();
+    else resize_section_nav(e);
 });
 
 window.addEventListener('load', resize_section_nav);
@@ -101,5 +102,5 @@ action_theme_switch.addEventListener('click', e => {
 
 action_share_toggle.addEventListener('click', e => {
     e.preventDefault();
-    share_icons.classList.toggle("translate-y-[]");
+    share_icons.classList.toggle("translate-y-[-100%]");
 });

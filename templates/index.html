@@ -11,161 +11,196 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% block extrahead %}{% endblock %}
     </head>
-    <body class="h-[10000px] mt-20 flex flex-row">
-        {% block lsidebar %}
-            <div class="mx-8 grow">
-                <button aria-label="Table of Contents">
-                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                </button>
-            </div>
-        {% endblock %}
-        {% block main %}
-            <div id="main" class="prose prose-sm max-w-none w-[48rem]">
-                <h1>Home</h1>
-                <p>My first paragraph.</p>
-                {% if page %}
-                    {{ page.content }}
-                {% elif section %}
-                    {{ section.content }}
-                {% endif %}
-            </div>
-        {% endblock %}
-        <!-- Right sidebar space reserve -->
-        <div class="mx-8 grow"></div>
-        <div class="fixed top-8 right-8 z-10">
-            {% block header %}
-                <div class="flex flex-row items-center justify-end group">
-                    <!-- NavBar -->
-                    <nav class="overflow-hidden inline-block">
-                        <ul id="section-nav"
-                            class="list-none text-sm bg-white rounded-lg shadow py-1 child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition duration-300 ease-in-out translate-x-0">
-                            {% set root_section = get_section(path="_index.md") %}
-                            <li>
-                                <a href="{{ root_section.permalink }}">{{ root_section.title }}</a>
-                            </li>
-                            {% for subsection_path in root_section.subsections | reverse %}
-                                {% set subsection = get_section(path=subsection_path) %}
-                                <li>
-                                    <a href="{{ subsection.permalink }}">{{ subsection.title }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                    <!-- Hamburger -->
-                    <button id="menu-toggle" class="ml-3">
-                        <i class="fas fa-bars fa-lg text-pink-600"></i>
+    <body class="min-h-screen h-[10000px] flex flex-col child:child:px-8">
+        <div class="flex flex-row child:pt-8 flex-1">
+            <div class="flex-1 hidden md:block mt-14">
+                {% block lsidebar %}
+                    <button aria-label="Table of Contents">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>  <!-- Toggle fa-chevron-right -->
+                        <span class="px-2">Table of Contents</span>
                     </button>
-                </div>
-                <!-- Page Actions -->
-                <div class="overflow-hidden">
-                    <div id="action-nav"
-                         class="transition translate-y-0 duration-300 ease-in-out">
-                        <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
-                            <!-- Action Text -->
-                            <i id="action-text" class="text-sm"></i>  {# Previous post, Next post, Back to top, Share post #}
-                            <!-- Action Icons -->
-                            {% if page %}
-                                {% if page.lower %}
-                                    <a href="{{ page.lower.permalink }}" aria-label="Previous">
-                                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                                    </a>
+
+                    <div id="toc">
+                        <ul>
+                            <li>Hi</li>
+                            <li>Hi</li>
+                            <li>Hi</li>
+                        </ul>
+                    </div>
+                {% endblock %}
+            </div>
+            <div id="main" class="prose w-[48rem] max-w-none mt-14">
+                {% block main %}
+                    <div class="prose-xl flex flex-row">
+                        <h1 class="font-extrabold text-green-400">Homie Homie Homie Homie Homie Homie</h1>
+                    </div>
+                    <p>My first paragraph.</p>
+                    {% if page %}
+                        {{ page.content | safe }}
+                    {% elif section %}
+                        {{ section.content | safe }}
+                    {% endif %}
+                {% endblock %}
+            </div>
+            <div class="flex-1 hidden md:block self-start max-h-screen sticky top-0">
+                <!-- Header -->
+                {% block header %}
+                    <div class="flex flex-row items-center justify-end child:inline-block group">
+                        <!-- NavBar -->
+                        <nav class="overflow-hidden ml-[-100vw] z-10 bg-white">
+                            <ul id="section-nav"
+                                class="list-none text-sm rounded-lg shadow py-1 child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition duration-300 ease-in-out translate-x-0">
+                                {% set root_section = get_section(path="_index.md") %}
+                                <li>
+                                    <a href="{{ root_section.permalink }}">{{ root_section.title }}</a>
+                                </li>
+                                {% for subsection_path in root_section.subsections | reverse %}
+                                    {% set subsection = get_section(path=subsection_path) %}
+                                    <li>
+                                        <a href="{{ subsection.permalink }}">{{ subsection.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                        <!-- Hamburger -->
+                        <button id="menu-toggle" class="ml-3">
+                            <i class="fas fa-bars fa-lg text-pink-600"></i>
+                        </button>
+                    </div>
+                    <!-- Page Actions -->
+                    <div class="overflow-hidden">
+                        <div id="action-nav"
+                             class="transition translate-y-0 duration-300 ease-in-out">
+                            <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                                <!-- Action Text -->
+                                <i id="action-text" class="text-sm"></i>  {# Previous post, Next post, Back to top, Share post #}
+                                <!-- Action Icons -->
+                                {% if page %}
+                                    {% if page.lower %}
+                                        <a href="{{ page.lower.permalink }}" aria-label="Previous">
+                                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                        </a>
+                                    {% endif %}
+                                    {% if page.higher %}
+                                        <a href="{{ page.higher.permalink }}" aria-label="Next">
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </a>
+                                    {% endif %}
                                 {% endif %}
-                                {% if page.higher %}
-                                    <a href="{{ page.higher.permalink }}" aria-label="Next">
-                                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                <a href="#" id="action-scroll-top" aria-label="Top of Page">
+                                    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" id="action-theme-switch" aria-label="Switch Theme">
+                                    <i class="fas fa-moon" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" id="action-share-toggle" aria-label="Share">
+                                    <i class="fas fa-share-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <!-- Share Icons -->
+                            <div class="overflow-hidden float-right py-1">
+                                <ul id="share-icons"
+                                    class="transition translate-y-[-100%] duration-300 ease-in-out">
+                                    <li>
+                                        <a class="icon" href="" aria-label="Facebook">
+                                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Twitter">
+                                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Linkedin">
+                                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Pinterest">
+                                            <i class="fab fa-pinterest" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon"
+                                           href="mailto:?subject={#{{ page.title }}#}&body=Check out this article: {#{{ page.permalink }}#}"
+                                           aria-label="Email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
                                     </a>
-                                {% endif %}
-                            {% endif %}
-                            <a href="#" id="action-scroll-top" aria-label="Top of Page">
-                                <i class="fas fa-chevron-up" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" id="action-theme-switch" aria-label="Switch Theme">
-                                <i class="fas fa-moon" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" id="action-share-toggle" aria-label="Share">
-                                <i class="fas fa-share-alt" aria-hidden="true"></i>
-                            </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Pocket">
+                                            <i class="fab fa-get-pocket" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="reddit">
+                                            <i class="fab fa-reddit" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Tumblr">
+                                            <i class="fab fa-tumblr" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon" href="" aria-label="Hacker News">
+                                            <i class="fab fa-hacker-news" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                {% endblock %}
+
+                <!-- Right Sidebar -->
+                <div class="overflow-y-auto break-words">
+                    {% block rsidebar %}
+                        Right Sidebar
+                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                        culpa duis.
+                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                        culpa duis.
+                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                        culpa duis.
+                    {% endblock %}
                 </div>
-                <!-- Share Icons -->
-                <!-- <ul id="share-icons"> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Facebook"> -->
-                <!--             <i class="fab fa-facebook" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Twitter"> -->
-                <!--             <i class="fab fa-twitter" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Linkedin"> -->
-                <!--             <i class="fab fa-linkedin" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Pinterest"> -->
-                <!--             <i class="fab fa-pinterest" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="mailto:?subject=Algorithms%20-%20Graphs&amp;body=Check out this article: " -->
-                <!--            aria-label="Email"> -->
-                <!--             <i class="fas fa-envelope" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Pocket"> -->
-                <!--             <i class="fab fa-get-pocket" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="reddit"> -->
-                <!--             <i class="fab fa-reddit" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Tumblr"> -->
-                <!--             <i class="fab fa-tumblr" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!--     <li> -->
-                <!--         <a class="icon" -->
-                <!--            href="" -->
-                <!--            aria-label="Hacker News"> -->
-                <!--             <i class="fab fa-hacker-news" aria-hidden="true"></i> -->
-                <!--         </a> -->
-                <!--     </li> -->
-                <!-- </ul> -->
-            {% endblock %}
-            <!-- Unexpected higer width -->
-            <div style="width: calc((100vw - 48rem)/2 - 16px)"
-                 class="px-8 fixed right-0 overflow-auto">
-                <!-- TODO: overflow-auto not working atm -->
-                {% block rsidebar %}Right Sidebar{% endblock %}
             </div>
         </div>
-    </div>
-    <!-- {{ __tera_context }} -->
-    {% block footer %}{% endblock %}
-    {% block extrascripts %}{% endblock %}
-    <script src="{{ config.base_url }}/assets/js/page.js"></script>
-</body>
+
+
+        {% block footer %}
+            <footer class="bottom-0 pb-8">
+                <span>Hi</span>
+            </footer>
+        {% endblock %}
+
+        <script src="{{ config.base_url }}/assets/js/page.js"></script>
+        {% block extrascripts %}{% endblock %}
+    </body>
 </html>
