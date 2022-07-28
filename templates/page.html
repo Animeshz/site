@@ -1,17 +1,17 @@
 {% extends "index.html" %}
 
 {% block main %}
-    <div class="prose-xl flex flex-row">
-        <h1 class="font-extrabold text-green-400">{{ page.title }}</h1>
+    <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="{{ page.permalink }}" class="decoration-none">{{ page.title }}</a></h1>
+    <div class="dark:prose-invert  dark:text-[#e8e6e3]">
+        {{ page.content | safe }}
     </div>
-    {{ page.content | safe }}
 {% endblock %}
 
 {% block lsidebar %}
     {% if page.toc %}
     <div x-data="{ toc: true }">
         <button class="hover:text-green-400" x-on:click="toc = !toc">
-            <i class="fas fa-chevron-down transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
+            <i class="fas fa-chevron-down text-green-400 transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
             <span class="px-2 text-sm">Table of Contents</span>
         </button>
         <div id="toc" class="text-lg mt-2 break-words transition-[max-height] duration-300 ease-in-out overflow-hidden"
@@ -19,19 +19,19 @@
             <ul>
             {% for h1 in page.toc %}
                 <li>
-                    <a href="{{ h1.permalink | safe }}"># {{ h1.title }}</a>
+                    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
                 </li>
                 {% if h1.children %}
                     <ul>
                         {% for h2 in h1.children %}
                             <li>
-                                <a href="{{ h2.permalink | safe }}">* {{ h2.title }}</a>
+                                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
                             </li>
                             {% if h2.children %}
                                 <ul>
                                     {% for h3 in h2.children %}
                                         <li>
-                                            <a href="{{ h3.permalink | safe }}">- {{ h3.title }}</a>
+                                            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
                                         </li>
                                     {% endfor %}
                                 </ul>

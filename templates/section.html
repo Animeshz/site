@@ -4,7 +4,7 @@
     {% if section.toc %}
     <div x-data="{ toc: true }">
         <button class="hover:text-green-400" x-on:click="toc = !toc">
-            <i class="fas fa-chevron-down transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
+            <i class="fas fa-chevron-down text-green-400 transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
             <span class="px-2 text-sm">Table of Contents</span>
         </button>
         <div id="toc" class="text-lg mt-2 break-words transition-[max-height] duration-300 ease-in-out overflow-hidden"

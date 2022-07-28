@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
@@ -9,11 +9,12 @@
               referrerpolicy="no-referrer"/>
         <link rel="stylesheet"
               href="{{ config.base_url }}/assets/css/generated/main.css"/>
+        <script defer src="https://unpkg.com/darkreader@4.9.52/darkreader.js"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <!-- <script defer src="{{ config.base_url }}/assets/js/page.js"></script> -->
         {% block extrahead %}{% endblock %}
     </head>
-    <body class="min-h-screen h-[10000px] flex flex-col child:child:px-8">
+    <body class="min-h-screen flex flex-col child:child:px-8">
         <div class="flex-1 flex flex-row child:pt-8">
             <div class="flex-1 min-w-0 hidden md:block mt-14">
                 <!-- Left Sidebar -->
@@ -23,9 +24,7 @@
             <div id="main" class="prose w-[48rem] max-w-none mt-14">
                 <!-- Main Content -->
                 {% block main %}
-                    <div class="prose-xl flex flex-row">
-                        <h1 class="font-extrabold text-green-400">{{ section.title }}</h1>
-                    </div>
+                    <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="{{ section.permalink }}" class="decoration-none">{{ section.title }}</a></h1>
                     {{ section.content | safe }}
                 {% endblock %}
             </div>
@@ -159,27 +158,6 @@
                 <!-- Right Sidebar -->
                 <div class="overflow-y-auto break-words flex-1">
                     {% block rsidebar %}
-                        Right Sidebar
-                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
-                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
-                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
-                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
-                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
-                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
-                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
-                        culpa duis.
-                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
-                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
-                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
-                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
-                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
-                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
-                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
-                        culpa duis.
                     {% endblock %}
                 </div>
             </div>
@@ -198,6 +176,12 @@
                     document.documentElement.classList.add('dark');
                     e.firstElementChild.classList.remove('fa-moon');
                     e.firstElementChild.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
                 }
             }
 
@@ -206,10 +190,18 @@
                     localStorage.theme = 'dark';
                     evt.target.classList.remove('fa-moon');
                     evt.target.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
                 } else {
                     localStorage.theme = 'light';
                     evt.target.classList.remove('fa-sun');
                     evt.target.classList.add('fa-moon');
+
+                    DarkReader.disable();
                 }
             }
 
