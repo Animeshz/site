@@ -15,39 +15,22 @@
     </head>
     <body class="min-h-screen h-[10000px] flex flex-col child:child:px-8">
         <div class="flex-1 flex flex-row child:pt-8">
-            <div class="flex-1 hidden md:block mt-14">
+            <div class="flex-1 min-w-0 hidden md:block mt-14">
                 <!-- Left Sidebar -->
                 {% block lsidebar %}
-                    <button>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>  <!-- Toggle fa-chevron-right -->
-                        <span class="px-2">Table of Contents</span>
-                    </button>
-                    <div id="toc">
-                        <ul>
-                            <li>Hi</li>
-                            <li>Hi</li>
-                            <li>Hi</li>
-                        </ul>
-                    </div>
                 {% endblock %}
             </div>
             <div id="main" class="prose w-[48rem] max-w-none mt-14">
                 <!-- Main Content -->
                 {% block main %}
                     <div class="prose-xl flex flex-row">
-                        <h1 class="font-extrabold text-green-400">Homie Homie Homie Homie Homie Homie</h1>
+                        <h1 class="font-extrabold text-green-400">{{ section.title }}</h1>
                     </div>
-                    <p>My first paragraph.</p>
-                    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
-                    {% if page %}
-                        {{ page.content | safe }}
-                    {% elif section %}
-                        {{ section.content | safe }}
-                    {% endif %}
+                    {{ section.content | safe }}
                 {% endblock %}
             </div>
             <div x-data="{ open: true, full: true, share_icons: false }"
-                 class="flex-1 sticky top-0 self-start h-screen hidden md:flex flex-col">
+                 class="flex-1 min-w-0 sticky top-0 self-start h-screen hidden md:flex flex-col">
                 <!-- Header -->
                 {% block header %}
                     <nav class="flex flex-row items-center justify-end child:inline-block group">
@@ -202,9 +185,11 @@
             </div>
         </div>
         {% block footer %}
+            {#
             <footer class="bottom-0 pb-8">
                 <span>Hi</span>
             </footer>
+            #}
         {% endblock %}
         <script>
             function theme_init(e) {

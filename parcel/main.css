@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    #toc ul {
+        transform: scale(0.9);
+    }
+
+    #toc ul > li > *:hover {
+        @apply text-green-400
+    }
+}
