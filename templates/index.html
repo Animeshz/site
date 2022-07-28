@@ -14,7 +14,7 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body class="min-h-screen h-[10000px] flex flex-col child:child:px-8">
-        <div class="flex flex-row child:pt-8 flex-1">
+        <div class="flex-1 flex flex-row child:pt-8">
             <div class="flex-1 hidden md:block mt-14">
                 <!-- Left Sidebar -->
                 {% block lsidebar %}
@@ -46,13 +46,13 @@
                     {% endif %}
                 {% endblock %}
             </div>
-            <div x-data="{ open: true, full: true, share_icons: false }" class="flex-1 hidden md:block sticky top-0 self-start max-h-screen">
+            <div x-data="{ open: true, full: true, share_icons: false }"
+                 class="flex-1 sticky top-0 self-start h-screen hidden md:flex flex-col">
                 <!-- Header -->
                 {% block header %}
                     <nav class="flex flex-row items-center justify-end child:inline-block group">
                         <!-- NavBar -->
-                        <ul
-                            x-on:mouseover="full = true"
+                        <ul x-on:mouseover="full = true"
                             x-init="full = is_top()"
                             x-on:mouseout="full = is_top()"
                             x-on:scroll.document="full = is_top()"
@@ -95,20 +95,33 @@
                                     </a>
                                 {% endif %}
                             {% endif %}
-                            <a href="#" aria-label="Top of Page" x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })" x-on:mouseover="$refs.action_text.innerText = 'Back to top'" x-on:mouseout="$refs.action_text.innerText = ''" >
+                            <a href="#"
+                               aria-label="Top of Page"
+                               x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                               x-on:mouseover="$refs.action_text.innerText = 'Back to top'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
                                 <i class="fas fa-chevron-up" aria-hidden="true"></i>
                             </a>
-                            <a href="#" aria-label="Switch Theme" x-init="theme_init($el)" x-on:click.prevent="theme_toggle" x-on:mouseover="$refs.action_text.innerText = 'Toggle dark theme'" x-on:mouseout="$refs.action_text.innerText = ''">
+                            <a href="#"
+                               aria-label="Switch Theme"
+                               x-init="theme_init($el)"
+                               x-on:click.prevent="theme_toggle"
+                               x-on:mouseover="$refs.action_text.innerText = 'Toggle dark theme'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
                                 <i class="fas fa-moon" aria-hidden="true"></i>
                             </a>
-                            <a href="#" aria-label="Share" x-on:click.prevent="share_icons = !share_icons" x-on:mouseover="$refs.action_text.innerText = 'Share post'" x-on:mouseout="$refs.action_text.innerText = ''">
+                            <a href="#"
+                               aria-label="Share"
+                               x-on:click.prevent="share_icons = !share_icons"
+                               x-on:mouseover="$refs.action_text.innerText = 'Share post'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
                                 <i class="fas fa-share-alt" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                     <!-- Share Icons -->
                     <ul id="share-icons"
-                        class="transition-[max-height] duration-300 ease-in-out my-1 overflow-hidden text-right"
+                        class="transition-[max-height] duration-300 ease-in-out mt-1 mb-4 overflow-hidden text-right"
                         style="max-height: 0px"
                         x-effect="if (!open) share_icons = false"
                         x-bind:style="{ 'max-height': share_icons ? height($el) : '0px' }">
@@ -133,10 +146,9 @@
                             </a>
                         </li>
                         <li>
-                            <a class="icon"
-                               href="mailto:?subject={#{{ page.title }}#}&body=Check out this article: {#{{ page.permalink }}#}"
-                               aria-label="Email">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <!-- href="mailto:?subject={#{{ page.title }}#}&body=Check out this article: {#{{ page.permalink }}#}" -->
+                            <a class="icon" aria-label="Email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
@@ -162,19 +174,9 @@
                     </ul>
                 {% endblock %}
                 <!-- Right Sidebar -->
-                <div class="overflow-y-auto break-words max-h-[85vh]">
+                <div class="overflow-y-auto break-words flex-1">
                     {% block rsidebar %}
                         Right Sidebar
-                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-                        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
-                        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
-                        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
-                        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-                        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
-                        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
-                        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
-                        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
-                        culpa duis.
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
                         labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
                         animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
@@ -199,13 +201,12 @@
                 </div>
             </div>
         </div>
-    </div>
-    {% block footer %}
-        <footer class="bottom-0 pb-8">
-            <span>Hi</span>
-        </footer>
-    {% endblock %}
-    <script>
+        {% block footer %}
+            <footer class="bottom-0 pb-8">
+                <span>Hi</span>
+            </footer>
+        {% endblock %}
+        <script>
             function theme_init(e) {
                 if (localStorage.theme === 'dark' ||
                     (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -239,6 +240,6 @@
             function parent_width(e) {
                 return e.parentElement.scrollWidth + 'px';
             }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
