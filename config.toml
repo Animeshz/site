@@ -5,5 +5,9 @@ build_search_index = true
 [markdown]
 highlight_code = true
 
+[link_checker]
+internal_level = "warn"
+external_level = "error"
+
 [extra]
 # Put all your custom variables here

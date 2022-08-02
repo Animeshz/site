@@ -7,7 +7,7 @@
         "tailwindcss": "^3.1.6"
     },
     "scripts": {
-        "build": "parcel build parcel/main.css --dist-dir static/assets/css/generated --no-source-maps",
-        "watch": "parcel watch parcel/main.css --dist-dir static/assets/css/generated --no-hmr --no-source-maps"
+        "build": "parcel build preprocess/parcel/main.css --dist-dir static/assets/css/generated --no-source-maps",
+        "watch": "parcel watch preprocess/parcel/main.css --dist-dir static/assets/css/generated --no-hmr --no-source-maps"
     }
 }

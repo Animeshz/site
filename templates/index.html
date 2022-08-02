@@ -11,7 +11,6 @@
               href="{{ config.base_url }}/assets/css/generated/main.css"/>
         <script defer src="https://unpkg.com/darkreader@4.9.52/darkreader.js"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <!-- <script defer src="{{ config.base_url }}/assets/js/page.js"></script> -->
         {% block extrahead %}{% endblock %}
     </head>
     <body class="min-h-screen flex flex-col child:child:px-8">
@@ -40,7 +39,7 @@
                             x-on:scroll.document="full = is_top()"
                             x-on:resize.document="full = is_top()"
                             x-bind:style="{ 'max-width': open ? (full ? width($el) : parent_width($el)) : 0 }"
-                            class="list-none ml-[-100vw] z-10 overflow-hidden text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition-[max-width] whitespace-nowrap duration-300 ease-in-out">
+                            class="list-none bg-white rounded py-1 ml-[-100vw] z-10 overflow-hidden text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition-[max-width] whitespace-nowrap duration-300 ease-in-out">
                             {% set root_section = get_section(path="_index.md") %}
                             <li>
                                 <a href="{{ root_section.permalink }}">{{ root_section.title }}</a>
