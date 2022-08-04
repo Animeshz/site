@@ -25,6 +25,17 @@ jobs:
         with:
           cmd: build
 
+      - name: Setup Rust & Install SvgBob
+        uses: actions-rs/install@v0.1
+        with:
+          crate: svgbob_cli
+          version: latest
+
+      - name: Build svg (svgbob)
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: svgbob
+
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@master
         env:

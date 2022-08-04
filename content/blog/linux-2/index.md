@@ -17,6 +17,7 @@ Every single time."
 
 <!-- Ref part 1 -->
 
+<!-- Linux is a kernel that is an abstraction layer over the hardware providing a common interface to the user-space applications. -->
 <!-- A linux in itself is just a kernel *(knows how to use hardware, but doesn't know what to do)*. A linux distro is what makes linux an Operating System -->
 <!--
 Because it runs from high-end servers to desktops and all the way to embedded platforms like raspberry-pi, there are numerous install methods available listed on particular distro's docs/wiki.

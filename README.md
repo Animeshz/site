@@ -18,6 +18,10 @@ a seperate build agent because zola doesn't support plugin / post-build-pipeline
 In order to start the live server or build the website (output goes to `.build`):
 
 ```bash
+yarn
+
+yarn run svgbob
+
 ## Live server
 yarn run watch  # Terminal 1
 zola serve      # Terminal 2

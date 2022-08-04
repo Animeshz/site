@@ -4,10 +4,6 @@ const config = {
         './{templates,static}/**/*.{html,js}',
     ],
 
-    theme: {
-        extend: {},
-    },
-
     plugins: [
         require('@tailwindcss/typography'),
         function({ addVariant }) {
@@ -15,6 +11,20 @@ const config = {
             addVariant('child-hover', '& > *:hover');
         },
     ],
+
+    theme: {
+        extend: {
+            typography: {
+                DEFAULT: {
+                    css: {
+                        strong: {
+                            'font-weight': 700,
+                        }
+                    },
+                },
+            },
+        },
+    },
 
     mode: 'jit',
 

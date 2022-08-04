@@ -14,8 +14,6 @@ Linux is considered to be the most important software project in the history. It
 
 Traditionally, Linux was known as an OS that is reserved for tech-savvy people. The CLI was intimidating and far too complicated for end-users. But now, everything's changed, various communities have contributed to Linux and it now has a GUI (Graphical User Interface, mouse-based) that can be used just like any Windows or MacOS you're familiar with.
 
-<!-- Linux is a kernel that is an abstraction layer over the hardware providing a common interface to the user-space applications. -->
-
 
 ## What is (the point of) Linux & why you should consider it?
 
@@ -26,12 +24,20 @@ Linux is a minimal & clean design which gives you building blocks that are just 
 * Make sures the software you're downloading is coming from a trusted source, so you don't have to identify which 1 of the top 4 google results is legit.
 * Is transparent, modular & easy to debug.
 
-<!--
 <details>
-<summary><b>Curated list of customization / stuffs you can perform (click-me):</b></summary>
-Foldable Content [enter image description here][1]
+<summary class="sticky top-0 cursor-pointer"><b>Examples of customization / stuffs you can perform (*CLICK ME*):</b></summary>
+
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/m5522z/grub2_had_some_fun_with_grub/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/pq8m5r/dwm_widgets_two_layout_do_you_like_light_theme/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/vl09nw/newm_the_best_wayland_compositor_scrolling_tiling/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark&amp;autoStart=false" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="431" width="640" scrolling="no"></iframe>
+
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/v7wnp6/hyprland_a_beautiful_wayland_compositor/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="412" width="640" scrolling="no"></iframe>
+
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/j3mfc6/i3gaps_ready_for_fall/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+
 </details>
--->
 
 
 ## What is a linux distro & choosing the best for your needs
@@ -57,11 +63,7 @@ Generally speaking, there are uncountable number of [linux-distros available](ht
 
 ## Installation
 
-<!--
-Linux -> Servers
-Linux -> Desktop
-Linux -> Embedded
--->
+![Installation Targets](linux-installation-targets.svg)
 
 Because this article is mainly focused on getting-started, I'm mainly gonna talk about linux for desktops.
 
@@ -77,9 +79,11 @@ Img of sample partitions (gparted)
 
 At one of the last step in the installation, you'll be prompted to allocate disk space where you're going to install the linux distro. Make sure you make the following partitions in case you choose the manual partitioning (**not recommended for beginners**).
 
-* 1 EFI partition *[vfat]* mounted on `/boot/efi` (>=500M preferred, shared)
+* 1 EFI partition *[fat32]* mounted on `/boot/efi` (>=500M preferred, shared)
 * 1 swap partition *[swap]* mounted as `swap` (>=RAM)
 * 1 root partition *[ext4]* mounted on `/` (rest of the size)
+
+![Gparted](gparted.jpg)
 
 *Note: Multiple distro install should use seperate swap space, as they are used in hibernation and if reused by another may cause data-loss.*
 
@@ -87,7 +91,7 @@ At one of the last step in the installation, you'll be prompted to allocate disk
 
 There are exactly 3 things that I think everybody should know while using linux.
 
-### The console (shell term prompt)
+### The console
 
 The console is the heart of the Linux OS. Every operation is initiated through it.
 
@@ -96,11 +100,9 @@ Console is a very generic term, and there are actually 3 indivisual-components t
 * **Prompt:** The part of visual prompt on the shell just before command.<br>e.g. [starship](https://starship.rs), [powerlevel10k](https://github.com/romkatv/powerlevel10k), ohmyzsh.
 * **Terminal:** The graphical interface between the shell and the user, controllling the visual stuffs (fonts, padding, etc).<br>e.g. [kitty](https://sw.kovidgoyal.net/kitty), alacritty, konsole, gnome-terminal, [xfce4-terminal](https://gitlab.xfce.org/apps/xfce4-terminal).
 
-*My personal favourites: fish as shell, starship as prompt & kitty as my terminal application.*
+![Console](console.jpg)
 
-<!--
-Pic of terminal with highlight of each of three terms above ^
--->
+*My personal favourites: fish as shell, starship as prompt & kitty as my terminal application.*
 
 ### The file structure
 
@@ -108,7 +110,7 @@ Pic of terminal with highlight of each of three terms above ^
 
 Linux (or unix in general e.g. MacOS) starts laying out filesystem from `/` called root (unlike C: D: multiple drives in windows). Every other partition can be mounted as *(emulated to be)* a directory of this root.
 
-<img src="https://linuxconfig.org/wp-content/uploads/2013/03/Directory-Filesystem-Hierarchy-Standard.jpg" width="450px"></img>
+<img src="https://linuxconfig.org/wp-content/uploads/2013/03/Directory-Filesystem-Hierarchy-Standard.jpg" width="500px"></img>
 
 *Note: There are 4 special folders: /sys /proc /dev /tmp which donot actually exist in disk, which may interest you (as I said earlier everything is a file, not just things residing in the disk)*
 
@@ -127,7 +129,7 @@ Those files are referred to as dotfiles, they're a few KiB in size and once you 
 
 ## Getting your hands dirty
 
-* [r/unixporn](https://www.reddit.com/r/unixporn): The world of customization.
+* [r/unixporn](https://www.reddit.com/r/unixporn): The home for linux & unix customization.
 * [ArchWiki](https://wiki.archlinux.org) & [GentooWiki](https://wiki.gentoo.org): The bible of Linux Troubleshooting and How-To(s).
 * [Google](http://google.com): Your best friend!
 * [ManPage](https://en.wikipedia.org/wiki/Man_page): Best resource to understand any command, type `man <any-command>` to view.<br>
@@ -135,5 +137,3 @@ Those files are referred to as dotfiles, they're a few KiB in size and once you 
 * Shell Scripting (bash): *The task automator* from [GoalKicker](https://goalkicker.com) | [LearnXinYminutes](https://learnxinyminutes.com)
 * [Linux-kernel-labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html): Understand how linux works (bottom up approach).
 
-
-<!-- ## Troubleshooting & Optimization (e.g. battery) -->

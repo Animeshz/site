@@ -8,6 +8,7 @@
     },
     "scripts": {
         "build": "parcel build preprocess/parcel/main.css --dist-dir static/assets/css/generated --no-source-maps",
-        "watch": "parcel watch preprocess/parcel/main.css --dist-dir static/assets/css/generated --no-hmr --no-source-maps"
+        "watch": "parcel watch preprocess/parcel/main.css --dist-dir static/assets/css/generated --no-hmr --no-source-maps",
+        "svgbob": "find preprocess/svgbob -type f -exec sh -c 'cat {} | svgbob_cli | install -D /dev/stdin content/$(realpath --relative-to preprocess/svgbob {}).svg' \\;"
     }
 }
