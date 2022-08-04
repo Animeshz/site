@@ -2,9 +2,7 @@
 
 {% block main %}
     <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="{{ page.permalink }}" class="decoration-none">{{ page.title }}</a></h1>
-    <div class="dark:prose-invert  dark:text-[#e8e6e3]">
-        {{ page.content | safe }}
-    </div>
+    {{ page.content | safe }}
 {% endblock %}
 
 {% block lsidebar %}

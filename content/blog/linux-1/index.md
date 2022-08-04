@@ -96,7 +96,7 @@ There are exactly 3 things that I think everybody should know while using linux.
 The console is the heart of the Linux OS. Every operation is initiated through it.
 
 Console is a very generic term, and there are actually 3 indivisual-components that builds up a console.
-* [**Shell**](https://en.wikipedia.org/wiki/Unix_shell)**:** The most important part of console, namely interpreter of commands. It is the one which provides you with tab-completions and syntax-highlighting etc.<br>e.g. bash zsh fish.
+* [**Shell**](https://en.wikipedia.org/wiki/Unix_shell)**:** The ***most important*** part of console, namely interpreter of commands. It is the one which also provides you with tab-completions and syntax-highlighting etc.<br>Learn more about it from [GoalKicker](https://goalkicker.com/BashBook) | [LearnXinYminutes](https://learnxinyminutes.com/docs/bash).<br>e.g. bash zsh fish.
 * **Prompt:** The part of visual prompt on the shell just before command.<br>e.g. [starship](https://starship.rs), [powerlevel10k](https://github.com/romkatv/powerlevel10k), ohmyzsh.
 * **Terminal:** The graphical interface between the shell and the user, controllling the visual stuffs (fonts, padding, etc).<br>e.g. [kitty](https://sw.kovidgoyal.net/kitty), alacritty, konsole, gnome-terminal, [xfce4-terminal](https://gitlab.xfce.org/apps/xfce4-terminal).
 
@@ -116,24 +116,22 @@ Linux (or unix in general e.g. MacOS) starts laying out filesystem from `/` call
 
 ### The dotfiles (& DRY principle)
 
-If you ever gone through programming, you may have already heard about the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) principle.
+If you ever gone through programming, you may have already heard about the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) principle, that is when you define a function to do same stuff over and over again.
 
 Same thing applies here, if you already setup your linux once, you shouldn't need to set it up all over again if something went wrong.
 
-Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](@/blog/linux-2.md) of article), places all its configuration as flat text files in the `~/.config` folder for particular user or `/etc` for universal.
+Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](@/blog/linux-2.md) of article), places all its configuration as flat text files in the `/home/$USER/.config` folder for particular user or `/etc` for universal.
 
 Those files are referred to as dotfiles, they're a few KiB in size and once you have it backed up, you can throw it to any fresh install with applications installed, and your look, feel & customization will be fully replicated in no-time!
-
-*Note: `~` refers to `/home/$USER`*
 
 
 ## Getting your hands dirty
 
+* Shell Scripting (bash): Learn it from [GoalKicker](https://goalkicker.com/BashBook) | [LearnXinYminutes](https://learnxinyminutes.com/docs/bash).
 * [r/unixporn](https://www.reddit.com/r/unixporn): The home for linux & unix customization.
 * [ArchWiki](https://wiki.archlinux.org) & [GentooWiki](https://wiki.gentoo.org): The bible of Linux Troubleshooting and How-To(s).
 * [Google](http://google.com): Your best friend!
 * [ManPage](https://en.wikipedia.org/wiki/Man_page): Best resource to understand any command, type `man <any-command>` to view.<br>
   [TLDR](https://dbrgn.github.io/tealdeer): A less intimidating version of man-pages, only lists what's used the most.
-* Shell Scripting (bash): *The task automator* from [GoalKicker](https://goalkicker.com) | [LearnXinYminutes](https://learnxinyminutes.com)
 * [Linux-kernel-labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html): Understand how linux works (bottom up approach).
 
