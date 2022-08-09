@@ -9,7 +9,7 @@ Nix, a package manager for NixOS is not just available to the NixOS but any othe
 
 This page contains my notes while installing nix on Void Linux.
 
-### Installing Nix
+## Installing Nix
 
 ```bash
 sudo xbps-install nix
@@ -32,6 +32,22 @@ nix-env --version
 nix-shell -p hello   # run 'hello' in the new shell
 ```
 
-### Learning Nix
+### Some useful fish abbreviations
+
+```fish
+# abbr ne 'nix-env'
+abbr nc 'nix-channel --add'
+abbr nu 'nix-channel --update'
+abbr ns 'nix-shell'
+abbr ng 'nix-collect-garbage -d'
+```
+
+## Opiniated Configuration
+
+```bash
+echo 'max-jobs = auto' | sudo tee --append /etc/nix/nix.conf   # Use multi-threads
+```
+
+## Learning Nix
 
 https://nixos.org/manual/nix/stable/expressions/language-values.html
