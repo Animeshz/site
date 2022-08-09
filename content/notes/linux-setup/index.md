@@ -14,10 +14,10 @@ updated = "2022-08-08T18:08:52+05:30"
 ```lua
 Ctrl+l          clear
 Alt+l           ls
+Alt+s           toggles `sudo`
 {Ctrl+w,Alt+d}  {backspace,delete} whole word
 Ctrl+{u,y}      copy/paste currently written
-Alt+s           toggles `sudo`
-Alt+e           open text editor
+Alt+e           edit currently written ($EDITOR)
 ```
 
 ### (N)Vim

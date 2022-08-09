@@ -12,11 +12,11 @@ This page contains my notes while installing nix on Void Linux.
 ## Installing Nix
 
 ```bash
-sudo xbps-install nix
-sudo usermod -aG nixbld (whoami)   # logout & login
+sudo xbps-install nix             # 1
+sudo usermod -aG nixbld (whoami)  # logout & login
 
 sudo ln -s /etc/sv/nix-daemon /var/service
-nix-channel --add http://nixos.org/channels/nixpkgs-stable nixpkgs
+nix-channel --add http://nixos.org/channels/nixpkgs-unstable nixpkgs
 nix-channel --update
 
 # Specific to fish shell
@@ -31,6 +31,8 @@ echo $NIX_PATH
 nix-env --version
 nix-shell -p hello   # run 'hello' in the new shell
 ```
+
+<sub>1. Installation with xbps just makes uninstall process easier (otherwise run the script in their website & create a runit service with one line: `exec /nix/var/nix/profiles/default/bin/nix-daemon`)</sub>
 
 ### Some useful fish abbreviations
 
@@ -50,4 +52,4 @@ echo 'max-jobs = auto' | sudo tee --append /etc/nix/nix.conf   # Use multi-threa
 
 ## Learning Nix
 
-https://nixos.org/manual/nix/stable/expressions/language-values.html
+https://nixos.org/manual/nix/stable/expressions/expression-syntax.html
