@@ -73,10 +73,6 @@ The most common way to install any linux-distro for desktop-use is to download t
 
 ### Partitioning Notes
 
-<!--
-Img of sample partitions (gparted)
--->
-
 At one of the last step in the installation, you'll be prompted to allocate disk space where you're going to install the linux distro. Make sure you make the following partitions in case you choose the manual partitioning (**not recommended for beginners**).
 
 * 1 EFI partition *[fat32]* mounted on `/boot/efi` (>=500M preferred, shared)
