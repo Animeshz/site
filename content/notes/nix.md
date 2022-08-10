@@ -48,8 +48,17 @@ abbr ng 'nix-collect-garbage -d'
 
 ```bash
 echo 'max-jobs = auto' | sudo tee --append /etc/nix/nix.conf   # Use multi-threads
+echo 'experimental-features = nix-command flakes' | sudo tee --append /etc/nix/nix.conf # Use flakes
 ```
 
 ## Learning Nix
 
-https://nixos.org/manual/nix/stable/expressions/expression-syntax.html
+[https://nixos.org/manual/nix/stable/expressions/expression-syntax.html](https://nixos.org/manual/nix/stable/expressions/expression-syntax.html)
+[https://learnxinyminutes.com/docs/nix](https://learnxinyminutes.com/docs/nix)
+
+
+## Nix Flakes
+
+A new de-facto standard to write nix files, making everything clean and easier to understand. Quite like a rust crate, also forms a lockfile for automated reproducibility.
+
+Learn more: [https://serokell.io/blog/practical-nix-flakes](https://serokell.io/blog/practical-nix-flakes)
