@@ -1,13 +1,22 @@
 +++
-title = "Nix - The unbreakable dev environment"
+title = "Nix - Building a Robust Dev Environment"
 slug = "nix"
 date = "2022-08-02T13:10:17+05:30"
 updated = "2022-08-07T15:03:47+05:30"
 +++
 
-Nix, a package manager for NixOS is not just available to the NixOS but any other distro available on the planet.
+## Nix - An introduction
+
+Nix, a package manager and a configuration language (not just specific to NixOS), to make a reproducible self-contained builds, from flat text-files.
+
+Its primary repository (called [nixpkgs](https://search.nixos.org/packages)) is quite like a AUR but without the restriction to use a particular distro in order to use it, it runs on *all the Linux distros available on the planet* as well as on the MacOS.
+
+Plus unlike AUR, it uses a binary cache by which you can install pkgs directly (without hours of build). Its over 220TB large and distributed via CDN.
+
+If something went wrong ***including any system level modifications*** from nix, can be easily rolled back using nix profiles (created automatically at every change).
 
 This page contains my notes while installing nix on Void Linux.
+
 
 ## Installing Nix
 
@@ -42,6 +51,15 @@ abbr nc 'nix-channel --add'
 abbr nu 'nix-channel --update'
 abbr ns 'nix-shell'
 abbr ng 'nix-collect-garbage -d'
+
+abbr npi 'nix profile install'
+abbr npr 'nix profile remove'
+abbr nph 'nix profile history'
+abbr nproll 'nix profile rollback --to'
+
+abbr nfs 'nix shell'
+abbr nfr 'nix run'
+abbr nfd 'nix develop'
 ```
 
 ## Opiniated Configuration
@@ -53,12 +71,38 @@ echo 'experimental-features = nix-command flakes' | sudo tee --append /etc/nix/n
 
 ## Learning Nix
 
-[https://nixos.org/manual/nix/stable/expressions/expression-syntax.html](https://nixos.org/manual/nix/stable/expressions/expression-syntax.html)
-[https://learnxinyminutes.com/docs/nix](https://learnxinyminutes.com/docs/nix)
+[Nix - Getting started](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html)<br>
+[NixShorts - Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)<br>
+[LearnXinYminutes - Nix](https://learnxinyminutes.com/docs/nix)
+
+[This video](https://www.youtube.com/watch?v=qjq2wVEpSsA) talks in-depth how Nix and NixOS are so close to be perfect.
+
+[Declaring dependencies](https://discourse.nixos.org/t/poetry2nix-flakes-add-runtime-dependencies/15930/3)<br>
+[Runtime dependencies in shell scripts](https://discourse.nixos.org/t/how-to-create-a-script-with-dependencies/7970/6)
+
+Misc:
+
+[Nix Modules - Docs](https://nixos.wiki/wiki/NixOS_modules)<br>
+[Nix Pills](https://nixos.org/guides/nix-pills/our-first-derivation.html)
 
 
 ## Nix Flakes
 
 A new de-facto standard to write nix files, making everything clean and easier to understand. Quite like a rust crate, also forms a lockfile for automated reproducibility.
 
-Learn more: [https://serokell.io/blog/practical-nix-flakes](https://serokell.io/blog/practical-nix-flakes)
+* Learn more:<br>
+  [https://edolstra.github.io/talks/nixcon-oct-2019.pdf](https://edolstra.github.io/talks/nixcon-oct-2019.pdf)<br>
+  [https://serokell.io/blog/practical-nix-flakes](https://serokell.io/blog/practical-nix-flakes)<br>
+  [https://ianthehenry.com/posts/how-to-learn-nix/flakes](https://ianthehenry.com/posts/how-to-learn-nix/flakes)
+* Official Docs: [https://nixos.wiki/wiki/Flakes](https://nixos.wiki/wiki/Flakes)
+
+[The new `nix *` commands vs the traditional `nix-*` commands](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/#tldr-nix-develop)
+
+
+<!- Home Manager: https://www.youtube.com/watch?v=OgUvDXxHlLs --->
+
+## Extra (Personal Favourites)
+
+* [Include all nix modules under a path](https://www.reddit.com/r/NixOS/comments/j5pa9o/getting_all_configs_from_folder)
+* [Sample config from a long time nix user](https://github.com/nuxshed/dotfiles/blob/main/flake.nix)
+* [Setup Binary Cache](https://nixos.wiki/wiki/Binary_Cache) + [Use it](https://nixos.org/manual/nix/stable/command-ref/conf-file.html)
