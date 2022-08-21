@@ -51,7 +51,9 @@ abbr nc 'nix-channel --add'
 abbr nu 'nix-channel --update'
 abbr ns 'nix-shell'
 abbr ng 'nix-collect-garbage -d'
+abbr no 'nix store optimise'
 
+abbr nr 'nix registry list'
 abbr npi 'nix profile install'
 abbr npr 'nix profile remove'
 abbr nph 'nix profile history'
@@ -60,6 +62,10 @@ abbr nproll 'nix profile rollback --to'
 abbr nfs 'nix shell'
 abbr nfr 'nix run'
 abbr nfd 'nix develop'
+
+abbr nfshow 'nix flake show'
+abbr nfmeta 'nix flake metadata'
+abbr nfpinf 'nix path-info -rsSh'
 ```
 
 ## Opiniated Configuration
@@ -74,15 +80,18 @@ echo 'experimental-features = nix-command flakes' | sudo tee --append /etc/nix/n
 [Nix - Getting started](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html)<br>
 [NixShorts - Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)<br>
 [LearnXinYminutes - Nix](https://learnxinyminutes.com/docs/nix)
+[Nix - The cool stdLib](https://ryantm.github.io/nixpkgs/functions/library/strings)
 
 [This video](https://www.youtube.com/watch?v=qjq2wVEpSsA) talks in-depth how Nix and NixOS are so close to be perfect.
 
+[Using file to manage packages - non-nixos users](https://unix.stackexchange.com/questions/369234/how-to-configure-a-nix-environment-outside-of-nixos)
 [Declaring dependencies](https://discourse.nixos.org/t/poetry2nix-flakes-add-runtime-dependencies/15930/3)<br>
-[Runtime dependencies in shell scripts](https://discourse.nixos.org/t/how-to-create-a-script-with-dependencies/7970/6)
+[Runtime dependencies in shell scripts](https://discourse.nixos.org/t/how-to-create-a-script-with-dependencies/7970/6) or [makeWrapper on nixpkgs](https://gist.github.com/CMCDragonkai/9b65cbb1989913555c203f4fa9c23374) or [substituteInPlace in home-manager](https://github.com/nix-community/home-manager/blob/master/home-manager/default.nix)
 
 Misc:
 
-[Nix Modules - Docs](https://nixos.wiki/wiki/NixOS_modules)<br>
+
+[Nix Modules - Docs](https://nixos.wiki/wiki/NixOS_modules) | [nix_modules src](https://github.com/NixOS/nixpkgs/blob/master/lib/modules.nix#L373)<br>
 [Nix Pills](https://nixos.org/guides/nix-pills/our-first-derivation.html)
 
 
@@ -103,6 +112,8 @@ A new de-facto standard to write nix files, making everything clean and easier t
 
 ## Extra (Personal Favourites)
 
+* [lib.mkDefault](https://discourse.nixos.org/t/what-does-mkdefault-do-exactly/9028/2)
 * [Include all nix modules under a path](https://www.reddit.com/r/NixOS/comments/j5pa9o/getting_all_configs_from_folder)
 * [Sample config from a long time nix user](https://github.com/nuxshed/dotfiles/blob/main/flake.nix)
 * [Setup Binary Cache](https://nixos.wiki/wiki/Binary_Cache) + [Use it](https://nixos.org/manual/nix/stable/command-ref/conf-file.html)
+* [nix path-info command](https://nixos.org/manual/nix/unstable/command-ref/new-cli/nix3-path-info.html)

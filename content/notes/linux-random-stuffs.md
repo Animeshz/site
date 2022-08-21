@@ -29,3 +29,17 @@ I/O (DISK_ACCESS + SHARED_MEMORY_ACCESS) DISK_WRITE_AS_MEMORY
 ```
 
 There's a [very good article explaining PageFaults & Swaps](https://scoutapm.com/blog/understanding-page-faults-and-memory-swap-in-outs-when-should-you-worry), in case you want to read more about them.
+
+
+## Advertising Linux as a Audio Sinking Device
+
+```bash
+bluetoothctl
+[...]# power on
+[...]# advertise.name FW
+[...]# advertise on
+
+# A few yes here
+```
+
+Note that these commands donot work from outside (in non-interactive mode).

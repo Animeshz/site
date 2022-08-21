@@ -43,3 +43,4 @@ xdg-mime default ranger.desktop inode/directory
 sudo update-desktop-database
 sudo update-desktop-database ~/.local/share/applications
 ```
+

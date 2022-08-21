@@ -166,6 +166,45 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 acpi_osi='Windows 2020' net.ifnames=0 i91
 
 After every edit, you must run `sudo update-grub` in order for the changes to take effect in next boot.
 
+## Cassowary (100% Windows App compatibility)
+
+Unlike [Wine](https://www.winehq.org), which often breaks itself when you need something like two applications co-working together or when you need to use applications like MS Word or any Heavy video-editor which extensively uses Win32 and Microsoft APIs, The [Cassowary](https://github.com/casualsnek/cassowary) will fully support running all of them with native experience.
+
+Under the hood, it'll use a Windows VM which can autosuspend itself when not under use to lower the power consumption while giving back 100% application compatibility without any hard to setup path. You can make windows installation as custom as you like, you just need to turn on RDP and install cassowary guest tools for forwarding the application to your linux host and make application shortcuts for directly opening them.
+
+I'd be using [quickemu](https://github.com/quickemu-project/quickemu) for quickly setting up the VM without hassle... Prebuilt void-pkg is [here](https://github.com/Animeshz/void-xpackages). Use gpu passthrough helper for GPU forwarding (optional).
+```bash
+sudo xbps-install quickemu spice-vdagent
+
+# Find for your distro here: https://github.com/pavolelsig
+git clone https://github.com/oSoWoSo/passthrough_helper_void && cd passthrough_helper_void
+chmod +x *.sh
+sudo ./gpu_passthrough.sh
+
+quickget windows 10
+echo 'cpu_cores="4"' >> windows-10.conf  # optional
+echo 'port_forwards=("7220:7220")' >> windows-10.conf
+quickemu --vm windows-10.conf --display spice
+
+# Download & Install for copy paste (in Windows VM)
+# https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
+
+# Enable RDP & Change RDP Port to 7220 (in Windows VM)
+# Win+I -> System -> Remote Desktop
+
+sudo xbps-install freerdp libvirt-python3
+pip install PyQt5
+
+wget https://github.com/casualsnek/cassowary/releases/download/0.6/cassowary-0.6-py3-none-any.whl
+pip install cassowary*
+
+python3 -m cassowary -a
+# Set VM IP as `127.0.0.1`, rest from get from rdp settings and `hostname` command in cmd/powershell.
+# Save Settings & Reconnect
+# Goto: Guest app, and create shortcuts
+```
+
+
 ## Extras
 
 * [Chromium - MacOS like pinch zoom (not scaling like Ctrl+ Ctrl-)](https://www.reddit.com/r/linux/comments/rmuh0o/finally_macoswindows_like_touchpad_zoom_gesture)
