@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site/assets/css/generated/main.css"/>
+        <script defer src="https://unpkg.com/darkreader@4.9.52/darkreader.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        
+    </head>
+    <body class="min-h-screen flex flex-col child:child:px-8">
+        <div class="flex-1 flex flex-row child:pt-8">
+            <div class="flex-1 min-w-0 hidden md:block mt-14">
+                <!-- Left Sidebar -->
+                
+                
+            </div>
+            <div id="main" class="prose w-[48rem] max-w-none mt-14">
+                <!-- Main Content -->
+                
+                    <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;" class="decoration-none">Home</a></h1>
+                    <h1 id="header">Header</h1>
+<h2 id="subheading">Subheading</h2>
+
+                
+            </div>
+            <div x-data="{ open: true, full: true, share_icons: false }"
+                 class="flex-1 min-w-0 sticky top-0 self-start h-screen hidden md:flex flex-col">
+                <!-- Header -->
+                
+                    <nav class="flex flex-row items-center justify-end child:inline-block group">
+                        <!-- NavBar -->
+                        <ul x-on:mouseover="full = true"
+                            x-init="full = is_top()"
+                            x-on:mouseout="full = is_top()"
+                            x-on:scroll.document="full = is_top()"
+                            x-on:resize.document="full = is_top()"
+                            x-bind:style="{ 'max-width': open ? (full ? width($el) : parent_width($el)) : 0 }"
+                            class="list-none bg-white rounded py-1 ml-[-100vw] z-10 overflow-hidden text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition-[max-width] whitespace-nowrap duration-300 ease-in-out">
+                            
+                            <li>
+                                <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;">Home</a>
+                            </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;blog&#x2F;">Blogs</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;awesome&#x2F;">Awesome</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;notes&#x2F;">Notes</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;point_of_interest&#x2F;">Point of Interest</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;setup&#x2F;">Setup</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;contact&#x2F;">Contact</a>
+                                </li>
+                            
+                        </ul>
+                        <!-- Hamburger -->
+                        <button x-on:click="open = !open" id="menu-toggle" class="ml-3">
+                            <i class="fas fa-bars fa-lg text-pink-600"></i>
+                        </button>
+                    </nav>
+                    <!-- Page Actions -->
+                    <div id="action-nav"
+                         class="transition-[max-height] duration-300 ease-in-out overflow-hidden"
+                         x-bind:style="{ 'max-height': open ? height($el) : '0px' }">
+                        <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                            <!-- Action Text -->
+                            <i x-ref="action_text" class="text-sm"></i>  
+                            <!-- Action Icons -->
+                            
+                            <a href="#"
+                               aria-label="Top of Page"
+                               x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                               x-on:mouseover="$refs.action_text.innerText = 'Back to top'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Switch Theme"
+                               x-init="theme_init($el)"
+                               x-on:click.prevent="theme_toggle"
+                               x-on:mouseover="$refs.action_text.innerText = 'Toggle dark theme'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Share"
+                               x-on:click.prevent="share_icons = !share_icons"
+                               x-on:mouseover="$refs.action_text.innerText = 'Share post'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Share Icons -->
+                    <ul id="share-icons"
+                        class="transition-[max-height] duration-300 ease-in-out mt-1 mb-4 overflow-hidden text-right"
+                        style="max-height: 0px"
+                        x-effect="if (!open) share_icons = false"
+                        x-bind:style="{ 'max-height': share_icons ? height($el) : '0px' }">
+                        <li>
+                            <a class="icon" href="" aria-label="Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Linkedin">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pinterest">
+                                <i class="fab fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- href="mailto:?subject=&body=Check out this article: " -->
+                            <a class="icon" aria-label="Email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pocket">
+                                <i class="fab fa-get-pocket" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="reddit">
+                                <i class="fab fa-reddit" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Tumblr">
+                                <i class="fab fa-tumblr" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Hacker News">
+                                <i class="fab fa-hacker-news" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                
+                <!-- Right Sidebar -->
+                <div class="overflow-y-auto break-words flex-1">
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="mb-14"></div>
+        
+        <script>
+            function theme_init(e) {
+                if (localStorage.theme === 'dark' ||
+                    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    e.firstElementChild.classList.remove('fa-moon');
+                    e.firstElementChild.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                }
+            }
+
+            function theme_toggle(evt) {
+                if (document.documentElement.classList.toggle('dark')) {
+                    localStorage.theme = 'dark';
+                    evt.target.classList.remove('fa-moon');
+                    evt.target.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                } else {
+                    localStorage.theme = 'light';
+                    evt.target.classList.remove('fa-sun');
+                    evt.target.classList.add('fa-moon');
+
+                    DarkReader.disable();
+                }
+            }
+
+            function is_top() {
+                return document.documentElement.scrollTop == 0;
+            }
+            function height(e) {
+                return e.scrollHeight + 'px';
+            }
+            function width(e) {
+                return e.scrollWidth + 'px';
+            }
+            function parent_width(e) {
+                return e.parentElement.scrollWidth + 'px';
+            }
+        </script>
+    </body>
+</html>

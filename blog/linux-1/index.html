@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site/assets/css/generated/main.css"/>
+        <script defer src="https://unpkg.com/darkreader@4.9.52/darkreader.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        
+    </head>
+    <body class="min-h-screen flex flex-col child:child:px-8">
+        <div class="flex-1 flex flex-row child:pt-8">
+            <div class="flex-1 min-w-0 hidden md:block mt-14">
+                <!-- Left Sidebar -->
+                
+    
+    <div x-data="{ toc: true }" class="sticky top-0 pt-8">
+        <button class="hover:text-green-400" x-on:click="toc = !toc">
+            <i class="fas fa-chevron-down text-green-400 transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
+            <span class="px-2">Table of Contents</span>
+        </button>
+        <div id="toc" class="text-lg mt-2 break-words transition-[max-height] duration-300 ease-in-out overflow-hidden"
+            x-bind:style="{ 'max-height': toc ? height($el) : '0px' }">
+            <ul>
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/blog/linux-1/#what-is-the-point-of-linux-why-you-should-consider-it">What is (the point of) Linux &amp; why you should consider it?</a>
+                </li>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/blog/linux-1/#what-is-a-linux-distro-choosing-the-best-for-your-needs">What is a linux distro &amp; choosing the best for your needs</a>
+                </li>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/blog/linux-1/#installation">Installation</a>
+                </li>
+                
+                    <ul>
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/blog/linux-1/#partitioning-notes">Partitioning Notes</a>
+                            </li>
+                            
+                        
+                    </ul>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/blog/linux-1/#basic-components-terminologies">Basic components &amp; terminologies</a>
+                </li>
+                
+                    <ul>
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/blog/linux-1/#the-console">The console</a>
+                            </li>
+                            
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/blog/linux-1/#the-file-structure">The file structure</a>
+                            </li>
+                            
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/blog/linux-1/#the-dotfiles-dry-principle">The dotfiles (&amp; DRY principle)</a>
+                            </li>
+                            
+                        
+                    </ul>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/blog/linux-1/#getting-your-hands-dirty">Getting your hands dirty</a>
+                </li>
+                
+            
+            </ul>
+        </div>
+    </div>
+    
+
+            </div>
+            <div id="main" class="prose w-[48rem] max-w-none mt-14">
+                <!-- Main Content -->
+                
+    <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;blog&#x2F;linux-1&#x2F;" class="decoration-none">Linux (1&#x2F;2) - A near surface exploration</a></h1>
+    <blockquote>
+"Intelligence is the ability to avoid doing work, yet getting the work done."
+<div class="text-right">- Linus Torvalds</div>
+</blockquote>
+<p>Linux is considered to be the most important software project in the history. It is an evergreen example that shows how collaborative development can work, which can be applied to other FOSS projects to the current date.</p>
+<p>Traditionally, Linux was known as an OS that is reserved for tech-savvy people. The CLI was intimidating and far too complicated for end-users. But now, everything's changed, various communities have contributed to Linux and it now has a GUI (Graphical User Interface, mouse-based) that can be used just like any Windows or MacOS you're familiar with.</p>
+<h2 id="what-is-the-point-of-linux-why-you-should-consider-it">What is (the point of) Linux &amp; why you should consider it?</h2>
+<p>Linux is a minimal &amp; clean design which gives you building blocks that are just sufficient enough for doing everything.</p>
+<ul>
+<li>It is lightweight and generally performant.</li>
+<li>Extremely <a href="https://www.reddit.com/r/unixporn">customizable</a> for specific workflows and hardware requirements.</li>
+<li>Make sures the software you're downloading is coming from a trusted source, so you don't have to identify which 1 of the top 4 google results is legit.</li>
+<li>Is transparent, modular &amp; easy to debug.</li>
+</ul>
+<details>
+<summary class="sticky top-0 cursor-pointer"><b>Examples of customization / stuffs you can perform (*CLICK ME*):</b></summary>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/m5522z/grub2_had_some_fun_with_grub/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/pq8m5r/dwm_widgets_two_layout_do_you_like_light_theme/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/vl09nw/newm_the_best_wayland_compositor_scrolling_tiling/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark&amp;autoStart=false" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="431" width="640" scrolling="no"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/v7wnp6/hyprland_a_beautiful_wayland_compositor/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="412" width="640" scrolling="no"></iframe>
+<iframe id="reddit-embed" src="https://www.redditmedia.com/r/unixporn/comments/j3mfc6/i3gaps_ready_for_fall/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="529" width="640" scrolling="no"></iframe>
+</details>
+<h2 id="what-is-a-linux-distro-choosing-the-best-for-your-needs">What is a linux distro &amp; choosing the best for your needs</h2>
+<p>A linux distro is a set of tools chosen to make your setup start working for a specific usecase instantly.</p>
+<p><em>Note: A distro is nothing but a collection of tools (referred to as packages), which can be added/removed in any other distro as well, as time will pass you'll notice only thing one differs by another is the package management and the rate of delivery of package updates.</em></p>
+<p>As a matter of fact, the <em>worst</em> part about</p>
+<ul>
+<li>Windows is &quot;privacy&quot; (does random things on behalf, incl. annoying updates).</li>
+<li>Macos is &quot;customization&quot; (too much locked down).</li>
+<li>Linux is &quot;fragmentation&quot; (too many choices to choose from).</li>
+</ul>
+<p>Generally speaking, there are uncountable number of <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions">linux-distros available</a> on the planet.</p>
+<blockquote>
+"When you think of the linux kernel like engine in your car, it answers the question of why there are so many linux distros. Some cars are designed to be fast, some for comfort, some are engineered for enterprise, and others are just for fun. As a developer, linux is like a free engine that you can use to make your own car."
+<div class="text-right">- fireship.io</div>
+</blockquote>
+<p><em><strong><a href="https://distrochooser.de">DistroChooser</a> is my favourite resource I recommend everyone for choosing their first (or even latter) distro.</strong></em></p>
+<h2 id="installation">Installation</h2>
+<p><img src="https://animeshz.github.io/site/blog/linux-1/linux-installation-targets.svg" alt="Installation Targets" /></p>
+<p>Because this article is mainly focused on getting-started, I'm mainly gonna talk about linux for desktops.</p>
+<p>The most common way to install any linux-distro for desktop-use is to download the .iso image-file from their respective website and flash it on to a pen-drive using flashing tools (e.g. <a href="https://www.balena.io/etcher">balena etcher</a> or <a href="https://rufus.ie/en">rufus</a>), boot from it and follow the guide / on-screen-instructions.</p>
+<p><em><strong>Bonus:</strong> Because a pen-drive flashing overwrites pen-drive and only one-distro at a time can live on it this way, I personally use <a href="https://www.ventoy.net/en/index.html">Ventoy</a> a multi-boot usb software that lets me just copy iso file without any external application like a regular file and it becomes ready to boot, plus I can place regular files and continue to use pen-drive as a storage device...</em></p>
+<h3 id="partitioning-notes">Partitioning Notes</h3>
+<p>At one of the last step in the installation, you'll be prompted to allocate disk space where you're going to install the linux distro. Make sure you make the following partitions in case you choose the manual partitioning (<strong>not recommended for beginners</strong>).</p>
+<ul>
+<li>1 EFI partition <em>[fat32]</em> mounted on <code>/boot/efi</code> (&gt;=500M preferred, shared)</li>
+<li>1 swap partition <em>[swap]</em> mounted as <code>swap</code> (&gt;=RAM)</li>
+<li>1 root partition <em>[ext4]</em> mounted on <code>/</code> (rest of the size)</li>
+</ul>
+<p><img src="https://animeshz.github.io/site/blog/linux-1/gparted.jpg" alt="Gparted" /></p>
+<p><em>Note: Multiple distro install should use seperate swap space, as they are used in hibernation and if reused by another may cause data-loss.</em></p>
+<h2 id="basic-components-terminologies">Basic components &amp; terminologies</h2>
+<p>There are exactly 3 things that I think everybody should know while using linux.</p>
+<h3 id="the-console">The console</h3>
+<p>The console is the heart of the Linux OS. Every operation is initiated through it.</p>
+<p>Console is a very generic term, and there are actually 3 indivisual-components that builds up a console.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Unix_shell"><strong>Shell</strong></a><strong>:</strong> The <em><strong>most important</strong></em> part of console, namely interpreter of commands. It is the one which also provides you with tab-completions and syntax-highlighting etc.<br>Learn more about it from <a href="https://goalkicker.com/BashBook">GoalKicker</a> | <a href="https://learnxinyminutes.com/docs/bash">LearnXinYminutes</a>.<br>e.g. bash zsh fish.</li>
+<li><strong>Prompt:</strong> The part of visual prompt on the shell just before command.<br>e.g. <a href="https://starship.rs">starship</a>, <a href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>, ohmyzsh.</li>
+<li><strong>Terminal:</strong> The graphical interface between the shell and the user, controllling the visual stuffs (fonts, padding, etc).<br>e.g. <a href="https://sw.kovidgoyal.net/kitty">kitty</a>, alacritty, konsole, gnome-terminal, <a href="https://gitlab.xfce.org/apps/xfce4-terminal">xfce4-terminal</a>.</li>
+</ul>
+<p><img src="https://animeshz.github.io/site/blog/linux-1/console.jpg" alt="Console" /></p>
+<p><em>My personal favourites: fish as shell, starship as prompt &amp; kitty as my terminal application.</em></p>
+<h3 id="the-file-structure">The file structure</h3>
+<p><em><strong>Everything in linux is a file</strong></em>, and by everything I mean literally everything! Your disk, your logical partitions, your usb peripheral including your mouse and keyboard, ramdisk, folders, whatever you can ever imagine is a file.</p>
+<p>Linux (or unix in general e.g. MacOS) starts laying out filesystem from <code>/</code> called root (unlike C: D: multiple drives in windows). Every other partition can be mounted as <em>(emulated to be)</em> a directory of this root.</p>
+<p><img src="https://linuxconfig.org/wp-content/uploads/2013/03/Directory-Filesystem-Hierarchy-Standard.jpg" width="500px"></img></p>
+<p><em>Note: There are 4 special folders: /sys /proc /dev /tmp which donot actually exist in disk, which may interest you (as I said earlier everything is a file, not just things residing in the disk)</em></p>
+<h3 id="the-dotfiles-dry-principle">The dotfiles (&amp; DRY principle)</h3>
+<p>If you ever gone through programming, you may have already heard about the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> (Don't Repeat Yourself) principle, that is when you define a function to do same stuff over and over again.</p>
+<p>Same thing applies here, if you already setup your linux once, you shouldn't need to set it up all over again if something went wrong.</p>
+<p>Every application in linux which follows something called as Unix Philosophy (discussed in <a href="@/blog/linux-2.md">part 2</a> of article), places all its configuration as flat text files in the <code>/home/$USER/.config</code> folder for particular user or <code>/etc</code> for universal.</p>
+<p>Those files are referred to as dotfiles, they're a few KiB in size and once you have it backed up, you can throw it to any fresh install with applications installed, and your look, feel &amp; customization will be fully replicated in no-time!</p>
+<h2 id="getting-your-hands-dirty">Getting your hands dirty</h2>
+<ul>
+<li>Shell Scripting (bash): Learn it from <a href="https://goalkicker.com/BashBook">GoalKicker</a> | <a href="https://learnxinyminutes.com/docs/bash">LearnXinYminutes</a>.</li>
+<li><a href="https://www.reddit.com/r/unixporn">r/unixporn</a>: The home for linux &amp; unix customization.</li>
+<li><a href="https://wiki.archlinux.org">ArchWiki</a> &amp; <a href="https://wiki.gentoo.org">GentooWiki</a>: The bible of Linux Troubleshooting and How-To(s).</li>
+<li><a href="http://google.com">Google</a>: Your best friend!</li>
+<li><a href="https://en.wikipedia.org/wiki/Man_page">ManPage</a>: Best resource to understand any command, type <code>man &lt;any-command&gt;</code> to view.<br>
+<a href="https://dbrgn.github.io/tealdeer">TLDR</a>: A less intimidating version of man-pages, only lists what's used the most.</li>
+<li><a href="https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html">Linux-kernel-labs</a>: Understand how linux works (bottom up approach).</li>
+</ul>
+
+
+            </div>
+            <div x-data="{ open: true, full: true, share_icons: false }"
+                 class="flex-1 min-w-0 sticky top-0 self-start h-screen hidden md:flex flex-col">
+                <!-- Header -->
+                
+                    <nav class="flex flex-row items-center justify-end child:inline-block group">
+                        <!-- NavBar -->
+                        <ul x-on:mouseover="full = true"
+                            x-init="full = is_top()"
+                            x-on:mouseout="full = is_top()"
+                            x-on:scroll.document="full = is_top()"
+                            x-on:resize.document="full = is_top()"
+                            x-bind:style="{ 'max-width': open ? (full ? width($el) : parent_width($el)) : 0 }"
+                            class="list-none bg-white rounded py-1 ml-[-100vw] z-10 overflow-hidden text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition-[max-width] whitespace-nowrap duration-300 ease-in-out">
+                            
+                            <li>
+                                <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;">Home</a>
+                            </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;blog&#x2F;">Blogs</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;awesome&#x2F;">Awesome</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;notes&#x2F;">Notes</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;point_of_interest&#x2F;">Point of Interest</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;setup&#x2F;">Setup</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;contact&#x2F;">Contact</a>
+                                </li>
+                            
+                        </ul>
+                        <!-- Hamburger -->
+                        <button x-on:click="open = !open" id="menu-toggle" class="ml-3">
+                            <i class="fas fa-bars fa-lg text-pink-600"></i>
+                        </button>
+                    </nav>
+                    <!-- Page Actions -->
+                    <div id="action-nav"
+                         class="transition-[max-height] duration-300 ease-in-out overflow-hidden"
+                         x-bind:style="{ 'max-height': open ? height($el) : '0px' }">
+                        <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                            <!-- Action Text -->
+                            <i x-ref="action_text" class="text-sm"></i>  
+                            <!-- Action Icons -->
+                            
+                                
+                                
+                            
+                            <a href="#"
+                               aria-label="Top of Page"
+                               x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                               x-on:mouseover="$refs.action_text.innerText = 'Back to top'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Switch Theme"
+                               x-init="theme_init($el)"
+                               x-on:click.prevent="theme_toggle"
+                               x-on:mouseover="$refs.action_text.innerText = 'Toggle dark theme'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Share"
+                               x-on:click.prevent="share_icons = !share_icons"
+                               x-on:mouseover="$refs.action_text.innerText = 'Share post'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Share Icons -->
+                    <ul id="share-icons"
+                        class="transition-[max-height] duration-300 ease-in-out mt-1 mb-4 overflow-hidden text-right"
+                        style="max-height: 0px"
+                        x-effect="if (!open) share_icons = false"
+                        x-bind:style="{ 'max-height': share_icons ? height($el) : '0px' }">
+                        <li>
+                            <a class="icon" href="" aria-label="Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Linkedin">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pinterest">
+                                <i class="fab fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- href="mailto:?subject=&body=Check out this article: " -->
+                            <a class="icon" aria-label="Email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pocket">
+                                <i class="fab fa-get-pocket" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="reddit">
+                                <i class="fab fa-reddit" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Tumblr">
+                                <i class="fab fa-tumblr" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Hacker News">
+                                <i class="fab fa-hacker-news" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                
+                <!-- Right Sidebar -->
+                <div class="overflow-y-auto break-words flex-1">
+                    
+
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="mb-14"></div>
+        
+        <script>
+            function theme_init(e) {
+                if (localStorage.theme === 'dark' ||
+                    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    e.firstElementChild.classList.remove('fa-moon');
+                    e.firstElementChild.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                }
+            }
+
+            function theme_toggle(evt) {
+                if (document.documentElement.classList.toggle('dark')) {
+                    localStorage.theme = 'dark';
+                    evt.target.classList.remove('fa-moon');
+                    evt.target.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                } else {
+                    localStorage.theme = 'light';
+                    evt.target.classList.remove('fa-sun');
+                    evt.target.classList.add('fa-moon');
+
+                    DarkReader.disable();
+                }
+            }
+
+            function is_top() {
+                return document.documentElement.scrollTop == 0;
+            }
+            function height(e) {
+                return e.scrollHeight + 'px';
+            }
+            function width(e) {
+                return e.scrollWidth + 'px';
+            }
+            function parent_width(e) {
+                return e.parentElement.scrollWidth + 'px';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site/assets/css/generated/main.css"/>
+        <script defer src="https://unpkg.com/darkreader@4.9.52/darkreader.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        
+    </head>
+    <body class="min-h-screen flex flex-col child:child:px-8">
+        <div class="flex-1 flex flex-row child:pt-8">
+            <div class="flex-1 min-w-0 hidden md:block mt-14">
+                <!-- Left Sidebar -->
+                
+    
+    <div x-data="{ toc: true }" class="sticky top-0 pt-8">
+        <button class="hover:text-green-400" x-on:click="toc = !toc">
+            <i class="fas fa-chevron-down text-green-400 transision duration-300" aria-hidden="true" x-bind:style="{ 'transform': toc ? '' : 'rotate(-90deg)' }"></i>
+            <span class="px-2">Table of Contents</span>
+        </button>
+        <div id="toc" class="text-lg mt-2 break-words transition-[max-height] duration-300 ease-in-out overflow-hidden"
+            x-bind:style="{ 'max-height': toc ? height($el) : '0px' }">
+            <ul>
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/notes/linux-setup/#good-to-know-keybinds">Good to know Keybinds</a>
+                </li>
+                
+                    <ul>
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/notes/linux-setup/#terminal">Terminal</a>
+                            </li>
+                            
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/notes/linux-setup/#n-vim">(N)Vim</a>
+                            </li>
+                            
+                        
+                    </ul>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/notes/linux-setup/#battery-saving">Battery Saving</a>
+                </li>
+                
+                    <ul>
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/notes/linux-setup/#install-auto-cpufreq">Install auto-cpufreq</a>
+                            </li>
+                            
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/notes/linux-setup/#enable-hardware-acceleration-browser-video-playback">Enable Hardware Acceleration (Browser &#x2F; Video Playback)</a>
+                            </li>
+                            
+                        
+                            <li>
+                                <a href="https://animeshz.github.io/site/notes/linux-setup/#tune-your-usb-peripherals">Tune your USB peripherals</a>
+                            </li>
+                            
+                        
+                    </ul>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/notes/linux-setup/#kernel-flags">Kernel flags</a>
+                </li>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/notes/linux-setup/#cassowary-100-windows-app-compatibility">Cassowary (100% Windows App compatibility)</a>
+                </li>
+                
+            
+                <li>
+                    <a href="https://animeshz.github.io/site/notes/linux-setup/#extras">Extras</a>
+                </li>
+                
+            
+            </ul>
+        </div>
+    </div>
+    
+
+            </div>
+            <div id="main" class="prose w-[48rem] max-w-none mt-14">
+                <!-- Main Content -->
+                
+    <h1 class="not-prose text-5xl font-extrabold text-green-400"><a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;notes&#x2F;linux-setup&#x2F;" class="decoration-none">Linux Setup (Post Install)</a></h1>
+    <p><em>Note: A lot of commands listed here uses xbps (VoidLinux's package manager) for installation purposes, package names may vary distro to distro.</em></p>
+<h2 id="good-to-know-keybinds">Good to know Keybinds</h2>
+<h3 id="terminal">Terminal</h3>
+<pre data-lang="lua" style="background-color:#2b303b;color:#c0c5ce;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#bf616a;">Ctrl</span><span>+</span><span style="color:#bf616a;">l          clear
+</span><span style="color:#bf616a;">Alt</span><span>+</span><span style="color:#bf616a;">l           ls
+</span><span style="color:#bf616a;">Alt</span><span>+</span><span style="color:#bf616a;">s           toggles</span><span> `</span><span style="color:#bf616a;">sudo</span><span>`
+</span><span>{</span><span style="color:#bf616a;">Ctrl</span><span>+</span><span style="color:#bf616a;">w</span><span>,</span><span style="color:#bf616a;">Alt</span><span>+</span><span style="color:#bf616a;">d</span><span>}  {</span><span style="color:#bf616a;">backspace</span><span>,</span><span style="color:#bf616a;">delete</span><span>} </span><span style="color:#bf616a;">whole word
+</span><span style="color:#bf616a;">Ctrl</span><span>+{</span><span style="color:#bf616a;">u</span><span>,</span><span style="color:#bf616a;">y</span><span>}      </span><span style="color:#bf616a;">copy</span><span>/</span><span style="color:#bf616a;">paste currently written
+</span><span style="color:#bf616a;">Alt</span><span>+</span><span style="color:#bf616a;">e           edit currently written </span><span>($</span><span style="color:#bf616a;">EDITOR</span><span>)
+</span></code></pre>
+<h3 id="n-vim">(N)Vim</h3>
+<pre data-lang="lua" style="background-color:#2b303b;color:#c0c5ce;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#bf616a;">Abbreviation</span><span>: &lt;</span><span style="color:#bf616a;">C</span><span>&gt; === </span><span style="color:#bf616a;">Ctrl  </span><span>&lt;</span><span style="color:#bf616a;">A</span><span>&gt; === </span><span style="color:#bf616a;">Alt  </span><span>&lt;</span><span style="color:#bf616a;">S</span><span>&gt; === </span><span style="color:#bf616a;">Shift
+</span><span style="color:#bf616a;">Notation</span><span>: ^</span><span style="color:#bf616a;">T </span><span>=== &lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">t</span><span>&gt; === </span><span style="color:#bf616a;">Ctrl</span><span>-</span><span style="color:#bf616a;">t
+</span><span>
+</span><span>:</span><span style="color:#d08770;">5                </span><span style="color:#bf616a;">Goto </span><span style="color:#d08770;">5</span><span style="color:#bf616a;">th line
+</span><span style="color:#d08770;">5</span><span>|                </span><span style="color:#bf616a;">Goto </span><span style="color:#d08770;">5</span><span style="color:#bf616a;">th character on current line
+</span><span style="color:#bf616a;">f</span><span>+&lt;</span><span style="color:#bf616a;">x</span><span>&gt;             </span><span style="color:#bf616a;">Goto </span><span style="color:#96b5b4;">next </span><span style="color:#bf616a;">occurrence of the character x  </span><span>(</span><span style="color:#bf616a;">previous</span><span>: F)
+</span><span style="color:#bf616a;">t</span><span>+&lt;</span><span style="color:#bf616a;">x</span><span>&gt;             </span><span style="color:#bf616a;">Goto character just before </span><span style="color:#96b5b4;">next </span><span style="color:#bf616a;">occurrence of the character x </span><span>(</span><span style="color:#bf616a;">previous</span><span>: T)
+</span><span>;                 </span><span style="color:#bf616a;">Repeat last f</span><span>/</span><span style="color:#bf616a;">t</span><span>-&lt;</span><span style="color:#bf616a;">x</span><span>&gt; </span><span style="color:#bf616a;">command
+</span><span>&lt;&lt;|&gt;&gt;|==          </span><span style="color:#bf616a;">Tab</span><span> i</span><span style="color:#bf616a;">n normal mode </span><span>(== </span><span style="color:#bf616a;">is smart add</span><span>/</span><span style="color:#bf616a;">reducer</span><span>)
+</span><span style="color:#bf616a;">gg</span><span>=</span><span style="color:#bf616a;">G              Reindent whole file </span><span>(</span><span style="color:#bf616a;">gg </span><span>&amp; =</span><span style="color:#bf616a;">G</span><span>), </span><span style="color:#bf616a;">similarly ggyG to yank file
+</span><span>&quot;</span><span style="color:#a3be8c;">                 Access any register (+ being system clipboard); </span><span>&quot;+</span><span style="color:#bf616a;">p </span><span>and &quot;</span><span style="color:#a3be8c;">+y being paste and copy respectively</span><span style="background-color:#bf616a;color:#2b303b;">
+</span><span style="color:#bf616a;">viw </span><span>| </span><span style="color:#bf616a;">diw </span><span>| </span><span style="color:#bf616a;">yiw   Visual</span><span>/</span><span style="color:#bf616a;">Delete</span><span>/</span><span style="color:#bf616a;">Yank inside </span><span>(</span><span style="color:#bf616a;">a</span><span>) </span><span style="color:#bf616a;">word
+</span><span style="color:#bf616a;">v</span><span>|</span><span style="color:#bf616a;">V</span><span>|&lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">v</span><span>&gt;         </span><span style="color:#bf616a;">Visual </span><span>/ </span><span style="color:#bf616a;">LineVisual </span><span>/ </span><span style="color:#bf616a;">VisualBlock mode
+</span><span>*|#               </span><span style="color:#bf616a;">Search </span><span style="color:#96b5b4;">next</span><span>/</span><span style="color:#bf616a;">prev occurrence of currently focused word
+</span><span>&lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">o</span><span>&gt;|&lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">S</span><span>-</span><span style="color:#bf616a;">i</span><span>&gt;     </span><span style="color:#bf616a;">Next</span><span>/</span><span style="color:#bf616a;">Prev location of jump</span><span>, i</span><span style="color:#bf616a;">n find </span><span>(/)
+</span><span>&lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">d</span><span>&gt;|&lt;</span><span style="color:#bf616a;">C</span><span>-</span><span style="color:#bf616a;">u</span><span>&gt;       </span><span style="color:#bf616a;">Next</span><span>/</span><span style="color:#bf616a;">Prev </span><span style="color:#b48ead;">function </span><span>(not </span><span style="color:#bf616a;">that important</span><span>)
+</span></code></pre>
+<h2 id="battery-saving">Battery Saving</h2>
+<h3 id="install-auto-cpufreq">Install auto-cpufreq</h3>
+<blockquote>
+CPU scaling algorithm built-in are not very efficient, auto-cpufreq is ranked to be the best frequency (GHz) scaler, downscales the CPU quickly depending on the current usage of the CPU. It usually results in approx 25-30% more battery life.
+</blockquote>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> clone https://github.com/AdnanHodzic/auto-cpufreq.git
+</span><span style="color:#96b5b4;">cd</span><span> auto-cpufreq &amp;&amp; </span><span style="color:#bf616a;">sudo</span><span> ./auto-cpufreq-installer
+</span></code></pre>
+<p>And follow on-screen instructions.</p>
+<p>Optionally you can restrict your CPU to go power-save and turn off turbo by writing the following at <code>/etc/auto-cpufreq.conf</code>:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[charger]
+</span><span>governor = performance
+</span><span>turbo = auto
+</span><span>
+</span><span>[battery]
+</span><span>governor = powersave
+</span><span>turbo = off
+</span></code></pre>
+<p>&amp; restarting the service: <code>sudo sv restart auto-cpufreq</code> after editing the file to make the changes take effect.</p>
+<p><em>Note: On intel CPU, scaling is governed by a kernel option, in order for auto-cpufreq to work properly, you may need to set the kernel flag listed below in <a href="https://animeshz.github.io/site/notes/linux-setup/#kernel-flags">Kernel flags</a> section.</em></p>
+<h3 id="enable-hardware-acceleration-browser-video-playback">Enable Hardware Acceleration (Browser / Video Playback)</h3>
+<blockquote>
+Hardware acceleration reduces significant load from the CPU, sometimes making battery life upto more than 100%, while using media.
+</blockquote>
+<p>CLI flags (e.g. <code>~/.config/brave-flags.conf</code>) should match approximately these:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>--force-dark-mode
+</span><span>--enable-features=VaapiVideoEncoder,VaapiVideoDecoder,CanvasOopRasterization,TouchpadOverscrollHistoryNavigation,WebUIDarkMode
+</span><span>--enable-zero-copy
+</span><span>--use-gl=desktop    # =egl on wayland
+</span><span>--ignore-gpu-blocklist
+</span><span>--enable-oop-rasterization
+</span><span>--enable-raw-draw
+</span><span>--enable-gpu-compositing
+</span><span>--enable-gpu-rasterization
+</span><span>--enable-native-gpu-memory-buffers
+</span><span>--use-vulkan
+</span><span>--disable-features=UseChromeOSDirectVideoDecoder
+</span><span>--disable-sync-preferences
+</span><span>--force-device-scale-factor=1.5
+</span><span>--password-store=basic    # disables kwallet (optional)
+</span></code></pre>
+<p>Also, <em>optionally</em> enable these two flags by navigating into these addresses:<br>
+chrome://flags/#enable-raw-draw<br>
+chrome://flags/#enable-vp9-kSVC-decode-acceleration</p>
+<p>Now everything should be green in chrome://gpu except for compositor rendering.</p>
+<p>If not, possibly graphic drivers are missing, install appropriately for your GPU <em>(may require a reboot to take effect)</em>:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Intel
+</span><span style="color:#bf616a;">sudo</span><span> xbps-install mesa-intel-dri mesa-vaapi intel-video-accel
+</span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">[ -f /usr/lib64/dri/iHD_drv_video.so ] &amp;&amp; export LIBVA_DRIVER_NAME=iHD</span><span>&#39; &gt;&gt; </span><span style="color:#bf616a;">~</span><span>/.bashrc
+</span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">if [ -f /usr/lib64/dri/iHD_drv_video.so ]; set -x LIBVA_DRIVER_NAME iHD; end</span><span>&#39; &gt;&gt; </span><span style="color:#bf616a;">~</span><span>/.config/fish/config.fish
+</span><span>
+</span><span style="color:#65737e;"># AMD
+</span><span style="color:#bf616a;">sudo</span><span> xbps-install mesa-ati-dri
+</span></code></pre>
+<p>Yet still sometimes video decoding doesn't work, to check either go to</p>
+<ul>
+<li>Media section in chrome's inspect panel (F12/Right-Click)</li>
+<li>OR navigate to chrome://media-internals</li>
+</ul>
+<p>while playing a video and see if error is empty, <code>Hardware decoder: true</code> and <code>Decoding name: VDAVideoDecoder</code>.</p>
+<div class="flex flex-row child:self-start">
+<img src="battery-saving-video-decoding.jpg" width="55%"></img>
+<img src="battery-saving-video-decoding-true.jpg" width="45%"></img>
+</div>
+<p>If not, first try using <a href="https://chrome.google.com/webstore/detail/enhanced-h264ify/omkfmpieigblcllmkgbflkikinpkodlk">enhanced-264ify</a> extension with following blocks:</p>
+<p><img src="https://animeshz.github.io/site/notes/linux-setup/./battery-saving-enhanced-264ify.jpg" alt="enhanced-264ify extension" /></p>
+<p>That should make low-resolution videos (&lt;720p) forcefully use h264 which can be hardware-decoded.</p>
+<p>If still not showing hardware decoding, you may need to build <code>intel-media-driver</code> with nonfree kernel-option (Or check if nonfree repository on your distro redistribute this pkg) as pointed out by <a href="https://github.com/saiarcot895/chromium-ubuntu-build/issues/98#issuecomment-757710499">this comment</a>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./xbps-src -o</span><span> nonfree pkg intel-media-driver
+</span></code></pre>
+<h3 id="tune-your-usb-peripherals">Tune your USB peripherals</h3>
+<blockquote>
+PowerTop is majorly a power resource monitor, yet it provides a tuning option which can significantly reduce your power consumption, may result in upto 5-10% more battery life.
+</blockquote>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> xbps-install powertop
+</span><span style="color:#bf616a;">sudo</span><span> powertop</span><span style="color:#bf616a;"> --autotune   </span><span style="color:#65737e;"># Do everytime laptop boots, or make a startup script
+</span></code></pre>
+<h2 id="kernel-flags">Kernel flags</h2>
+<p>Set the following parameters (in <code>/etc/default/grub</code>) to ensure:</p>
+<ul>
+<li>Kernel throws good amount of information to debug if sth went wrong.</li>
+<li>Sleep states work perfectly.</li>
+<li>Wireless &amp; Ethernet device names are traditional (wlan0/eth0) rather than some dynamic names (e.g. wlp3s0).</li>
+<li>Panel self refresh is on (Intel).</li>
+<li>Intel's pstate is turned off, so auto-cpufreq can take over.</li>
+<li>NVME acpi is required on very new SSD to work, but it compromises battery on other laptops, should be turned off if possible by setting noacpi=1.</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>GRUB_CMDLINE_LINUX_DEFAULT=&quot;loglevel=4 acpi_osi=&#39;Windows 2020&#39; net.ifnames=0 i915.enable_psr=1 intel_pstate=disable nvme.noacpi=1&quot;
+</span></code></pre>
+<p>After every edit, you must run <code>sudo update-grub</code> in order for the changes to take effect in next boot.</p>
+<h2 id="cassowary-100-windows-app-compatibility">Cassowary (100% Windows App compatibility)</h2>
+<p>Unlike <a href="https://www.winehq.org">Wine</a>, which often breaks itself when you need something like two applications co-working together or when you need to use applications like MS Word or any Heavy video-editor which extensively uses Win32 and Microsoft APIs, The <a href="https://github.com/casualsnek/cassowary">Cassowary</a> will fully support running all of them with native experience.</p>
+<p>Under the hood, it'll use a Windows VM which can autosuspend itself when not under use to lower the power consumption while giving back 100% application compatibility without any hard to setup path. You can make windows installation as custom as you like, you just need to turn on RDP and install cassowary guest tools for forwarding the application to your linux host and make application shortcuts for directly opening them.</p>
+<p>I'd be using <a href="https://github.com/quickemu-project/quickemu">quickemu</a> for quickly setting up the VM without hassle... Prebuilt void-pkg is <a href="https://github.com/Animeshz/void-xpackages">here</a>. Use gpu passthrough helper for GPU forwarding (optional).</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> xbps-install quickemu spice-vdagent
+</span><span>
+</span><span style="color:#65737e;"># Find for your distro here: https://github.com/pavolelsig
+</span><span style="color:#bf616a;">git</span><span> clone https://github.com/oSoWoSo/passthrough_helper_void &amp;&amp; </span><span style="color:#96b5b4;">cd</span><span> passthrough_helper_void
+</span><span style="color:#bf616a;">chmod</span><span> +x *.sh
+</span><span style="color:#bf616a;">sudo</span><span> ./gpu_passthrough.sh
+</span><span>
+</span><span style="color:#bf616a;">quickget</span><span> windows 10
+</span><span style="color:#96b5b4;">echo </span><span>&#39;</span><span style="color:#a3be8c;">cpu_cores=&quot;4&quot;</span><span>&#39; &gt;&gt; windows-10.conf  </span><span style="color:#65737e;"># optional
+</span><span>echo &#39;</span><span style="color:#a3be8c;">port_forwards=(&quot;7220:7220&quot;)</span><span>&#39; &gt;&gt; windows-10.conf
+</span><span style="color:#bf616a;">quickemu --vm</span><span> windows-10.conf</span><span style="color:#bf616a;"> --display</span><span> spice
+</span><span>
+</span><span style="color:#65737e;"># Download &amp; Install for copy paste (in Windows VM)
+</span><span style="color:#65737e;"># https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe
+</span><span>
+</span><span style="color:#65737e;"># Enable RDP &amp; Change RDP Port to 7220 (in Windows VM)
+</span><span style="color:#65737e;"># Win+I -&gt; System -&gt; Remote Desktop
+</span><span>
+</span><span style="color:#bf616a;">sudo</span><span> xbps-install freerdp libvirt-python3
+</span><span style="color:#bf616a;">pip</span><span> install PyQt5
+</span><span>
+</span><span style="color:#bf616a;">wget</span><span> https://github.com/casualsnek/cassowary/releases/download/0.6/cassowary-0.6-py3-none-any.whl
+</span><span style="color:#bf616a;">pip</span><span> install cassowary*
+</span><span>
+</span><span style="color:#bf616a;">python3 -m</span><span> cassowary</span><span style="color:#bf616a;"> -a
+</span><span style="color:#65737e;"># Set VM IP as `127.0.0.1`, rest from get from rdp settings and `hostname` command in cmd/powershell.
+</span><span style="color:#65737e;"># Save Settings &amp; Reconnect
+</span><span style="color:#65737e;"># Goto: Guest app, and create shortcuts
+</span></code></pre>
+<h2 id="extras">Extras</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/linux/comments/rmuh0o/finally_macoswindows_like_touchpad_zoom_gesture">Chromium - MacOS like pinch zoom (not scaling like Ctrl+ Ctrl-)</a></li>
+</ul>
+
+
+            </div>
+            <div x-data="{ open: true, full: true, share_icons: false }"
+                 class="flex-1 min-w-0 sticky top-0 self-start h-screen hidden md:flex flex-col">
+                <!-- Header -->
+                
+                    <nav class="flex flex-row items-center justify-end child:inline-block group">
+                        <!-- NavBar -->
+                        <ul x-on:mouseover="full = true"
+                            x-init="full = is_top()"
+                            x-on:mouseout="full = is_top()"
+                            x-on:scroll.document="full = is_top()"
+                            x-on:resize.document="full = is_top()"
+                            x-bind:style="{ 'max-width': open ? (full ? width($el) : parent_width($el)) : 0 }"
+                            class="list-none bg-white rounded py-1 ml-[-100vw] z-10 overflow-hidden text-sm child:text-right child:inline-block child:mx-2 hover:child:text-pink-400 dark:hover:child:text-pink-200 transition-[max-width] whitespace-nowrap duration-300 ease-in-out">
+                            
+                            <li>
+                                <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;">Home</a>
+                            </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;blog&#x2F;">Blogs</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;awesome&#x2F;">Awesome</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;notes&#x2F;">Notes</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;point_of_interest&#x2F;">Point of Interest</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;setup&#x2F;">Setup</a>
+                                </li>
+                            
+                                
+                                <li>
+                                    <a href="https:&#x2F;&#x2F;animeshz.github.io&#x2F;site&#x2F;contact&#x2F;">Contact</a>
+                                </li>
+                            
+                        </ul>
+                        <!-- Hamburger -->
+                        <button x-on:click="open = !open" id="menu-toggle" class="ml-3">
+                            <i class="fas fa-bars fa-lg text-pink-600"></i>
+                        </button>
+                    </nav>
+                    <!-- Page Actions -->
+                    <div id="action-nav"
+                         class="transition-[max-height] duration-300 ease-in-out overflow-hidden"
+                         x-bind:style="{ 'max-height': open ? height($el) : '0px' }">
+                        <div class="flex flex-row flex-wrap space-x-5 justify-end mt-7 hover:child:text-pink-300">
+                            <!-- Action Text -->
+                            <i x-ref="action_text" class="text-sm"></i>  
+                            <!-- Action Icons -->
+                            
+                                
+                                
+                            
+                            <a href="#"
+                               aria-label="Top of Page"
+                               x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                               x-on:mouseover="$refs.action_text.innerText = 'Back to top'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Switch Theme"
+                               x-init="theme_init($el)"
+                               x-on:click.prevent="theme_toggle"
+                               x-on:mouseover="$refs.action_text.innerText = 'Toggle dark theme'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </a>
+                            <a href="#"
+                               aria-label="Share"
+                               x-on:click.prevent="share_icons = !share_icons"
+                               x-on:mouseover="$refs.action_text.innerText = 'Share post'"
+                               x-on:mouseout="$refs.action_text.innerText = ''">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Share Icons -->
+                    <ul id="share-icons"
+                        class="transition-[max-height] duration-300 ease-in-out mt-1 mb-4 overflow-hidden text-right"
+                        style="max-height: 0px"
+                        x-effect="if (!open) share_icons = false"
+                        x-bind:style="{ 'max-height': share_icons ? height($el) : '0px' }">
+                        <li>
+                            <a class="icon" href="" aria-label="Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Linkedin">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pinterest">
+                                <i class="fab fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- href="mailto:?subject=&body=Check out this article: " -->
+                            <a class="icon" aria-label="Email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Pocket">
+                                <i class="fab fa-get-pocket" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="reddit">
+                                <i class="fab fa-reddit" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Tumblr">
+                                <i class="fab fa-tumblr" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon" href="" aria-label="Hacker News">
+                                <i class="fab fa-hacker-news" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                
+                <!-- Right Sidebar -->
+                <div class="overflow-y-auto break-words flex-1">
+                    
+
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="mb-14"></div>
+        
+        <script>
+            function theme_init(e) {
+                if (localStorage.theme === 'dark' ||
+                    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    e.firstElementChild.classList.remove('fa-moon');
+                    e.firstElementChild.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                }
+            }
+
+            function theme_toggle(evt) {
+                if (document.documentElement.classList.toggle('dark')) {
+                    localStorage.theme = 'dark';
+                    evt.target.classList.remove('fa-moon');
+                    evt.target.classList.add('fa-sun');
+
+                    DarkReader.enable({
+                        brDarkReaderightness: 100,
+                        contrast: 90,
+                        sepia: 10
+                    });
+                } else {
+                    localStorage.theme = 'light';
+                    evt.target.classList.remove('fa-sun');
+                    evt.target.classList.add('fa-moon');
+
+                    DarkReader.disable();
+                }
+            }
+
+            function is_top() {
+                return document.documentElement.scrollTop == 0;
+            }
+            function height(e) {
+                return e.scrollHeight + 'px';
+            }
+            function width(e) {
+                return e.scrollWidth + 'px';
+            }
+            function parent_width(e) {
+                return e.parentElement.scrollWidth + 'px';
+            }
+        </script>
+    </body>
+</html>
