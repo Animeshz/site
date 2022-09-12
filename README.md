@@ -9,24 +9,15 @@ You can find more about me or gain my knowledge in a concise manner here!
 
 #### Development/Deployment
 
-This website is powered by [Zola](https://getzola.org), a static-site generator (SSG)
-written in rust.
+This website is powered by [Vitepress](https://vitepress.vuejs.org),
+a static-site generator (SSG) with Vue3.
 
-I use [TailwindCSS](https://tailwindcss.com) for styling my webpages, it requires
-a seperate build agent because zola doesn't support plugin / post-build-pipeline atm.
-
-In order to start the live server or build the website (output goes to `.build`):
+In order to start the live server or build the website (output goes to `dist`):
 
 ```bash
-yarn
-
-yarn run svgbob
-
 ## Live server
-yarn run watch  # Terminal 1
-zola serve      # Terminal 2
+yarn run content:dev
 
 ## Build
-yarn run build
-zola build
+yarn run content:build
 ```

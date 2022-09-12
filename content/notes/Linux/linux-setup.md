@@ -1,11 +1,13 @@
-+++
-title = "Linux Setup (Post Install)"
-slug = "linux-setup"
-date = "2022-08-08T18:08:52+05:30"
-updated = "2022-08-08T18:08:52+05:30"
-+++
+---
+title: "Linux Setup (Post Install)"
+slug: "linux-setup"
+---
 
-*Note: A lot of commands listed here uses xbps (VoidLinux's package manager) for installation purposes, package names may vary distro to distro.*
+<h1>{{ $frontmatter.title }}</h1>
+
+::: info Note
+*A lot of commands listed here uses xbps (VoidLinux's package manager) for installation purposes, package names may vary distro to distro.*
+:::
 
 ## Good to know Keybinds
 
@@ -123,14 +125,14 @@ Yet still sometimes video decoding doesn't work, to check either go to
 
 while playing a video and see if error is empty, `Hardware decoder: true` and `Decoding name: VDAVideoDecoder`.
 
-<div class="flex flex-row child:self-start">
-<img src="battery-saving-video-decoding.jpg" width="55%"></img>
-<img src="battery-saving-video-decoding-true.jpg" width="45%"></img>
+<div style="display: flex; flex-direction: row;">
+  <img src="./linux-setup/battery-saving-video-decoding.jpg" width="55%" />
+  <img src="./linux-setup/battery-saving-video-decoding-true.jpg" width="45%" />
 </div>
 
 If not, first try using [enhanced-264ify](https://chrome.google.com/webstore/detail/enhanced-h264ify/omkfmpieigblcllmkgbflkikinpkodlk) extension with following blocks:
 
-![enhanced-264ify extension](./battery-saving-enhanced-264ify.jpg)
+![enhanced-264ify extension](./linux-setup/battery-saving-enhanced-264ify.jpg)
 
 That should make low-resolution videos (<720p) forcefully use h264 which can be hardware-decoded.
 
@@ -208,4 +210,3 @@ python3 -m cassowary -a
 ## Extras
 
 * [Chromium - MacOS like pinch zoom (not scaling like Ctrl+ Ctrl-)](https://www.reddit.com/r/linux/comments/rmuh0o/finally_macoswindows_like_touchpad_zoom_gesture)
-

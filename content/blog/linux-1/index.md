@@ -1,9 +1,9 @@
-+++
-title = "Linux (1/2) - A near surface exploration"
-slug = "linux-1"
-date = "2022-08-02T13:10:17+05:30"
-updated = "2022-08-02T13:10:17+05:30"
-+++
+---
+title: "Linux (1/2) - A near surface exploration"
+slug: "linux-1"
+---
+
+<h1>{{ $frontmatter.title }}</h1>
 
 <blockquote>
 "Intelligence is the ability to avoid doing work, yet getting the work done."
@@ -13,7 +13,6 @@ updated = "2022-08-02T13:10:17+05:30"
 Linux is considered to be the most important software project in the history. It is an evergreen example that shows how collaborative development can work, which can be applied to other FOSS projects to the current date.
 
 Traditionally, Linux was known as an OS that is reserved for tech-savvy people. The CLI was intimidating and far too complicated for end-users. But now, everything's changed, various communities have contributed to Linux and it now has a GUI (Graphical User Interface, mouse-based) that can be used just like any Windows or MacOS you're familiar with.
-
 
 ## What is (the point of) Linux & why you should consider it?
 
@@ -106,7 +105,7 @@ Console is a very generic term, and there are actually 3 indivisual-components t
 
 Linux (or unix in general e.g. MacOS) starts laying out filesystem from `/` called root (unlike C: D: multiple drives in windows). Every other partition can be mounted as *(emulated to be)* a directory of this root.
 
-<img src="https://linuxconfig.org/wp-content/uploads/2013/03/Directory-Filesystem-Hierarchy-Standard.jpg" width="500px"></img>
+<img src="https://linuxconfig.org/wp-content/uploads/2013/03/Directory-Filesystem-Hierarchy-Standard.jpg" width="500px" />
 
 *Note: There are 4 special folders: /sys /proc /dev /tmp which donot actually exist in disk, which may interest you (as I said earlier everything is a file, not just things residing in the disk)*
 
@@ -116,7 +115,7 @@ If you ever gone through programming, you may have already heard about the [DRY]
 
 Same thing applies here, if you already setup your linux once, you shouldn't need to set it up all over again if something went wrong.
 
-Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](@/blog/linux-2.md) of article), places all its configuration as flat text files in the `/home/$USER/.config` folder for particular user or `/etc` for universal.
+Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](/blog/linux-2/) of article), places all its configuration as flat text files in the `/home/$USER/.config` folder for particular user or `/etc` for universal.
 
 Those files are referred to as dotfiles, they're a few KiB in size and once you have it backed up, you can throw it to any fresh install with applications installed, and your look, feel & customization will be fully replicated in no-time!
 
@@ -130,4 +129,3 @@ Those files are referred to as dotfiles, they're a few KiB in size and once you 
 * [ManPage](https://en.wikipedia.org/wiki/Man_page): Best resource to understand any command, type `man <any-command>` to view.<br>
   [TLDR](https://dbrgn.github.io/tealdeer): A less intimidating version of man-pages, only lists what's used the most.
 * [Linux-kernel-labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html): Understand how linux works (bottom up approach).
-

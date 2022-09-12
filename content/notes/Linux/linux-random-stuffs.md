@@ -1,9 +1,9 @@
-+++
-title = "Random Stuffs"
-slug = "linux-random"
-date = "2022-08-10T14:14:08+05:30"
-updated = "2022-08-10T14:14:08+05:30"
-+++
+---
+title: "Random Stuffs"
+slug: "linux-random"
+---
+
+<h1>{{ $frontmatter.title }}</h1>
 
 ## Process Monitoring (/usr/bin/time)
 
@@ -17,7 +17,7 @@ We're **not talking about that time** here, we're talking about literally `/usr/
 in order to skip any time builtin present in the shell and run the possibly hidden time command in the system.
 
 Its a very useful resource monitor. In the man page, its general format is described as:
-```
+```ruby
 %Uuser %Ssystem %Eelapsed %PCPU (%Xtext+%Ddata %Mmax)k
 %Iinputs+%Ooutputs (%Fmajor+%Rminor)pagefaults %Wswaps
 ```
@@ -43,3 +43,15 @@ bluetoothctl
 ```
 
 Note that these commands donot work from outside (in non-interactive mode).
+
+
+## Running & Chrooting into cross-architecutre binaries
+
+Install `qemu-user-static` and run [this script](https://github.com/Animeshz/scripts/tree/main/main/qemu-binfmt) as superuser:
+
+```bash
+sudo qemu-binfmt --register
+```
+
+*Note: This script needs to be ran again after every reboot, so making it run at startup is recommended.*
+

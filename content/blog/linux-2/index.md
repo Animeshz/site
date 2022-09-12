@@ -1,10 +1,9 @@
-+++
-title = "Linux (2/2) - A deep dive"
-slug = "linux-2"
-draft = true
-date = "2022-07-28T18:30:39+05:30"
-updated = "2022-07-28T18:30:39+05:30"
-+++
+---
+title: "Linux (2/2) - A deep dive"
+slug: "linux-2"
+---
+
+<h1>{{ $frontmatter.title }}</h1>
 
 <blockquote>
 "Theory and practice sometimes clash. And when that happens, theory loses.<br>

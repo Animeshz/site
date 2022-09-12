@@ -1,9 +1,9 @@
-+++
-title = "Nix - Building a Robust Dev Environment"
-slug = "nix"
-date = "2022-08-02T13:10:17+05:30"
-updated = "2022-08-07T15:03:47+05:30"
-+++
+---
+title: "Nix - Building a Robust Dev Environment"
+slug: "nix"
+---
+
+<h1>{{ $frontmatter.title }}</h1>
 
 ## Nix - An introduction
 

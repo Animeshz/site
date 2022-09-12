@@ -1,43 +1,33 @@
 name: Deploy on GH Pages
 
 on:
- push:
-  branches:
-   - main
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
-
+  deploy:
     name: Publish site
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout main
-        uses: actions/checkout@v3.0.0
+        uses: actions/checkout@v3
 
-      - name: Setup Yarn & Dependencies
-        uses: borales/actions-yarn@v3.0.0
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
         with:
-          cmd: install
+          node-version: 16
+          cache: yarn
 
-      - name: Build TailwindCSS
-        uses: borales/actions-yarn@v3.0.0
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn run content:build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          cmd: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
 
-      - name: Setup Rust & Install SvgBob
-        uses: actions-rs/install@v0.1
-        with:
-          crate: svgbob_cli
-          version: latest
-
-      - name: Build svg (svgbob)
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: svgbob
-
-      - name: Build and deploy
-        uses: shalzz/zola-deploy-action@master
-        env:
-          OUT_DIR: .build
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
