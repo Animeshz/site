@@ -3,17 +3,55 @@ title: "Linux (1/2) - A near surface exploration"
 slug: "linux-1"
 ---
 
-<h1>{{ $frontmatter.title }}</h1>
+# {{ $frontmatter.title }}
 
-<blockquote>
+<Blockquote>
 "Intelligence is the ability to avoid doing work, yet getting the work done."
 <div class="text-right">- Linus Torvalds</div>
+</Blockquote>
+
+## A brief history
+
+**Linux** was started just as a hobby project by a guy named Linus Torvalds, it was first publically announced in August 25, 1991 with the following email in the Minix group.
+
+<pre style="font-size: 14px;">
+<blockquote>
+  From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)
+  Newsgroups: comp.os.minix
+  Subject: What would you like to see most in minix?
+  Summary: small poll for my new operating system
+  Message-ID:
+  Date: Sun, 25 Aug 91 20:57:08 GMT
+  Organization: University of Helsinki
+
+  Hello everybody out there using minix -
+
+  I'm doing a (free) operating system (just a hobby, won't be big and
+  professional like gnu) for 386(486) AT clones.  This has been brewing
+  since april, and is starting to get ready.  I'd like any feedback on
+  things people like/dislike in minix, as my OS resembles it somewhat
+  (same physical layout of the file-system (due to practical reasons)
+  among other things).
+
+  I've currently ported bash(1.08) and gcc(1.40), and things seem to work.
+  This implies that I'll get something practical within a few months, and
+  I'd like to know what features most people would want.  Any suggestions
+  are welcome, but I won't promise I'll implement them :-)
+
+                Linus (torvalds@kruuna.helsinki.fi)
+
+  PS.  Yes - it's free of any minix code, and it has a multi-threaded fs.
+  It is NOT protable (uses 386 task switching etc), and it probably never
+  will support anything other than AT-harddisks, as that's all I have :-(.
 </blockquote>
+</pre>
 
-Linux is considered to be the most important software project in the history. It is an evergreen example that shows how collaborative development can work, which can be applied to other FOSS projects to the current date.
+Who knew it'd be powering 96.3% of the top 1M websites today, being the only operating-system targeting both the embedded devices such as car's music & video system and the world's most powerful supercomputers, assisting to complete over 65 SpaceX missions, with reliance of over 60% in auto-shipments industry, become the preferred platform for IoT, the greatest Linux fork Android powering over 85% of the daily internet users, and over 90% of special effects in hollywood movies (including StarWars, LordOfRings, and HarryPotter) that are made thanks to Linux.
 
-Traditionally, Linux was known as an OS that is reserved for tech-savvy people. The CLI was intimidating and far too complicated for end-users. But now, everything's changed, various communities have contributed to Linux and it now has a GUI (Graphical User Interface, mouse-based) that can be used just like any Windows or MacOS you're familiar with.
+Linux (kernel) today is considered to be the most important software project in the history. It recieves and merges over 8.5 impactful changes on average *every single hour* in a day.
 
+
+<!--
 ## What is (the point of) Linux & why you should consider it?
 
 Linux is a minimal & clean design which gives you building blocks that are just sufficient enough for doing everything.
@@ -62,7 +100,7 @@ Generally speaking, there are uncountable number of [linux-distros available](ht
 
 ## Installation
 
-![Installation Targets](linux-installation-targets.svg)
+![Installation Targets](/blog/linux-1/linux-installation-targets.svg)
 
 Because this article is mainly focused on getting-started, I'm mainly gonna talk about linux for desktops.
 
@@ -78,7 +116,7 @@ At one of the last step in the installation, you'll be prompted to allocate disk
 * 1 swap partition *[swap]* mounted as `swap` (>=RAM)
 * 1 root partition *[ext4]* mounted on `/` (rest of the size)
 
-![Gparted](gparted.jpg)
+![Gparted](/blog/linux-1/gparted.jpg)
 
 *Note: Multiple distro install should use seperate swap space, as they are used in hibernation and if reused by another may cause data-loss.*
 
@@ -95,7 +133,7 @@ Console is a very generic term, and there are actually 3 indivisual-components t
 * **Prompt:** The part of visual prompt on the shell just before command.<br>e.g. [starship](https://starship.rs), [powerlevel10k](https://github.com/romkatv/powerlevel10k), ohmyzsh.
 * **Terminal:** The graphical interface between the shell and the user, controllling the visual stuffs (fonts, padding, etc).<br>e.g. [kitty](https://sw.kovidgoyal.net/kitty), alacritty, konsole, gnome-terminal, [xfce4-terminal](https://gitlab.xfce.org/apps/xfce4-terminal).
 
-![Console](console.jpg)
+![Console](/blog/linux-1/console.jpg)
 
 *My personal favourites: fish as shell, starship as prompt & kitty as my terminal application.*
 
@@ -115,7 +153,7 @@ If you ever gone through programming, you may have already heard about the [DRY]
 
 Same thing applies here, if you already setup your linux once, you shouldn't need to set it up all over again if something went wrong.
 
-Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](/blog/linux-2/) of article), places all its configuration as flat text files in the `/home/$USER/.config` folder for particular user or `/etc` for universal.
+Every application in linux which follows something called as Unix Philosophy (discussed in [part 2](/blog/linux-2) of article), places all its configuration as flat text files in the `/home/$USER/.config` folder for particular user or `/etc` for universal.
 
 Those files are referred to as dotfiles, they're a few KiB in size and once you have it backed up, you can throw it to any fresh install with applications installed, and your look, feel & customization will be fully replicated in no-time!
 
@@ -129,3 +167,4 @@ Those files are referred to as dotfiles, they're a few KiB in size and once you 
 * [ManPage](https://en.wikipedia.org/wiki/Man_page): Best resource to understand any command, type `man <any-command>` to view.<br>
   [TLDR](https://dbrgn.github.io/tealdeer): A less intimidating version of man-pages, only lists what's used the most.
 * [Linux-kernel-labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html): Understand how linux works (bottom up approach).
+-->

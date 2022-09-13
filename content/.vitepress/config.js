@@ -79,11 +79,10 @@ function sidebar_root() {
 function sidebar_blog() {
   return [
     {
-      text: 'topic',
-      collapsible: true,
+      text: 'Linux Related',
       items: [
-        { text: 'Linux (1/2) - A near surface exploration', link: '/blog/linux-1/' },
-        { text: 'Linux (2/2) - A deep dive', link: '/blog/linux-2/' },
+        { text: 'Linux (1/2) - A near surface exploration', link: '/blog/linux-1' },
+        { text: 'Linux (2/2) - A deep dive', link: '/blog/linux-2' },
       ],
     },
   ];
@@ -103,10 +102,10 @@ function sidebar_notes() {
     {
       text: 'Linux',
       items: [
-        { text: 'Linux Setup', link: '/notes/Linux/linux-setup/' },
-        { text: 'Random Stuffs', link: '/notes/Linux/linux-random-stuffs/' },
-        { text: 'Troubleshooting', link: '/notes/Linux/linux-troubleshooting/' },
-        { text: 'Nix', link: '/notes/Linux/nix/' },
+        { text: 'Linux Setup', link: '/notes/Linux/linux-setup' },
+        { text: 'Random Stuffs', link: '/notes/Linux/linux-random-stuffs' },
+        { text: 'Troubleshooting', link: '/notes/Linux/linux-troubleshooting' },
+        { text: 'Nix', link: '/notes/Linux/nix' },
       ]
     },
   ];
