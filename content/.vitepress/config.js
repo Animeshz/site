@@ -13,7 +13,7 @@ const config = {
   cleanUrls: 'with-subfolders',
 
   appearance: true,
-  ignoreDeadLinks: true,  // TODO: make error a warning instead of turning checks off
+  ignoreDeadLinks: true,
 
   buildEnd: (cfg) => {
     return fs.promises.rmdir(cfg.srcDir + '/node_modules');
@@ -92,8 +92,11 @@ function sidebar_blog() {
 function sidebar_awesome() {
   return [
     {
-      text: 'Home',
-      items: [],
+      text: 'Awesome',
+      items: [
+        { text: 'Awesome Blogs', link: '/awesome/blogs' },
+        { text: 'Awesome Web', link: '/awesome/web' },
+      ],
     },
   ];
 }
