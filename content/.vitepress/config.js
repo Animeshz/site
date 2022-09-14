@@ -95,6 +95,8 @@ function sidebar_awesome() {
       text: 'Awesome',
       items: [
         { text: 'Awesome Blogs', link: '/awesome/blogs' },
+        { text: 'Awesome Learning Resources', link: '/awesome/resources' },
+        { text: 'Awesome Life Lessions', link: '/awesome/life-lessions' },
         { text: 'Awesome Web', link: '/awesome/web' },
       ],
     },
@@ -103,6 +105,12 @@ function sidebar_awesome() {
 
 function sidebar_notes() {
   return [
+    {
+      text: 'Notes',
+      items: [
+        { text: 'Troubleshooting Notes', link: '/notes/troubleshooting' },
+      ]
+    },
     {
       text: 'Linux',
       items: [
