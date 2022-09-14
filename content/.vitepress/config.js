@@ -37,6 +37,7 @@ const config = {
     ],
     editLink: { pattern: 'https://github.com/Animeshz/site/edit/main/content/:path' },
     nav: [
+      { text: 'Home', link: '/' },
       { text: 'Blog', link: '/blog/' },
       { text: 'Awesome', link: '/awesome/' },
       { text: 'Notes', link: '/notes/' },
@@ -102,10 +103,10 @@ function sidebar_notes() {
     {
       text: 'Linux',
       items: [
-        { text: 'Linux Setup', link: '/notes/Linux/linux-setup' },
-        { text: 'Random Stuffs', link: '/notes/Linux/linux-random-stuffs' },
-        { text: 'Troubleshooting', link: '/notes/Linux/linux-troubleshooting' },
-        { text: 'Nix', link: '/notes/Linux/nix' },
+        { text: 'Linux Setup', link: '/notes/linux/linux-setup' },
+        { text: 'Random Stuffs', link: '/notes/linux/linux-random-stuffs' },
+        { text: 'Troubleshooting', link: '/notes/linux/linux-troubleshooting' },
+        // { text: 'Nix', link: '/notes/Linux/nix' },
       ]
     },
   ];

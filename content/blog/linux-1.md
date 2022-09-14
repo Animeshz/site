@@ -5,16 +5,15 @@ slug: "linux-1"
 
 # {{ $frontmatter.title }}
 
-<Blockquote>
-"Intelligence is the ability to avoid doing work, yet getting the work done."
-<div class="text-right">- Linus Torvalds</div>
-</Blockquote>
+<Quote author="Linus Torvalds">Intelligence is the ability to avoid doing work, yet getting the work done.</Quote>
+
+This article enlists facts and useful information with my experience in using linux for years.
 
 ## A brief history
 
 **Linux** was started just as a hobby project by a guy named Linus Torvalds, it was first publically announced in August 25, 1991 with the following email in the Minix group.
 
-<pre style="font-size: 14px;">
+<pre style="font-size: 14px; overflow-x: auto;">
 <blockquote>
   From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)
   Newsgroups: comp.os.minix
@@ -46,12 +45,79 @@ slug: "linux-1"
 </blockquote>
 </pre>
 
-Who knew it'd be powering 96.3% of the top 1M websites today, being the only operating-system targeting both the embedded devices such as car's music & video system and the world's most powerful supercomputers, assisting to complete over 65 SpaceX missions, with reliance of over 60% in auto-shipments industry, become the preferred platform for IoT, the greatest Linux fork Android powering over 85% of the daily internet users, and over 90% of special effects in hollywood movies (including StarWars, LordOfRings, and HarryPotter) that are made thanks to Linux.
+Who knew it'd be powering 96.3% of the top 1M websites today, being the only operating-system targeting both the embedded devices such as car's music & video system and the world's most powerful supercomputers, assisting to complete over 65 SpaceX missions, with reliance of over 60% in auto-shipments industry, become the preferred platform for IoT & backbone of Android powering over 85% of the daily internet users, and helping in manifestation of over 90% of special effects used in hollywood movies (including StarWars, LordOfRings, and HarryPotter).
 
-Linux (kernel) today is considered to be the most important software project in the history. It recieves and merges over 8.5 impactful changes on average *every single hour* in a day.
+Linux (kernel) today is considered to be the *most important* software project in the history. It recieves and merges over 8.5 impactful changes on average every single hour in a day.
 
+
+## What is Linux?
+
+### TL;DR
+
+Linux is a [monolithic kernel](https://www.javatpoint.com/monolithic-structure-of-operating-system), which gives you building blocks that are just sufficient enough for doing everything.
+
+### TS;WantMore?
+
+One of the greatest speciality about Linux is that it is a monolithic kernel, which means it's *self-sufficient* to run on variety of devices from smart watches & cars TO desktop TO workstations & supercomputers out-of-the-box.
+
+Note the word 'kernel' used above, Linux is not an Operating System in itself, it knows how to do things but it doesn't care anyhow what it has to do. It provides a stable and standard API to interact with any particular type of physical object (we'll talk more on this later in the article). This creates enormous amount of possibilities to easily create various frontends for interacting with it (or indirectly the hardware).
+
+It basically goes like: *I'M HERE GUYS, YOU DON'T NEED TO WORRY ABOUT WHICH PARTICULAR DEVICE YOU'RE TARGETING BE IT AMD, INTEL, NVIDIA, LOGITECH, OR WESTERN DIGITAL JUST TELL ME WHAT YOU WANT TO DO, I'LL FIGURE OUT HOW TO DO THAT.*
+
+And yes, that means it doesn't even contain a display server in itself, as per say it doesn't know what to draw (yet definitely know how to draw), making it possible for developers & users to instruct what it has to draw (with display server of your choice) and where it has to draw (with window manager of your choice).
+
+For instance lookup [r/unixporn](https://www.reddit.com/r/unixporn), a subreddit where users actively post their screenshots of desktop look, that they customize themselves.
+
+::: tip
+A precious resource I could never forget about while talking about kernel: [Linux Kernel Labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html).
+:::
+
+## The Shell
+
+The primary way of interaction, inherited from [Unix](https://en.wikipedia.org/wiki/Unix) is a command-line interface.
+
+**A shell** (e.g. dash, bash, zsh, fish) is thus referred to a command-line waiting for you to give a signal so that it instructs the linux what it has to do next. Btw, all your autocompletion and color-highlighting comes from your shell only.
+
+There is three more terms you may have heard of that are terminal, prompt & the console. These three are sometimes used interchangeably, but they completely differ in their purpose.
+
+**Terminal** (e.g. kitty, alacritty, konsole, gnome-terminal, xfce4-terminal) is just a graphical window which controls how to display the things, managing the visual part of shell (or any other program really) like font, size of text, padding, line-height, etc. It really has nothing to do with linux, its here just to provide a better UI/UX to the user while interacting with the Linux and not get feeling like controlling a 8-bit computer in 1980s from [tty](https://itsfoss.com/what-is-tty-in-linux).
+
+**Prompt** is referred to `$ ` or equivalent usually seen in a terminal right before place where we write a command. Can be customized to provide useful status like battery levels, git branches, etc. e.g. [starship](https://starship.rs) & [p10k](https://github.com/romkatv/powerlevel10k) are two of most popular options available today which replaces your old-day prompt with something giving more useful informations.
+
+**Console** is used to collectively refer to all three: shell, prompt and terminal.
+
+## More in the core of Linux
+
+### The filesystem
+
+This is the ***most exciting thing*** I usually like to talk about in Linux, that is, everything in the universe is seen as a file to the Linux. Be it your physcial disk, your logical partitions, your usb peripheral including your mouse and keyboard, wifi-card or processor, ramdisk or folders, whatever you can ever imagine is a file.
+
+Its not always true that files that are seen are populated by or saved in the disk. Files under `/proc`, `/sys`, `/dev`, `/run` and `/tmp` don't actually exist in the disk. They contain virtual files, for instance latter two saves files in RAM.
+
+AND that simply means, you don't need to learn hundred different tools to do something new. Just use whatever you use to edit files and you're done!
 
 <!--
+And you can use the same tools you use to edit a file to change behavior in these physical objects. You don't need to learn or lookup anything new (although locations of these files initially).
+
+For example:
+
+```bash
+# Prints temperature of various parts of CPU and wifi-card
+$ cat <(paste /sys/class/hwmon/hwmon*/temp*_label) <(paste /sys/class/hwmon/hwmon*/temp*_input) | expand -t15
+Composite      Sensor 1       Sensor 2       Package id 0   Core 0         Core 1         Core 2         Core 3
+43850          43850          40850          43800          43000          40000          41000          38000          37000          33000
+
+# Prints everything printable from first partition of the disk
+$ sudo strings /dev/nvme0n1p1
+
+# Write 0 to the whole physical disk, WARNING: Don't do it, files being deleted are irrecoverable.
+# Both the commands are equivalent
+$ cat /dev/zero > /dev/nvme0n1
+$ sudo dd if=/dev/zero of=/dev/nvme0n1
+```
+
+And filesystem is not absolute, everything starts from root (`/`) from a certain partition defined in `/etc/fstab` and then it starts to emulate that other devices (like your usb pendrive) are contained within itself (e.g. in `/media/sandisk1`), in reality, obviously it isn't.
+
 ## What is (the point of) Linux & why you should consider it?
 
 Linux is a minimal & clean design which gives you building blocks that are just sufficient enough for doing everything.

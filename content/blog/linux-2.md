@@ -5,14 +5,8 @@ slug: "linux-2"
 
 <h1>{{ $frontmatter.title }}</h1>
 
-<Blockquote>
-"Theory and practice sometimes clash. And when that happens, theory loses.<br>
-Every single time."
-<div class="text-right">- Linus Torvalds</div>
-<br>
-"Linus Torvalds, the creator of Linux, is an expert of understatement in his leadership of Linux development community. When eager programmers would ask him, 'What part of Linux should I work on?' his answer would usually be, 'Let me know when you find out'."
-<div class="text-right">- Dan Woods</div>
-</Blockquote>
+<Quote author="Linus Torvalds">Theory and practice sometimes clash. And when that happens, theory loses.<br>Every single time.</Quote>
+<Quote author="Dan Woods">Linus Torvalds, the creator of Linux, is an expert of understatement in his leadership of Linux development community. When eager programmers would ask him, 'What part of Linux should I work on?' his answer would usually be, 'Let me know when you find out'.</Quote>
 
 <!-- Ref part 1 -->
 

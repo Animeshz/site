@@ -7,6 +7,7 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #aside-outline-before>
+      <PageActions />
       <!-- TODO: Add share button as present in zola -->
     </template>
     
