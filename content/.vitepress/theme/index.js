@@ -1,3 +1,5 @@
+import './footer-in-bottom.css'
+
 import DefaultTheme from 'vitepress/theme'
 import SiteLayout from './SiteLayout.vue'
 import Quote from './components/Quote.vue'
