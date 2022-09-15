@@ -94,12 +94,18 @@ function sidebar_blog() {
 function sidebar_awesome() {
   return [
     {
-      text: 'Awesome',
+      text: 'Truely Awesome',
       items: [
         { text: 'Awesome Blogs', link: '/awesome/blogs' },
-        { text: 'Awesome Learning Resources', link: '/awesome/resources' },
+        { text: 'Awesome Learning Resources', link: '/awesome/learning-resources' },
         { text: 'Awesome Life Lessions', link: '/awesome/life-lessions' },
+      ],
+    },
+    {
+      text: 'Awesome Stuffs',
+      items: [
         { text: 'Awesome Web', link: '/awesome/web' },
+        { text: 'Awesome Linux', link: 'awesome/linux' }
       ],
     },
   ];
