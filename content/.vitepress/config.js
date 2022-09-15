@@ -10,7 +10,9 @@ const config = {
   lang: 'en-US',
   base: '/site/',
   outDir: '../dist',
-  cleanUrls: 'with-subfolders',
+
+  // Temporarily disabled due to: https://github.com/vuejs/vitepress/issues/1345
+  // cleanUrls: 'with-subfolders',
 
   appearance: true,
   ignoreDeadLinks: true,
