@@ -84,6 +84,7 @@ function sidebar_blog() {
     {
       text: 'Linux Related',
       items: [
+        { text: 'Machine Learning - A TL;DR', link: '/blog/ml-tldr' },
         { text: 'Linux (1/2) - A near surface exploration', link: '/blog/linux-1' },
         { text: 'Linux (2/2) - A deep dive', link: '/blog/linux-2' },
       ],
@@ -117,6 +118,7 @@ function sidebar_notes() {
       text: 'Notes',
       items: [
         { text: 'Troubleshooting Notes', link: '/notes/troubleshooting' },
+        { text: 'CLI Tools', link: '/notes/cli-tools' },
       ]
     },
     {
