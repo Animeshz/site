@@ -17,3 +17,8 @@ slug: "linux"
 * [xtools](https://github.com/leahneukirchen/xtools) - Helpers for working with XBPS, yet there are alot of scripts for general usecases too.
 * [kalker](https://github.com/PaddiM8/kalker) - Do all sort of mathematical calculations in terminal, including differential calculus, and unit conversion.
 * [cloc](https://github.com/AlDanial/cloc) - Mainly as [git-cloc](https://stackoverflow.com/a/29012789/11377112) to Count Lines Of Code of a git repo.
+
+<!--
+TODO: Maybe helpful? May need to review a bit.
+https://github.com/2KAbhishek/Dotfiles
+-->

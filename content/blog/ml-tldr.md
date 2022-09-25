@@ -30,6 +30,16 @@ This creates possibility to train a machine to do anything that we do not curren
 
 ![ml-techniques](./ml-tldr/ml-techniques.jpeg)
 
-* **Supervised:** Best approximate the function to predict desired outputs for given inputs.
+* **Supervised:** Best approximate the function to produce given outputs for given inputs.
 * **Unsupervised:** Find similarity and differences between data points.
-* **Reinforcement:** Find a suitable action model that would maximize the total cumulative reward of the agent (like score of a game).
+* **Reinforcement:** Find a suitable action model that would maximize the total cumulative reward of an agent (e.g. score of a game). Read more about reinforcement learning [here](https://towardsdatascience.com/reinforcement-learning-101-e24b50e1d292).
+
+<!--
+TODO: Sort out resources
+
+Importance of hidden layers (DL): https://towardsdatascience.com/how-neural-networks-solve-the-xor-problem-59763136bdd7
+Rule of Thumb to choose number of hidden layers (DL): https://stats.stackexchange.com/a/136542
+
+https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287
+https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/#:~:text=Reinforcement%20Learning%20will%20learn%20a,highest%20cumulative%20long%2Dterm%20reward.
+-->

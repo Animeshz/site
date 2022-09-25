@@ -29,6 +29,10 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 * [Things every developer absolutely, positively needs to know about database indexing - Kai Sassnowski (YouTube)](https://www.youtube.com/watch?v=HubezKbFL7E).
 * [What, Why and How to use Redis as your primary database (YouTube)](https://www.youtube.com/watch?v=OqCK95AS-YE) - How to use redis to replace your relational, graph, search, document databases and how to scale.
 
+### Algorithms
+
+* [Big O Notation Cheat Sheet](https://flexiple.com/algorithms/big-o-notation-cheat-sheet)
+
 ### Linux
 
 * [ArchWiki](https://wiki.archlinux.org) & [GentooWiki](https://wiki.gentoo.org/wiki/Main_Page) & [VoidDocs](https://docs.voidlinux.org) - Setup / troubleshoot almost anything.
