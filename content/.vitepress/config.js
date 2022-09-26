@@ -82,11 +82,13 @@ function sidebar_root() {
 function sidebar_blog() {
   return [
     {
-      text: 'Linux Related',
+      text: 'Blog',
       items: [
-        { text: 'Machine Learning - A TL;DR', link: '/blog/ml-tldr' },
-        { text: 'Linux (1/2) - A near surface exploration', link: '/blog/linux-1' },
-        { text: 'Linux (2/2) - A deep dive', link: '/blog/linux-2' },
+        { text: 'Git - Your best friend', link: '/blog/git' },
+        { text: 'Working with Binaries', link: '/blog/working-with-binaries' },
+        // { text: 'Machine Learning - A TL;DR', link: '/blog/ml-tldr' },
+        { text: 'Linux (1/2)', link: '/blog/linux-1' },
+        // { text: 'Linux (2/2)', link: '/blog/linux-2' },
       ],
     },
   ];
@@ -117,8 +119,8 @@ function sidebar_notes() {
     {
       text: 'Notes',
       items: [
-        { text: 'Troubleshooting Notes', link: '/notes/troubleshooting' },
-        { text: 'CLI Tools', link: '/notes/cli-tools' },
+        { text: 'CLI Tools', link: '/notes/notes/cli-tools' },
+        { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
       ]
     },
     {
