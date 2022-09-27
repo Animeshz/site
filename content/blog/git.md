@@ -213,7 +213,9 @@ git reset --soft <commit-hash>
 git reset --hard <commit-hash>  # overwrites untracked files too, riskier
 ```
 
-A commit-hash look like `6b1328c` can be viewed using `git log`, and alternatively `HEAD~2` is fancy way of referring to 3rd last commit in current branch.**
+A commit-hash look like `6b1328c` can be viewed using `git log`, and alternatively `HEAD~2` is fancy way of referring to 3rd last commit in current branch.
+
+**Note: You don't need to know this if you know rebase (below).**
 
 ### Rebase (Chance to edit commits)
 
@@ -273,6 +275,8 @@ Like `git log` but also shows every incident when the tip of the branch (HEAD) i
 ```bash
 git reflog show
 ```
+
+From the collected hash (looking like `5c7e4cf`) you can view the changes in that commit: `git show 5c7e4cf`.
 
 ### Stash
 
