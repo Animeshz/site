@@ -20,6 +20,8 @@ Alt+s           toggles `sudo`
 {Ctrl+w,Alt+d}  {backspace,delete} whole word
 Ctrl+{u,y}      copy/paste currently written
 Alt+e           edit currently written ($EDITOR)
+
+Ctrl+Shift+h    make terminal open as less (only kitty)
 ```
 
 ### (N)Vim
