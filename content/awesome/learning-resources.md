@@ -32,6 +32,7 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 ### Algorithms
 
 * [Big O Notation Cheat Sheet](https://flexiple.com/algorithms/big-o-notation-cheat-sheet)
+* [TheAlgorithms](https://the-algorithms.com)
 
 ### Linux
 
