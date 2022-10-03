@@ -4,7 +4,7 @@ const props = defineProps(['author']);
 
 <template>
     <div class="custom-block quote" style="">
-        "<slot />"
+        <slot />
         <div v-if="props.author" style="text-align: right">- {{ props.author }}</div>
     </div>
 </template>

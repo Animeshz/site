@@ -40,7 +40,7 @@ const config = {
     editLink: { pattern: 'https://github.com/Animeshz/site/edit/main/content/:path' },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Blog', link: '/blog/' },
+      { text: 'Blogs', link: '/blogs/' },
       { text: 'Awesome', link: '/awesome/' },
       { text: 'Notes', link: '/notes/' },
       { text: 'Point of Interest', link: '/point-of-interest/' },
@@ -48,7 +48,7 @@ const config = {
       { text: 'Contact', link: '/contact/' },
     ],
     sidebar: {
-      '/blog/': mcol(sidebar_blog()),
+      '/blogs/': mcol(sidebar_blogs()),
       '/awesome/': mcol(sidebar_awesome()),
       '/notes/': mcol(sidebar_notes()),
       '/point-of-interest/': mcol(sidebar_point_of_interest()),
@@ -72,23 +72,19 @@ function mcol(target) {
 
 function sidebar_root() {
   return [
-    {
-      text: 'Home',
-      items: [],
-    },
   ];
 }
 
-function sidebar_blog() {
+function sidebar_blogs() {
   return [
     {
-      text: 'Blog',
+      text: 'Blogs',
       items: [
-        { text: 'Git - Your best friend', link: '/blog/git' },
-        { text: 'Working with Binaries', link: '/blog/working-with-binaries' },
-        // { text: 'Machine Learning - A TL;DR', link: '/blog/ml-tldr' },
-        { text: 'Linux (1/2)', link: '/blog/linux-1' },
-        // { text: 'Linux (2/2)', link: '/blog/linux-2' },
+        { text: 'Git - Your best friend', link: '/blogs/git' },
+        { text: 'Working with Binaries', link: '/blogs/working-with-binaries' },
+        // { text: 'Machine Learning - A TL;DR', link: '/blogs/ml-tldr' },
+        { text: 'Linux (1/2)', link: '/blogs/linux-1' },
+        // { text: 'Linux (2/2)', link: '/blogs/linux-2' },
       ],
     },
   ];
@@ -137,27 +133,15 @@ function sidebar_notes() {
 
 function sidebar_point_of_interest() {
   return [
-    {
-      text: 'Home',
-      items: [],
-    },
   ];
 }
 
 function sidebar_setup() {
   return [
-    {
-      text: 'Home',
-      items: [],
-    },
   ];
 }
 
 function sidebar_contact() {
   return [
-    {
-      text: 'Home',
-      items: [],
-    },
   ];
 }
