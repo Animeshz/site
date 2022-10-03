@@ -28,6 +28,7 @@ const config = {
 
   themeConfig: {
     outlineTitle: 'Table of Contents',
+    outline: [2, 3],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Animeshz/site' },
       // Better on footer
