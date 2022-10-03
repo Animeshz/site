@@ -1,9 +1,9 @@
 ---
-title: "Linux (1/2) - A near surface exploration"
+title: "Linux (1/2)"
 tags: ["linux"]
 ---
 
-# {{ $frontmatter.title }}
+# Linux (1/2) - A near surface exploration
 
 <Quote author="Linus Torvalds">Intelligence is the ability to avoid doing work, yet getting the work done.</Quote>
 

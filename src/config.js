@@ -78,14 +78,9 @@ function sidebar_blogs() {
   return [
     {
       text: 'Blogs',
-      // TODO: Remove this and create manual NextPage PreviousPage
-      items: [
-        { text: 'Git - Your best friend', link: '/blogs/git' },
-        { text: 'Working with Binaries', link: '/blogs/working-with-binaries' },
-        // { text: 'Machine Learning - A TL;DR', link: '/blogs/ml-tldr' },
-        { text: 'Linux (1/2)', link: '/blogs/linux-1' },
-        // { text: 'Linux (2/2)', link: '/blogs/linux-2' },
-      ],
+      items: JSON.parse(fs.readFileSync('src/theme/cache/blogs.json')).map(obj => {
+        return { text: obj.title, link: obj.regular_path };
+      })
     },
   ];
 }
