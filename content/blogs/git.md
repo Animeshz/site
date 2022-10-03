@@ -1,6 +1,6 @@
 ---
 title: "Git - Your best friend"
-slug: "git"
+tags: ["git", "version-control"]
 ---
 
 # {{ $frontmatter.title }}

@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning - A TL;DR"
-slug: "ml-tldr"
+draft: true
 ---
 
 # {{ $frontmatter.title }}

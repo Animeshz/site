@@ -1,6 +1,6 @@
 ---
 title: "Linux (2/2) - A deep dive"
-slug: "linux-2"
+draft: true
 ---
 
 <h1>{{ $frontmatter.title }}</h1>

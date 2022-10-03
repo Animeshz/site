@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('./scripts/gen_blog_list').default('content/blogs', 'src/theme/cache');
 
 /**
  * @type {import('vitepress').UserConfig}
@@ -52,12 +53,9 @@ const config = {
       '/blogs/': mcol(sidebar_blogs()),
       '/awesome/': mcol(sidebar_awesome()),
       '/notes/': mcol(sidebar_notes()),
-      '/point-of-interest/': mcol(sidebar_point_of_interest()),
-      '/setup/': mcol(sidebar_setup()),
-      '/contact/': mcol(sidebar_contact()),
 
       // Must be at bottom, so other branches are not matched
-      '/': mcol(sidebar_root()),
+      // '/': mcol(sidebar_root()),
     }
   }
 };
@@ -80,6 +78,7 @@ function sidebar_blogs() {
   return [
     {
       text: 'Blogs',
+      // TODO: Remove this and create manual NextPage PreviousPage
       items: [
         { text: 'Git - Your best friend', link: '/blogs/git' },
         { text: 'Working with Binaries', link: '/blogs/working-with-binaries' },

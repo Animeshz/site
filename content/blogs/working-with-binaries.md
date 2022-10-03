@@ -1,6 +1,6 @@
 ---
 title: "Working with Binaries"
-slug: "working-with-binaries"
+tags: ["low-level"]
 ---
 
 # {{ $frontmatter.title }}

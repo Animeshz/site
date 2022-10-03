@@ -10,6 +10,8 @@
   "license": "CC-BY-4.0",
   "private": false,
   "devDependencies": {
+    "cheap-watch": "^1.0.4",
+    "gray-matter": "^4.0.3",
     "vitepress": "^1.0.0-alpha.14",
     "vue": "^3.2.39"
   },

@@ -1,6 +1,6 @@
 ---
 title: "Linux (1/2) - A near surface exploration"
-slug: "linux-1"
+tags: ["linux"]
 ---
 
 # {{ $frontmatter.title }}
