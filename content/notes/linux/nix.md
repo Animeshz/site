@@ -1,6 +1,6 @@
 ---
 title: "Nix - Building a Robust Dev Environment"
-slug: "nix"
+draft: true
 ---
 
 <h1>{{ $frontmatter.title }}</h1>

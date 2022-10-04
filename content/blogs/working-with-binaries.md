@@ -51,12 +51,10 @@ Now the musl executables should work, and those programs may be able to access t
 
 ```bash
 # both of these work!!!
-# First one may even correspond to musl linked executable!
+/usr/bin/ls
+/another_root/usr/bin/ls  # This one may even correspond to musl linked executable!
 
-/another_root/usr/bin/ls
-ls
-
-# musl executable calling glibc-system executable, and it works!
+# musl executable calling glibc-system executable, and it works too!
 /another_root/usr/bin/dash -c /usr/bin/ls
 ```
 

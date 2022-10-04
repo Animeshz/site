@@ -1,4 +1,5 @@
 const fs = require('fs');
+const rss_gen = require('./scripts/gen_rss_feed').default;
 require('./scripts/gen_blog_list').default('content/blogs', 'src/theme/cache');
 
 /**
@@ -6,11 +7,15 @@ require('./scripts/gen_blog_list').default('content/blogs', 'src/theme/cache');
  */
 const config = {
   title: 'Animesh Sahu',
-  description: 'My website for documenting myself',
+  description: 'My website for collection of useful stuffs I come across and documenting myself',
 
   lang: 'en-US',
   base: '/site/',
   outDir: '../dist',
+  head: [
+    ['link', { href: "/site/rss.xml", rel: "alternate", type: "application/rss+xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
+    ['link', { href: "/site/atom.xml", rel: "alternate", type: "application/atom+xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
+  ],
 
   // Temporarily disabled due to: https://github.com/vuejs/vitepress/issues/1345
   // cleanUrls: 'with-subfolders',
@@ -19,7 +24,8 @@ const config = {
   ignoreDeadLinks: true,
 
   buildEnd: (cfg) => {
-    return fs.promises.rm(cfg.srcDir + '/node_modules', { recursive: true });
+    return fs.promises.rm(cfg.srcDir + '/node_modules', { recursive: true })
+      .then(() => rss_gen(cfg, "https://animeshz.github.io/site", cfg.outDir))
   },
 
   markdown: {
@@ -28,6 +34,7 @@ const config = {
   },
 
   themeConfig: {
+    siteTitle: 'Animesh Sahu / Home',
     outlineTitle: 'Table of Contents',
     outline: [2, 3],
     socialLinks: [
@@ -69,19 +76,19 @@ const config = {
       ],
       '/notes/': [
         {
-          text: 'Notes',
-          items: [
-            { text: 'CLI Tools', link: '/notes/notes/cli-tools' },
-            { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
-          ]
-        },
-        {
           text: 'Linux',
           items: [
             { text: 'Linux Setup', link: '/notes/linux/linux-setup' },
             { text: 'Random Stuffs', link: '/notes/linux/linux-random-stuffs' },
             { text: 'Troubleshooting', link: '/notes/linux/linux-troubleshooting' },
             // { text: 'Nix', link: '/notes/Linux/nix' },
+          ]
+        },
+        {
+          text: 'Notes',
+          items: [
+            { text: 'CLI Tools', link: '/notes/notes/cli-tools' },
+            { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
           ]
         },
       ],
@@ -93,4 +100,3 @@ const config = {
 };
 
 export default config;
-

@@ -73,6 +73,10 @@ For instance lookup [r/unixporn](https://www.reddit.com/r/unixporn), a subreddit
 A precious resource I could never forget about while talking about kernel: [Linux Kernel Labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html).
 :::
 
+## More stuffs, TODO.
+
+<!--
+
 ## The Shell
 
 The primary way of interaction, inherited from [Unix](https://en.wikipedia.org/wiki/Unix) is a command-line interface.
@@ -98,9 +102,6 @@ Its not always true that files that are seen are populated by or saved in the di
 AND that simply means, you don't need to learn hundred different tools to do something new. Just use whatever you use to edit files and you're done!
 
 
-## More stuffs, TODO.
-
-<!--
 And you can use the same tools you use to edit a file to change behavior in these physical objects. You don't need to learn or lookup anything new (although locations of these files initially).
 
 For example:

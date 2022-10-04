@@ -11,6 +11,7 @@
   "private": false,
   "devDependencies": {
     "cheap-watch": "^1.0.4",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "vitepress": "^1.0.0-alpha.14",
     "vue": "^3.2.39"
