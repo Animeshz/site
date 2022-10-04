@@ -1,9 +1,11 @@
 import './footer-in-bottom.css'
 
 import DefaultTheme from 'vitepress/theme'
+// import VPDoc from 'vitepress/dist/client/theme-default/components/VPDoc.vue'
 import SiteLayout from './SiteLayout.vue'
 import Quote from './components/Quote.vue'
 import BlogList from './components/BlogList.vue'
+import BlogNav from './components/BlogNav.vue'
 import PageActions from './components/PageActions.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,6 +27,7 @@ const config = {
         app.component('PageActions', PageActions);
         app.component('FontAwesomeIcon', FontAwesomeIcon);
         app.component('BlogList', BlogList);
+        app.component('BlogNav', BlogNav);
     }
 };
 

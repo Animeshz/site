@@ -10,6 +10,10 @@ const { Layout } = DefaultTheme
       <PageActions />
     </template>
 
+    <template #doc-after>
+      <BlogNav />
+    </template>
+
     <template #layout-bottom>
       <!-- TODO: Add social links like https://fasterthanli.me -->
     </template>

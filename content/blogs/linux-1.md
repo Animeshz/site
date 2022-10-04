@@ -1,5 +1,6 @@
 ---
 title: "Linux (1/2)"
+created: 2022-09-25
 tags: ["linux"]
 ---
 
