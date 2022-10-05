@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2022-10-05T10:59:05.748Z</updated>
+    <updated>2022-10-05T11:27:56.828Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -17,37 +17,37 @@
         <title type="html"><![CDATA[Awesome Blogs]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[🌀 Awesome]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Learning Resources]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Life Lessions]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Linux]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Web]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.md"/>
-        <updated>2022-10-05T10:58:51.412Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Learn Git - The easy way]]></title>
@@ -60,7 +60,7 @@
         <title type="html"><![CDATA[📝 Blogs]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.md"/>
-        <updated>2022-10-05T10:58:51.416Z</updated>
+        <updated>2022-10-05T11:27:38.319Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux (1/2) - A near surface exploration]]></title>
@@ -74,53 +74,54 @@
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.md"/>
         <updated>2022-09-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Running system-incompatible binaries]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[📞 Contact]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Home]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[🗒️ Notes]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Blogs to write here]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Random Stuffs]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux Setup (Post Install)]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.323Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux Troubleshooting]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.327Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[CLI Tools]]></title>
         <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.md</id>
         <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.md"/>
-        <updated>2022-10-05T10:58:51.420Z</updated>
+        <updated>2022-10-05T11:27:38.327Z</updated>
     </entry>
 </feed>
