@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2022-10-05T11:27:56.828Z</updated>
+    <updated>2022-10-05T11:44:27.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -10,118 +10,118 @@
         <uri>https://github.com/Animeshz</uri>
     </author>
     <link rel="alternate" href="https://animeshz.github.io/site"/>
-    <link rel="self" href="https://animeshz.github.io/site/atom.xml"/>
+    <link rel="self" href="https://animeshz.github.io/siteatom.xml"/>
     <subtitle>My website for collection of useful stuffs I come across and documenting myself</subtitle>
     <rights>All rights reserved 2022, Animesh Sahu</rights>
     <entry>
         <title type="html"><![CDATA[Awesome Blogs]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/blogs.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[🌀 Awesome]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/index.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Learning Resources]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/learning-resources.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Life Lessions]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/life-lessions.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Linux]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/linux.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Awesome Web]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/awesome/web.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Learn Git - The easy way]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/git.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/git.md"/>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/git.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/git.html"/>
         <updated>2022-09-27T03:10:00.000Z</updated>
         <summary type="html"><![CDATA[The first and last article you'll ever need to master git]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[📝 Blogs]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.md"/>
-        <updated>2022-10-05T11:27:38.319Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/index.html"/>
+        <updated>2022-10-05T11:44:09.783Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux (1/2) - A near surface exploration]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/linux-1.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/linux-1.md"/>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/linux-1.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/linux-1.html"/>
         <updated>2022-09-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A high-level overview of Linux and its potential]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Working with Binaries]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.md"/>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/blogs/working-with-binaries.html"/>
         <updated>2022-09-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Running system-incompatible binaries]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[📞 Contact]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/contact/index.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Home]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/index.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[🗒️ Notes]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/index.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Blogs to write here]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/index.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Random Stuffs]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-random-stuffs.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux Setup (Post Install)]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.md"/>
-        <updated>2022-10-05T11:27:38.323Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-setup.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux Troubleshooting]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.md"/>
-        <updated>2022-10-05T11:27:38.327Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/linux/linux-troubleshooting.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[CLI Tools]]></title>
-        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.md</id>
-        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.md"/>
-        <updated>2022-10-05T11:27:38.327Z</updated>
+        <id>https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.html</id>
+        <link href="https://animeshz.github.io/site/site//home/runner/work/site/site/content/notes/notes/cli-tools.html"/>
+        <updated>2022-10-05T11:44:09.787Z</updated>
     </entry>
 </feed>
