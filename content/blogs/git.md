@@ -3,6 +3,11 @@ title: "Learn Git - The easy way"
 description: "The first and last article you'll ever need to master git"
 created: 2022-09-27 3:10 AM
 tags: ["git", "version-control"]
+
+head:
+  - - meta
+    - name: robots
+      content: "max-image-preview:large"
 ---
 
 # {{ $frontmatter.title }}

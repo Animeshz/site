@@ -1,7 +1,13 @@
 ---
 title: "Working with Binaries"
+description: "Running system-incompatible binaries"
 created: 2022-09-26
 tags: ["low-level"]
+
+head:
+  - - meta
+    - name: robots
+      content: "max-image-preview:large"
 ---
 
 # {{ $frontmatter.title }}

@@ -2,6 +2,11 @@
 title: Home
 sidebar: false
 aside: false
+
+head:
+  - - meta
+    - name: google-site-verification
+      content: nKxR8lEiAdEYmd6x-wwnXbelfIhUtEUB8xY6B7e32XI
 ---
 
 # 👋 Hi, I'm Animesh Sahu
