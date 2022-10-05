@@ -8,6 +8,8 @@ tags: ["low-level"]
 
 ## Background
 
+![Cover Image](/blogs/working-with-binaries/cover.jpg)
+
 I really struggled first when I was introduced to cross-compilation in C. It was when I tried to compile a C as a library (.so/.dll) for exposing a few functionality to JVM/NodeJS in my keyboard-mouse-kt project.
 
 It was really troublesome to see that cross-compilers don't exist in alpine repositories and only a few selected ones are on debian. So I literally made my own docker image with my own build of [cross-compilers](https://github.com/Animeshz/mainstream-cross-compilers). It was fun! And I still refer to them.

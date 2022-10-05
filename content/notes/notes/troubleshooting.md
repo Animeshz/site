@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Troubleshooting Notes"
 slug: "troubleshooting"
 ---

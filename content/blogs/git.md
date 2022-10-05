@@ -1,5 +1,6 @@
 ---
-title: "Git - Your best friend"
+title: "Learn Git - The easy way"
+description: "The first and last article you'll ever need to master git"
 created: 2022-09-27 3:10 AM
 tags: ["git", "version-control"]
 ---
@@ -15,6 +16,8 @@ There are various use-cases of git:
 * Keep history of a software safe, revert to any point if needed.
 
 and many more.
+
+![Cover Image](/blogs/git/cover.jpg)
 
 
 ## Installation
@@ -153,7 +156,11 @@ git checkout -b <name>  # creates and switches to branch <name>
 git checkout <name>     # switches to branch <name>
 ```
 
-`main` is the name of default branch, and you were working on the main branch since then.
+`main` is the name of default branch, and you were working on the main branch since then. (Few years ago default was `master`)
+
+::: tip ProTip
+Appending `/network` to any repository hosted on github previews commit-movement over branches. For example, https://github.com/elkowar/eww/network.
+:::
 
 ### Merge
 
@@ -220,7 +227,9 @@ A commit-hash look like `6b1328c` can be viewed using `git log`, and alternative
 
 ### Rebase (Chance to edit commits)
 
+::: warning Description
 Ever happened you created commit at wrong stage, or named the commit wrong, or anything like that? Rebase is at your rescue.
+:::
 
 ```bash
 git config --global core.editor code  # set default editor to vscode
@@ -277,7 +286,7 @@ Like `git log` but also shows every incident when the tip of the branch (HEAD) i
 git reflog show
 ```
 
-From the collected hash (looking like `5c7e4cf`) you can view the changes in that commit: `git show 5c7e4cf`.
+**ProTip:** From the collected hash (looking like `5c7e4cf`) you can view the changes in that commit using: `git show 5c7e4cf`.
 
 ### Stash
 

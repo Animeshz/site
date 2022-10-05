@@ -16,7 +16,9 @@ import blogs from '../cache/blogs.json'
             </time>
         </div>
 
-        <div class="describe">
+        <div class="describe" v-if="blog.frontmatter.description">{{blog.frontmatter.description}}</div>
+
+        <div class="tags">
             <span v-for="tag in blog.frontmatter.tags">#{{tag}}</span>
         </div>
     </div>
@@ -42,17 +44,23 @@ import blogs from '../cache/blogs.json'
 
 .describe {
     font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: var(--vp-c-text-2);
+}
+
+.tags {
+    font-size: 0.75rem;
     display: inline-block;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     color: var(--vp-c-text-2);
-    margin: 0.625rem 0 1rem;
+    margin: 0.5rem 0 1rem;
     line-height: 1.5rem;
     letter-spacing: 0.5px;
 }
 
-.describe > * {
+.tags > * {
     margin-right: 0.4rem;
 }
 

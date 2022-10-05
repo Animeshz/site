@@ -1,12 +1,15 @@
 ---
-title: "Linux (1/2)"
+title: "Linux (1/2) - A near surface exploration"
+description: "A high-level overview of Linux and its potential"
 created: 2022-09-25
 tags: ["linux"]
 ---
 
-# Linux (1/2) - A near surface exploration
+# {{ $frontmatter.title }}
 
 <Quote author="Linus Torvalds">Intelligence is the ability to avoid doing work, yet getting the work done.</Quote>
+
+![Cover Image](/blogs/linux-1/cover.png){ style="display: block; margin: 0 auto" }
 
 This article enlists facts and useful information with my experience in using linux for years.
 

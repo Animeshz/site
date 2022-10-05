@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## Book Purchase
 
 1. Define your problem. Search for your problem. Filter top 4-5 books on that topic.

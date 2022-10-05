@@ -13,8 +13,8 @@ const config = {
   base: '/site/',
   outDir: '../dist',
   head: [
-    ['link', { href: "/site/rss.xml", rel: "alternate", type: "application/rss+xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
-    ['link', { href: "/site/atom.xml", rel: "alternate", type: "application/atom+xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
+    ['link', { rel: "alternate", type: "application/rss+xml", href: "/site/rss.xml", title: "Animesh Sahu | Sitewide RSS Feed" }],
+    ['link', { rel: "alternate", type: "application/atom+xml", href: "/site/atom.xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
   ],
 
   // Temporarily disabled due to: https://github.com/vuejs/vitepress/issues/1345
@@ -52,8 +52,8 @@ const config = {
       { text: 'Blogs', link: '/blogs/' },
       { text: 'Awesome', link: '/awesome/' },
       { text: 'Notes', link: '/notes/' },
-      { text: 'Point of Interest', link: '/point-of-interest/' },
-      { text: 'Setup', link: '/setup/' },
+      // { text: 'Point of Interest', link: '/point-of-interest/' },
+      // { text: 'Setup', link: '/setup/' },
       { text: 'Contact', link: '/contact/' },
     ],
     sidebar: {
@@ -88,7 +88,7 @@ const config = {
           text: 'Notes',
           items: [
             { text: 'CLI Tools', link: '/notes/notes/cli-tools' },
-            { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
+            // { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
           ]
         },
       ],

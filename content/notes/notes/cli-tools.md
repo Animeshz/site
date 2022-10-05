@@ -22,8 +22,10 @@ CONDITION {...}
 END {...}
 ```
 
-1. Note: newline & spaces doesn't matter.
+1. Newline & spaces doesn't matter.
 2. Empty `CONDITION` is a `1` (non-zero, true).
 3. Only `CONDITION` without a block is equivalent to `CONDITION {print}` that is futher equivalent to `CONDITION {print $0}`, $0 is variable that contains current line.
 
 e.g. `awk '' filename`
+
+**TODO:** Add more
