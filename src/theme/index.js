@@ -7,6 +7,9 @@ import Quote from './components/Quote.vue'
 import BlogList from './components/BlogList.vue'
 import BlogNav from './components/BlogNav.vue'
 import PageActions from './components/PageActions.vue'
+import InFeedAd from './components/InFeedAd.vue'
+import MultiplexAd from './components/MultiplexAd.vue'
+import DisplayAd from './components/DisplayAd.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -28,6 +31,9 @@ const config = {
         app.component('FontAwesomeIcon', FontAwesomeIcon);
         app.component('BlogList', BlogList);
         app.component('BlogNav', BlogNav);
+        app.component('InFeedAd', InFeedAd);
+        app.component('MultiplexAd', MultiplexAd);
+        app.component('DisplayAd', DisplayAd);
     }
 };
 

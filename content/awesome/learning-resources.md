@@ -36,6 +36,7 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 
 ### Linux
 
+* [Linux Basics & CLI Tutorial](https://www.freecodecamp.org/news/linux-command-line-tutorial)
 * [ArchWiki](https://wiki.archlinux.org) & [GentooWiki](https://wiki.gentoo.org/wiki/Main_Page) & [VoidDocs](https://docs.voidlinux.org) - Setup / troubleshoot almost anything.
 * [Brodgie Robertson](https://www.youtube.com/c/SavvyNik) & [Savvy Nick](https://www.youtube.com/c/SavvyNik) - Quick talks & news related to linux.
 * [Linux Kernel Labs](https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html) - Guided way to learn about linux kernel with practical examples.

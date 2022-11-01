@@ -60,7 +60,7 @@ import blogs from '../cache/blogs.json'
     letter-spacing: 0.5px;
 }
 
-.tags > * {
+.tags>* {
     margin-right: 0.4rem;
 }
 
