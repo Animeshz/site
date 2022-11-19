@@ -23,6 +23,12 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 
 * [ziishaned/learn-regex](https://github.com/ziishaned/learn-regex) - Learn regex the easy way.
 
+### Git
+
+* [Git Concepts](https://opensource.com/article/22/11/git-concepts)
+* [My blog](/blogs/git) - Stuffs used all the time
+* [Advanced Git tools](https://opensource.com/article/22/11/git-tools) - reflog/gc/bisect/worktree
+
 ### Databases
 
 * [Different Database Paradigms - Fireship.io (YouTube)](https://www.youtube.com/watch?v=W2Z7fbCLSTw).
