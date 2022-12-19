@@ -5,6 +5,10 @@ slug: "linux"
 
 # {{ $frontmatter.title }}
 
+## Special Mentions
+
+* [ExplainShell.com](https://www.explainshell.com) - Explains the command(s) and their flags, along with meta-characters in the bash.
+
 ## Generic Tools/Utilities
 
 * [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'.

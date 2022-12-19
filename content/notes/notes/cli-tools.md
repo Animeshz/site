@@ -29,3 +29,9 @@ END {...}
 e.g. `awk '' filename`
 
 **TODO:** Add more
+
+## VSCode Keybinds
+
+```lua
+Ctrl+b    Toggle left panel
+```
