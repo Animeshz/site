@@ -8,6 +8,7 @@ slug: "linux"
 ## Special Mentions
 
 * [ExplainShell.com](https://www.explainshell.com) - Explains the command(s) and their flags, along with meta-characters in the bash.
+* [Puppet](https://www.puppet.com) - Figures out the differences and make the system in sync with the configuration as defined, even knows how to set/change a few lines on a file without overwriting it, supports multiple package-managers as well.
 
 ## Generic Tools/Utilities
 
