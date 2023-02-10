@@ -150,4 +150,4 @@ sudo chroot subdir dash
 sudo chroot subdir xbps-install --help
 ```
 
-Be sure to read [Running binaries in seperate root](/blog/working-with-binaries.html#let-s-go) to make them work without chroot.
+Be sure to read [Running binaries in seperate root](/blogs/working-with-binaries.html#let-s-go) to make them work without chroot.

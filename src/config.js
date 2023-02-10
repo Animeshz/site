@@ -61,18 +61,20 @@ const config = {
     sidebar: {
       '/awesome/': [
         {
-          text: 'Truely Awesome',
+          text: 'Truly Awesome',
           items: [
-            { text: 'Awesome Blogs', link: '/awesome/blogs' },
-            { text: 'Awesome Learning Resources', link: '/awesome/learning-resources' },
-            { text: 'Awesome Life Lessions', link: '/awesome/life-lessions' },
+            { text: 'Awesome Blogs', link: '/awesome/truly/blogs' },
+            { text: 'Awesome Pages', link: '/awesome/truly/pages' },
+            { text: 'Awesome Learning Resources', link: '/awesome/truly/learning-resources' },
+            { text: 'Awesome Life Lessions', link: '/awesome/truly/life-lessions' },
           ],
         },
         {
           text: 'Awesome Stuffs',
           items: [
-            { text: 'Awesome Web', link: '/awesome/web' },
-            { text: 'Awesome Linux', link: 'awesome/linux' }
+            { text: 'Awesome Web', link: '/awesome/stuffs/web' },
+            { text: 'Awesome Linux', link: 'awesome/stuffs/linux' },
+            { text: 'Awesome Extensions', link: 'awesome/stuffs/extensions' }
           ],
         },
       ],

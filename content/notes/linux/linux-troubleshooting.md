@@ -18,6 +18,10 @@ sudo xbps-install noto-fonts-ttf noto-fonts-emoji font-unifont-bdf
 
 Refer to [Battery-Saving Section in Linux-Setup](./linux-setup).
 
+## Tailwind CSS not giving suggestions on VSCode
+
+[Enable suggestions for strings](https://stackoverflow.com/a/71049515/11377112)
+
 ## xdg-open: no method available for opening 'scheme://url'
 
 ```bash

@@ -13,7 +13,7 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 * [GoalKicker - Free Programming Books](https://goalkicker.com) - Short notes compiled from StackOverflow.
 * [Learn X in Y Minutes](http://learnxinyminutes.com) - community-driven one-pager documentation for any language / tool.
 * [TealDeer](https://github.com/dbrgn/tealdeer) - Simplified, example based and community-driven man pages.
-* Blogs listed in my [Awesome Blogs](/awesome/blogs) page.
+* Blogs listed in my [Awesome Blogs](/awesome/truly/blogs) page.
 * [roadmap.sh](https://roadmap.sh) - The community driven widely-accepted developer roadmaps.
 * [r/FMHY](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/index) - Subreddit listing awesome list of various topics.
 
@@ -26,20 +26,20 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 
 ### Git
 
-* [Git Concepts](https://opensource.com/article/22/11/git-concepts)
+* [Basic Git Concepts](https://opensource.com/article/22/11/git-concepts)
 * [My blog](/blogs/git) - Stuffs used all the time
 * [Advanced Git tools](https://opensource.com/article/22/11/git-tools) - reflog/gc/bisect/worktree
+
+### Algorithms
+
+* [CP Algorithms](https://cp-algorithms.com) - CP Algorithms explained in details with different variations.
+* [The Algorithms](https://the-algorithms.com) - Clean implmentation of every algorithm in all the languages.
 
 ### Databases
 
 * [Different Database Paradigms - Fireship.io (YouTube)](https://www.youtube.com/watch?v=W2Z7fbCLSTw).
 * [Things every developer absolutely, positively needs to know about database indexing - Kai Sassnowski (YouTube)](https://www.youtube.com/watch?v=HubezKbFL7E).
 * [What, Why and How to use Redis as your primary database (YouTube)](https://www.youtube.com/watch?v=OqCK95AS-YE) - How to use redis to replace your relational, graph, search, document databases and how to scale.
-
-### Algorithms
-
-* [Big O Notation Cheat Sheet](https://flexiple.com/algorithms/big-o-notation-cheat-sheet)
-* [TheAlgorithms](https://the-algorithms.com)
 
 ### Linux
 

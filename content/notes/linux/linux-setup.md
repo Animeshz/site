@@ -170,6 +170,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 acpi_osi='Windows 2020' net.ifnames=0 i91
 
 After every edit, you must run `sudo update-grub` in order for the changes to take effect in next boot.
 
+<!--
 ## Cassowary (100% Windows App compatibility)
 
 Unlike [Wine](https://www.winehq.org), which often breaks itself when you need something like two applications co-working together or when you need to use applications like MS Word or any Heavy video-editor which extensively uses Win32 and Microsoft APIs, The [Cassowary](https://github.com/casualsnek/cassowary) will fully support running all of them with native experience.
@@ -207,6 +208,7 @@ python3 -m cassowary -a
 # Save Settings & Reconnect
 # Goto: Guest app, and create shortcuts
 ```
+-->
 
 
 ## Extras
