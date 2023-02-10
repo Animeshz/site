@@ -15,8 +15,6 @@ const config = {
   head: [
     ['link', { rel: "alternate", type: "application/rss+xml", href: "/site/rss.xml", title: "Animesh Sahu | Sitewide RSS Feed" }],
     ['link', { rel: "alternate", type: "application/atom+xml", href: "/site/atom.xml", title: "Animesh Sahu | Sitewide Atom Feed" }],
-    ['script', { async: '', src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3494660420162247", crossorigin: "anonymous" }],
-    ['script', {}, "(adsbygoogle = window.adsbygoogle || []).push({});"],
   ],
 
   // Temporarily disabled due to: https://github.com/vuejs/vitepress/issues/1345
@@ -73,8 +71,8 @@ const config = {
           text: 'Awesome Stuffs',
           items: [
             { text: 'Awesome Web', link: '/awesome/stuffs/web' },
-            { text: 'Awesome Linux', link: 'awesome/stuffs/linux' },
-            { text: 'Awesome Extensions', link: 'awesome/stuffs/extensions' }
+            { text: 'Awesome Linux', link: '/awesome/stuffs/linux' },
+            { text: 'Awesome Extensions', link: '/awesome/stuffs/extensions' },
           ],
         },
       ],
