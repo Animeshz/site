@@ -16,3 +16,4 @@ For each one, I've linked to specific blog post that I particularly liked.
 
 * Amos' [FasterThanLi.me](https://fasterthanli.me)
 * [Julia Evans](https://jvns.ca)
+* [Nemean - YouTube](https://youtube.com/@Nemean)
