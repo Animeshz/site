@@ -31,7 +31,7 @@ Abbreviation: <C> === Ctrl  <A> === Alt  <S> === Shift
 Notation: ^T === <C-t> === Ctrl-t
 
 /<regex>                 Search the opened file/buffer with regex pattern
-:%s/<regex>/<replace>/g  Global replace (use \1 \2 ... to backreference groups), removing g deletes first occurrence on each line only
+:%s/<regex>/<replace>/g  Global replace (use \1 \2 ... to backreference groups), removing g replaces first occurrence on each line only
 :%v/<regex>/d            %v is inverted search, /d will delete lines not matching the regex
                          (these two can also be paired with visual selection, only difference is that it doesn\'t require % after :)
 
