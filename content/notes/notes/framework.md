@@ -33,7 +33,6 @@ sudo fw-ectool led right <color|off|auto>
 sudo fw-ectool led power <color|off|auto>
 
 sudo fw-ectool fwchargelimit 80   # limit charging to hit maximum 80
-
 ```
 
 Read [this](https://www.howett.net/posts/2021-12-framework-ec) for further use of this tool (written by same guy who patched ectool to work for framework).

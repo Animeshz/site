@@ -90,6 +90,8 @@ const config = {
           text: 'Notes',
           items: [
             { text: 'CLI Tools', link: '/notes/notes/cli-tools' },
+            { text: 'Framework', link: '/notes/notes/framework' },
+            { text: 'Rust', link: '/notes/notes/rust' },
             // { text: 'Troubleshooting Notes', link: '/notes/notes/troubleshooting' },
           ]
         },
