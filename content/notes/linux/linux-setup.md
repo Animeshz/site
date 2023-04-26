@@ -46,6 +46,7 @@ gg=G              Reindent whole file (gg & =G), similarly ggyG to yank file
 viw | diw | yiw   Visual/Delete/Yank inside (a) word
 v|V|<C-v>         Visual / LineVisual / VisualBlock mode
 *|#               Search next/prev occurrence of currently focused word
+%                 Jump to parenthesis opening/closing
 <C-o>|<C-S-i>     Next/Prev location of jump, in find (/)
 <C-d>|<C-u>       Next/Prev function (not that important)
 ```
