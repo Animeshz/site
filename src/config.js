@@ -73,6 +73,7 @@ const config = {
             { text: 'Awesome Web', link: '/awesome/stuffs/web' },
             { text: 'Awesome Linux', link: '/awesome/stuffs/linux' },
             { text: 'Awesome Extensions', link: '/awesome/stuffs/extensions' },
+            { text: 'Awesome Freebies', link: '/awesome/stuffs/freebies' },
           ],
         },
       ],

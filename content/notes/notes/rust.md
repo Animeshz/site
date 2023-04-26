@@ -3,7 +3,7 @@ title: "Rust"
 slug: "rust"
 ---
 
-<h1>{{ $frontmatter.title }}</h1>
+# {{ $frontmatter.title }}
 
 ## Optimizing release builds
 
