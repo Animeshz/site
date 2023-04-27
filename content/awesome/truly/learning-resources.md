@@ -29,6 +29,7 @@ Here are some of my favourite resources I really appreciate to learn or quickly 
 * [Basic Git Concepts](https://opensource.com/article/22/11/git-concepts)
 * [My blog](/blogs/git) - Stuffs used all the time
 * [Advanced Git tools](https://opensource.com/article/22/11/git-tools) - reflog/gc/bisect/worktree
+* [OhShitGit](https://ohshitgit.com) - Your rescue to git if you messed it all up!
 
 ### Algorithms
 
