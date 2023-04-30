@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t,d as i}from"./app.eb04de9b.js";const u=JSON.parse('{"title":"\u{1F4DE} Contact","description":"","frontmatter":{"sidebar":false,"aside":false},"headers":[],"relativePath":"contact/index.md"}'),o={name:"contact/index.md"},n=i("",5),r=[n];function s(l,c,h,d,m,p){return t(),a("div",null,r)}const f=e(o,[["render",s]]);export{u as __pageData,f as default};
