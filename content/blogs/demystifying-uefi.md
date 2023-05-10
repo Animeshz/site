@@ -7,9 +7,11 @@ tags: ["uefi", "demystifying"]
 
 # {{ $frontmatter.title }}
 
----
+![Cover Image](/blogs/demystifying-uefi/processor-chip.jpg)
 
-**Today** I did something really cool. Has this ever happened to you? After a long time, errors seem to go away and _everything starts working again_. Its such a nice feeling.
+**Today** I did something really cool, made UKI (in the article) after few weeks of attempt.
+
+Has this ever happened to you? After a long time, errors seem to go away and _everything starts working again_. Its such a nice feeling.
 
 As an occassional low-level programming enjoyer, it feels really nice to work with something that you use everyday but are unaware of how it really works under the hood.
 
@@ -41,6 +43,8 @@ It may seem a bit _boring_, maybe. But the way we want to start demystifying UEF
 That computers are made up of little switches (also known as transistors). When we press the power button, we let some electricity flow into the BIOS/CMOS chip for a short duration of time. These chips generally contains an EPROM (Erasable Programmable Read-Only Memory) which is flashed with something called as a firmware-descriptor (fd) through some equipments externally.
 
 With a small flow of electricity, the firmware-descriptor present (which also contains the UEFI screen you see by pressing f2/f10 at the boot time), in the chip starts the booting sequence, by opening some gate and activating DRAM, then CPU then rest of the components.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Efi-simple.svg/1200px-Efi-simple.svg.png" width="40%" style="margin: auto;">
 
 Once the RAM and the CPU is functional for the first time, it scans all the vFAT partitions in the connected drives and start looking for `/EFI/*/*.efi` files. Once it finds one, it tries to launch and give full hardware control to it.
 
