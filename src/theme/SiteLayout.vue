@@ -19,6 +19,12 @@ const { frontmatter } = useData()
       </div>
     </template>
 
+    <template #doc-before>
+      <div class="custom-block">
+        Cool Tip: Turn on dark mode for better experience!
+      </div>
+    </template>
+
     <template #doc-after>
       <BlogNav />
     </template>
