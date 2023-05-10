@@ -1,6 +1,7 @@
 ---
 sidebar: false
 aside: false
+patreon: false
 ---
 
 # 📞 Contact

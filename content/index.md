@@ -2,6 +2,7 @@
 title: Home
 sidebar: false
 aside: false
+patreon: false
 
 head:
   - - meta

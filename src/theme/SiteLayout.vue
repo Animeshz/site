@@ -1,13 +1,22 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
+import { useData } from 'vitepress'
 
 const { Layout } = DefaultTheme
+const { frontmatter } = useData()
 </script>
 
 <template>
   <Layout>
     <template #aside-outline-before>
       <PageActions />
+    </template>
+
+    <template #doc-footer-before>
+      <div v-if="frontmatter.patreon !== false">
+        <br>
+        <PatreonButton />
+      </div>
     </template>
 
     <template #doc-after>

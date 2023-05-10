@@ -1,3 +1,7 @@
+---
+patreon: false
+---
+
 # 🌀 Awesome
 
 Here are my awesome list of my personally favourite stuffs.
