@@ -85,8 +85,6 @@ LD := lld
 CFLAGS := -ffreestanding -MMD -mno-red-zone -std=c11 -target x86_64-unknown-windows
 LDFLAGS := -flavor link -subsystem:efi_application -entry:efi_main
 
-SRCS := main.c
-
 default: all clean
 all: main.efi
 
@@ -96,7 +94,6 @@ all: main.efi
 	$(LD) $(LDFLAGS) $< -out:$@
 clean:
 	rm -fv *.o *.d
-
 
 .PHONY: clean all default
 ```
@@ -128,7 +125,7 @@ main.efi: PE32+ executable (EFI application) x86-64, for MS Windows
 
 Till now, everything seems great, although I don't think its a good idea to just throw the efi file to the `/boot/efi` and start booting your laptop/pc from it.
 
-A better approach would be to spin up a small qemu vm and run the efi as a firmware from there.
+A better approach would be to spin up a small qemu vm and run the efi image/binary from there.
 
 First let's install the dependencies:
 
@@ -148,7 +145,7 @@ qemu-system-x86_64 \
 
 The important options are the two `-drive` options, first tells the VM to use the edk2 firmware-descriptor as UEFI (similar to one flashed on to your EPROM in the BIOS chip), the second mounts current directory (`$PWD`) as a vFAT filesystem in the VM.
 
-Rest of options are just personal preference, `-net none` tells to not provide any network access to the vm, `-nographic` tells qemu can occupy our current terminal instead of a new graphical window (its conventient as I'm majorly a keyboard-centric guy).
+Rest of options are just personal preference, `-net none` tells to not provide any network access to the vm, `-nographic` tells qemu can occupy our current terminal instead of a new graphical window (its convenient as I'm majorly a keyboard-centric guy).
 
 This should drop you to a EFI shell, to load your efi file, run the following:
 
@@ -325,7 +322,7 @@ After that we're ready to create and add that \*.efi into our boot entry:
 ```bash
 dracut --force --verbose --kver $(uname -r) --conf my-dracut-uki.conf linux+initramfs.efi
 
-mkdir -p /boot/efi/EFI/void_custom/
+sudo mkdir -p /boot/efi/EFI/void_custom/
 sudo cp linux+initramfs.efi /boot/efi/EFI/void_custom/
 
 sudo efibootmgr --create --disk /dev/nvme0n1 --label 'Void Linux - Custom' --loader /EFI/void_custom/linux+initramfs.efi
