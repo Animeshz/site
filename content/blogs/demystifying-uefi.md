@@ -7,6 +7,23 @@ tags: ["uefi", "demystifying"]
 
 # {{ $frontmatter.title }}
 
+<style>
+.tags>* {
+    margin-right: 0.4rem;
+}
+</style>
+
+<p style="font-size: 20px;">
+{{ $frontmatter.description }}
+</p>
+<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
+  <span class="tags">
+    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
+  </span>
+</p>
+
+---
+
 ![Cover Image](/blogs/demystifying-uefi/processor-chip.jpg)
 
 **Today** I did something really cool, made UKI (in the article) after few weeks of attempt.

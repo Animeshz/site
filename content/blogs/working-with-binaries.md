@@ -1,18 +1,28 @@
 ---
 title: "Working with Binaries"
 description: "Running system-incompatible binaries"
-created: 2022-09-26
+created: 2022-09-26 12:00 AM
 tags: ["low-level"]
-
-head:
-  - - meta
-    - name: robots
-      content: "max-image-preview:large"
 ---
 
 # {{ $frontmatter.title }}
 
-## Background
+<style>
+.tags>* {
+    margin-right: 0.4rem;
+}
+</style>
+
+<p style="font-size: 20px;">
+{{ $frontmatter.description }}
+</p>
+<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
+  <span class="tags">
+    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
+  </span>
+</p>
+
+---
 
 ![Cover Image](/blogs/working-with-binaries/cover.jpg)
 

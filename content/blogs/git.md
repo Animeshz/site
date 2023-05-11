@@ -3,14 +3,26 @@ title: "Learn Git - The easy way"
 description: "The first and last article you'll ever need to master git"
 created: 2022-09-27 3:10 AM
 tags: ["git", "version-control"]
-
-head:
-  - - meta
-    - name: robots
-      content: "max-image-preview:large"
 ---
 
 # {{ $frontmatter.title }}
+
+<style>
+.tags>* {
+    margin-right: 0.4rem;
+}
+</style>
+
+<p style="font-size: 20px;">
+{{ $frontmatter.description }}
+</p>
+<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
+  <span class="tags">
+    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
+  </span>
+</p>
+
+---
 
 Git is a robust tool, to manage your complex to complex workflows. It was primarily made for managing the Linux Kernel (by Linus Torvalds itself) which today recieves and accepts over 8.5 changes/hour.
 

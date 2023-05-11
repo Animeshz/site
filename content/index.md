@@ -1,19 +1,15 @@
 ---
 title: Home
+description: I write about wide-variety of untouched topics in a simplified way.
 sidebar: false
 aside: false
 patreon: false
-
-head:
-  - - meta
-    - name: google-site-verification
-      content: nKxR8lEiAdEYmd6x-wwnXbelfIhUtEUB8xY6B7e32XI
 ---
 
 # 👋 Hi, I'm Animesh Sahu
 
 <p style="font-size: 20px;">
-I write about wide-variety of untouched topics in a simplified way.
+{{ $frontmatter.description }}
 </p>
 
 ---

@@ -1,11 +1,28 @@
 ---
 title: "Linux (1/2) - A near surface exploration"
 description: "A high-level overview of Linux and its potential"
-created: 2022-09-25
+created: 2022-09-25 12:00 AM
 tags: ["linux"]
 ---
 
 # {{ $frontmatter.title }}
+
+<style>
+.tags>* {
+    margin-right: 0.4rem;
+}
+</style>
+
+<p style="font-size: 20px;">
+{{ $frontmatter.description }}
+</p>
+<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
+  <span class="tags">
+    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
+  </span>
+</p>
+
+---
 
 <Quote author="Linus Torvalds">Intelligence is the ability to avoid doing work, yet getting the work done.</Quote>
 
