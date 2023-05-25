@@ -361,5 +361,9 @@ Working with UEFI has great potentials, there's projects like [grub2-theme-previ
 
 You can also make a custom portable pre-configured linux images, in a USB-drive that is loaded on the RAM using `root=live:<URL>` kernel parameter [more info on dracut man page](https://man7.org/linux/man-pages/man7/dracut.cmdline.7.html), that you can plug anywhere, and it'll contain all the configurations you like immediately after boot.
 
+## PostScript
+
+Read discussion on [r/embedded](https://www.reddit.com/r/embedded/comments/13dmyqo/demystifying_uefi_article), [r/linux](https://www.reddit.com/r/linux/comments/13dn6he/demystifying_uefi_building_unified_kernel_images) and [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/13dn3k8/demystifying_uefi_article).
+
 <Quote author="Steve Jobs">Stay hungry, stay foolish.</Quote>
 
