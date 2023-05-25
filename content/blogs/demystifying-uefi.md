@@ -13,7 +13,7 @@ tags: ["uefi", "demystifying"]
 }
 </style>
 
-<p style="font-size: 20px;">
+<p style="font-size: 18px;">
 {{ $frontmatter.description }}
 </p>
 <p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -

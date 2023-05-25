@@ -24,7 +24,7 @@ tags: ["git", "version-control"]
 
 ---
 
-Git is a robust tool, to manage your complex to complex workflows. It was primarily made for managing the Linux Kernel (by Linus Torvalds itself) which today recieves and accepts over 8.5 changes/hour.
+**Git** is a robust tool, to manage your complex to complex workflows. It was primarily made for managing the Linux Kernel (by Linus Torvalds itself) which today recieves and accepts over 8.5 changes/hour.
 
 There are various use-cases of git:
 

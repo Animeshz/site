@@ -8,7 +8,7 @@ patreon: false
 
 # 👋 Hi, I'm Animesh Sahu
 
-<p style="font-size: 20px;">
+<p style="font-size: 18px;">
 {{ $frontmatter.description }}
 </p>
 
