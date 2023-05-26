@@ -25,7 +25,7 @@ const config = {
 
   buildEnd: (cfg) => {
     return fs.promises.rm(cfg.srcDir + '/node_modules', { recursive: true })
-      .then(() => rss_gen(cfg, "https://animeshz.github.io/site", cfg.outDir))
+      .then(() => rss_gen(cfg, "https://animeshz.github.io", cfg.outDir))
   },
 
   markdown: {

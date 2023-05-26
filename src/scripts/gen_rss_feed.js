@@ -26,12 +26,12 @@ async function gen_feed(cfg, site_url, sitemap_stream) {
     const feed = new Feed({
         title: cfg.site.title,
         description: cfg.site.description,
-        link: site_url,
+        link: site_url + cfg.site.base,
         language: "en",
         copyright: "All rights reserved 2022, Animesh Sahu",
         feedLinks: {
-            rss: site_url + rss_file,
-            atom: site_url + atom_file,
+            rss: site_url + cfg.site.base + rss_file,
+            atom: site_url + cfg.site.base + atom_file,
         },
         author: {
             name: "Animesh Sahu",
@@ -48,14 +48,16 @@ async function gen_feed(cfg, site_url, sitemap_stream) {
         const stat = await fs.promises.stat(filename)
         const { data, excerpt } = matter(content, { excerpt: f => f.excerpt = (f.content.split('\n').find(e => e != '') || '').replace(/^#\s+/, '') })
         if (!data.draft) {
-            const link = site_url + cfg.site.base + filename.replace(/\.md/, '.html')
+            const html_file = filename.replace(cfg.srcDir, '').replace(/^\//, '').replace(/\.md/, '.html')
+            const link = site_url + cfg.site.base + html_file
+            // const page = cfg.outDir + '/' + html_file
             feed.addItem({
                 title: data.title || excerpt,
                 link: link,
                 description: data.description,
                 date: new Date(data.created || stat.birthtime),
                 // image: post.image
-                // content: post.content,
+                // content: await fs.promises.readFile(page, 'utf-8'),
             });
 
             sitemap.write(link)
