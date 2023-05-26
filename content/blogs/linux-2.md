@@ -1,6 +1,7 @@
 ---
 title: "Linux (2/2) - A deep dive"
 draft: true
+created: 2022-09-01 12:00 AM
 ---
 
 <h1>{{ $frontmatter.title }}</h1>

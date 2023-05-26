@@ -2,6 +2,7 @@
 draft: true
 title: "Troubleshooting Notes"
 slug: "troubleshooting"
+created: 2022-09-02 12:00 AM
 ---
 
 # {{ $frontmatter.title }}

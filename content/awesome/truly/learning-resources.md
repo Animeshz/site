@@ -1,6 +1,7 @@
 ---
 title: "Awesome Learning Resources"
 slug: "resources"
+created: 2022-09-02 12:00 AM
 ---
 
 # {{ $frontmatter.title }}

@@ -1,6 +1,7 @@
 ---
 title: "Awesome Web"
 slug: "web"
+created: 2022-09-02 12:00 AM
 ---
 
 # {{ $frontmatter.title }}

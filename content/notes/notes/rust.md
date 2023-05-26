@@ -1,6 +1,7 @@
 ---
 title: "Rust"
 slug: "rust"
+created: 2022-09-02 12:00 AM
 ---
 
 # {{ $frontmatter.title }}

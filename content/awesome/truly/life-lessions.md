@@ -1,6 +1,7 @@
 ---
 title: "Awesome Life Lessions"
 slug: "life-lessions"
+created: 2022-09-02 12:00 AM
 ---
 
 # {{ $frontmatter.title }}

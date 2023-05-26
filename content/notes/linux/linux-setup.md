@@ -1,6 +1,7 @@
 ---
 title: "Linux Setup (Post Install)"
 slug: "linux-setup"
+created: 2022-09-02 12:00 AM
 ---
 
 <h1>{{ $frontmatter.title }}</h1>
