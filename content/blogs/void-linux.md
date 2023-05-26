@@ -40,7 +40,7 @@ I went from windows -> kali -> parrot -> deb -> fedora -> windows -> pop -> wind
 
 My distro-hopping finally stopped at _void_, and I'm on it for more than 2 years now.
 
-The reason is simple, its by far its the most scripted distro I ever seen. _See_ everybody likes using ready-to-use products, but as you move with them you feel to loose control over your environment (things break if you try to swap components), feel restricted and hence unproductive. But if you choose minimalism, getting things done becomes very tedious and time-consuming.
+The reason is simple, its by far its the most scripted distro I ever seen. _See_ everybody likes using ready-to-use products, but as you move with them you feel to lose control over your environment (things break if you try to swap components), feel restricted and hence unproductive. But if you choose minimalism, getting things done becomes very tedious and time-consuming.
 
 Here comes the perfect bet, a mix-n-match of pseudo-minimalism and a lot of automation for getting things done faster than ever before. A scripted distribution, Void.
 
@@ -207,6 +207,8 @@ With this, void don't accept any random packages until [all the criterias](https
 
 This means rolling release (shipping latest-versions) while being completely **stable**. It even tracks the [common/shlibs](https://github.com/void-linux/void-packages/blob/master/common/shlibs) to map libraries to pkgs, so it can perform partial upgrade without breaking anything (unlike Arch xD).
 
+<sub>**PS:** Now this is controvertial as seen by reddit comments, its actually a personal taste if everything should go in one repository or not, but having multiple people verify the package status over different machine / architectures before its merged and distributed is a good to have.</sub>
+
 ---
 
 ### Easy (runit) Service Creation
@@ -299,6 +301,8 @@ There's even a dedicated script [xdeb](https://github.com/toluschr/xdeb) just fo
 ./xdeb -Sde <name>.deb
 sudo xbps-install -R binpkgs <name>
 ```
+
+<sub>**PS:** Note that [xdeb is not official way of installing softwares](https://www.reddit.com/r/voidlinux/comments/13rcz03/comment/jljl9cw/?utm_source=share&utm_medium=web2x&context=3), prefer making package templates under xbps-src if possible. xdeb doesn't perform a lot of checks that should be done to keep safety of void installation, it does however automatically detects dependencies so I showed it for quick reference.</sub>
 
 ---
 
