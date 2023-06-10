@@ -51,3 +51,8 @@ sudo update-desktop-database
 sudo update-desktop-database ~/.local/share/applications
 ```
 
+## gpg: signing failed: No pinentry
+
+```bash
+gpgconf --kill gpg-agent
+```
