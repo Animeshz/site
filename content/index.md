@@ -15,6 +15,10 @@ created: 2022-08-31 12:00 AM
 
 ---
 
+::: danger Site redesign in progress
+Some parts of website may be broken
+:::
+
 * Curated Data is Information.
 * Curated Information is Knowledge.
 * Curated Knowledge is Wisdom.
