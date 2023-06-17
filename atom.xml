@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2023-06-14T18:49:12.534Z</updated>
+    <updated>2023-06-17T20:54:01.221Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -11,68 +11,15 @@
     </author>
     <link rel="alternate" href="https://animeshz.github.io/site/"/>
     <link rel="self" href="https://animeshz.github.io/site/atom.xml"/>
-    <subtitle>My website for collection of useful stuffs I come across and documenting myself</subtitle>
+    <subtitle>My website for open sourcing myself</subtitle>
     <rights>All rights reserved 2022, Animesh Sahu</rights>
-    <entry>
-        <title type="html"><![CDATA[🌀 Awesome]]></title>
-        <id>https://animeshz.github.io/site/awesome/index.html</id>
-        <link href="https://animeshz.github.io/site/awesome/index.html"/>
-        <updated>2022-09-01T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Extensions]]></title>
-        <id>https://animeshz.github.io/site/awesome/stuffs/extensions.html</id>
-        <link href="https://animeshz.github.io/site/awesome/stuffs/extensions.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Freebies]]></title>
-        <id>https://animeshz.github.io/site/awesome/stuffs/freebies.html</id>
-        <link href="https://animeshz.github.io/site/awesome/stuffs/freebies.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Linux]]></title>
-        <id>https://animeshz.github.io/site/awesome/stuffs/linux.html</id>
-        <link href="https://animeshz.github.io/site/awesome/stuffs/linux.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Web]]></title>
-        <id>https://animeshz.github.io/site/awesome/stuffs/web.html</id>
-        <link href="https://animeshz.github.io/site/awesome/stuffs/web.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Blogs]]></title>
-        <id>https://animeshz.github.io/site/awesome/truly/blogs.html</id>
-        <link href="https://animeshz.github.io/site/awesome/truly/blogs.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Learning Resources]]></title>
-        <id>https://animeshz.github.io/site/awesome/truly/learning-resources.html</id>
-        <link href="https://animeshz.github.io/site/awesome/truly/learning-resources.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Life Lessions]]></title>
-        <id>https://animeshz.github.io/site/awesome/truly/life-lessions.html</id>
-        <link href="https://animeshz.github.io/site/awesome/truly/life-lessions.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Awesome Pages]]></title>
-        <id>https://animeshz.github.io/site/awesome/truly/pages.html</id>
-        <link href="https://animeshz.github.io/site/awesome/truly/pages.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Demystifying UEFI]]></title>
         <id>https://animeshz.github.io/site/blogs/demystifying-uefi.html</id>
         <link href="https://animeshz.github.io/site/blogs/demystifying-uefi.html"/>
         <updated>2023-05-10T14:03:00.000Z</updated>
         <summary type="html"><![CDATA[Easily understand everything you're missing about UEFI]]></summary>
+        <content type="html"><![CDATA[Easily understand everything you're missing about UEFI]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Learn Git - The easy way]]></title>
@@ -80,19 +27,7 @@
         <link href="https://animeshz.github.io/site/blogs/git.html"/>
         <updated>2022-09-27T03:10:00.000Z</updated>
         <summary type="html"><![CDATA[The first and last article you'll ever need to master git]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[📝 Blogs]]></title>
-        <id>https://animeshz.github.io/site/blogs/index.html</id>
-        <link href="https://animeshz.github.io/site/blogs/index.html"/>
-        <updated>2022-09-01T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux (1/2) - A near surface exploration]]></title>
-        <id>https://animeshz.github.io/site/blogs/linux-1.html</id>
-        <link href="https://animeshz.github.io/site/blogs/linux-1.html"/>
-        <updated>2022-09-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A high-level overview of Linux and its potential]]></summary>
+        <content type="html"><![CDATA[The first and last article you'll ever need to master git]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Unmasking the hidden gems of Void Linux]]></title>
@@ -100,67 +35,6 @@
         <link href="https://animeshz.github.io/site/blogs/void-linux.html"/>
         <updated>2023-05-25T14:51:00.000Z</updated>
         <summary type="html"><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Working with Binaries]]></title>
-        <id>https://animeshz.github.io/site/blogs/working-with-binaries.html</id>
-        <link href="https://animeshz.github.io/site/blogs/working-with-binaries.html"/>
-        <updated>2022-09-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Running system-incompatible binaries]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[📞 Contact]]></title>
-        <id>https://animeshz.github.io/site/contact/index.html</id>
-        <link href="https://animeshz.github.io/site/contact/index.html"/>
-        <updated>2022-09-01T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Home]]></title>
-        <id>https://animeshz.github.io/site/index.html</id>
-        <link href="https://animeshz.github.io/site/index.html"/>
-        <updated>2022-08-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[I write about wide-variety of untouched topics in a simplified way.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[🗒️ Notes]]></title>
-        <id>https://animeshz.github.io/site/notes/index.html</id>
-        <link href="https://animeshz.github.io/site/notes/index.html"/>
-        <updated>2022-09-01T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Random Stuffs]]></title>
-        <id>https://animeshz.github.io/site/notes/linux/linux-random-stuffs.html</id>
-        <link href="https://animeshz.github.io/site/notes/linux/linux-random-stuffs.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux Setup (Post Install)]]></title>
-        <id>https://animeshz.github.io/site/notes/linux/linux-setup.html</id>
-        <link href="https://animeshz.github.io/site/notes/linux/linux-setup.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux Troubleshooting]]></title>
-        <id>https://animeshz.github.io/site/notes/linux/linux-troubleshooting.html</id>
-        <link href="https://animeshz.github.io/site/notes/linux/linux-troubleshooting.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CLI Tools]]></title>
-        <id>https://animeshz.github.io/site/notes/notes/cli-tools.html</id>
-        <link href="https://animeshz.github.io/site/notes/notes/cli-tools.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Framework]]></title>
-        <id>https://animeshz.github.io/site/notes/notes/framework.html</id>
-        <link href="https://animeshz.github.io/site/notes/notes/framework.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rust]]></title>
-        <id>https://animeshz.github.io/site/notes/notes/rust.html</id>
-        <link href="https://animeshz.github.io/site/notes/notes/rust.html"/>
-        <updated>2022-09-02T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></content>
     </entry>
 </feed>

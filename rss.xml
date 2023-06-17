@@ -1,75 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
-        <description>My website for collection of useful stuffs I come across and documenting myself</description>
-        <lastBuildDate>Wed, 14 Jun 2023 18:49:12 GMT</lastBuildDate>
+        <description>My website for open sourcing myself</description>
+        <lastBuildDate>Sat, 17 Jun 2023 20:54:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, Animesh Sahu</copyright>
         <atom:link href="https://animeshz.github.io/site/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[🌀 Awesome]]></title>
-            <link>https://animeshz.github.io/site/awesome/index.html</link>
-            <guid>https://animeshz.github.io/site/awesome/index.html</guid>
-            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Extensions]]></title>
-            <link>https://animeshz.github.io/site/awesome/stuffs/extensions.html</link>
-            <guid>https://animeshz.github.io/site/awesome/stuffs/extensions.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Freebies]]></title>
-            <link>https://animeshz.github.io/site/awesome/stuffs/freebies.html</link>
-            <guid>https://animeshz.github.io/site/awesome/stuffs/freebies.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Linux]]></title>
-            <link>https://animeshz.github.io/site/awesome/stuffs/linux.html</link>
-            <guid>https://animeshz.github.io/site/awesome/stuffs/linux.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Web]]></title>
-            <link>https://animeshz.github.io/site/awesome/stuffs/web.html</link>
-            <guid>https://animeshz.github.io/site/awesome/stuffs/web.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Blogs]]></title>
-            <link>https://animeshz.github.io/site/awesome/truly/blogs.html</link>
-            <guid>https://animeshz.github.io/site/awesome/truly/blogs.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Learning Resources]]></title>
-            <link>https://animeshz.github.io/site/awesome/truly/learning-resources.html</link>
-            <guid>https://animeshz.github.io/site/awesome/truly/learning-resources.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Life Lessions]]></title>
-            <link>https://animeshz.github.io/site/awesome/truly/life-lessions.html</link>
-            <guid>https://animeshz.github.io/site/awesome/truly/life-lessions.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Awesome Pages]]></title>
-            <link>https://animeshz.github.io/site/awesome/truly/pages.html</link>
-            <guid>https://animeshz.github.io/site/awesome/truly/pages.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Demystifying UEFI]]></title>
             <link>https://animeshz.github.io/site/blogs/demystifying-uefi.html</link>
             <guid>https://animeshz.github.io/site/blogs/demystifying-uefi.html</guid>
             <pubDate>Wed, 10 May 2023 14:03:00 GMT</pubDate>
             <description><![CDATA[Easily understand everything you're missing about UEFI]]></description>
+            <content:encoded><![CDATA[Easily understand everything you're missing about UEFI]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/demystifying-uefi/processor-chip.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Learn Git - The easy way]]></title>
@@ -77,19 +25,8 @@
             <guid>https://animeshz.github.io/site/blogs/git.html</guid>
             <pubDate>Tue, 27 Sep 2022 03:10:00 GMT</pubDate>
             <description><![CDATA[The first and last article you'll ever need to master git]]></description>
-        </item>
-        <item>
-            <title><![CDATA[📝 Blogs]]></title>
-            <link>https://animeshz.github.io/site/blogs/index.html</link>
-            <guid>https://animeshz.github.io/site/blogs/index.html</guid>
-            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Linux (1/2) - A near surface exploration]]></title>
-            <link>https://animeshz.github.io/site/blogs/linux-1.html</link>
-            <guid>https://animeshz.github.io/site/blogs/linux-1.html</guid>
-            <pubDate>Sun, 25 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[A high-level overview of Linux and its potential]]></description>
+            <content:encoded><![CDATA[The first and last article you'll ever need to master git]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Unmasking the hidden gems of Void Linux]]></title>
@@ -97,68 +34,8 @@
             <guid>https://animeshz.github.io/site/blogs/void-linux.html</guid>
             <pubDate>Thu, 25 May 2023 14:51:00 GMT</pubDate>
             <description><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Working with Binaries]]></title>
-            <link>https://animeshz.github.io/site/blogs/working-with-binaries.html</link>
-            <guid>https://animeshz.github.io/site/blogs/working-with-binaries.html</guid>
-            <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Running system-incompatible binaries]]></description>
-        </item>
-        <item>
-            <title><![CDATA[📞 Contact]]></title>
-            <link>https://animeshz.github.io/site/contact/index.html</link>
-            <guid>https://animeshz.github.io/site/contact/index.html</guid>
-            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Home]]></title>
-            <link>https://animeshz.github.io/site/index.html</link>
-            <guid>https://animeshz.github.io/site/index.html</guid>
-            <pubDate>Wed, 31 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[I write about wide-variety of untouched topics in a simplified way.]]></description>
-        </item>
-        <item>
-            <title><![CDATA[🗒️ Notes]]></title>
-            <link>https://animeshz.github.io/site/notes/index.html</link>
-            <guid>https://animeshz.github.io/site/notes/index.html</guid>
-            <pubDate>Thu, 01 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Random Stuffs]]></title>
-            <link>https://animeshz.github.io/site/notes/linux/linux-random-stuffs.html</link>
-            <guid>https://animeshz.github.io/site/notes/linux/linux-random-stuffs.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Linux Setup (Post Install)]]></title>
-            <link>https://animeshz.github.io/site/notes/linux/linux-setup.html</link>
-            <guid>https://animeshz.github.io/site/notes/linux/linux-setup.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Linux Troubleshooting]]></title>
-            <link>https://animeshz.github.io/site/notes/linux/linux-troubleshooting.html</link>
-            <guid>https://animeshz.github.io/site/notes/linux/linux-troubleshooting.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[CLI Tools]]></title>
-            <link>https://animeshz.github.io/site/notes/notes/cli-tools.html</link>
-            <guid>https://animeshz.github.io/site/notes/notes/cli-tools.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Framework]]></title>
-            <link>https://animeshz.github.io/site/notes/notes/framework.html</link>
-            <guid>https://animeshz.github.io/site/notes/notes/framework.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Rust]]></title>
-            <link>https://animeshz.github.io/site/notes/notes/rust.html</link>
-            <guid>https://animeshz.github.io/site/notes/notes/rust.html</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/void-linux/void-wall.png" length="0" type="image/png"/>
         </item>
     </channel>
 </rss>
