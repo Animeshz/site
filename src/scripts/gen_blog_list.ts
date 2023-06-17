@@ -1,7 +1,7 @@
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
-const CheapWatch = require('cheap-watch')
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import CheapWatch from 'cheap-watch';
 
 function convert_date(date) {
     date = new Date(date)

@@ -7,17 +7,19 @@ patreon: false
 created: 2022-08-31 12:00 AM
 ---
 
-# 👋 Hi, I'm Animesh Sahu
-
-<p style="font-size: 18px;">
-{{ $frontmatter.description }}
-</p>
-
----
-
 ::: danger Site redesign in progress
 Some parts of website may be broken
 :::
+
+<br>
+
+# 👋 Hi, I'm Animesh Sahu
+
+<p style="font-size: 18px;">
+I write about wide-variety of untouched topics in a simplified way.
+</p>
+
+---
 
 * Curated Data is Information.
 * Curated Information is Knowledge.
@@ -31,11 +33,12 @@ You don't make a great museum by putting all the art in the world into a single 
 
 ## This Site
 
-Most of my [Blogs](/blogs/index.md) are based on How Computer Works & otherwise Useful Tools/Tips.
+Most of my [📝 Blogs](/blogs/index.md) are based on How Computer Works & otherwise Useful Tools/Tips. You can also subscribe to the RSS Feeds ([atom.xml](/atom.xml) or [rss.xml](/rss.xml)) for getting regular updates on blog.
 
-I maintain [Curated Awesome List](/awesome/index.md) of my personally favourite stuffs.
+I maintain a series of well-organized [📔 Notes](/notes/index.md).
 
-And there are a few [Notes](/notes/index.md) for things I believe are hard to search for.
+I have my [🚀 Projects](/projects/index.md) listed over here, and I do a monthly [✍🏻 Journal](/journal/index.md).
 
-<!-- Rest of the site may document myself e.g. on [My Point of Interest](/point-of-interest/index.md) and [My Setup](/setup/index.md). -->
-
+<!-- Temporal fixup - hydration failure -->
+<br>
+<br>

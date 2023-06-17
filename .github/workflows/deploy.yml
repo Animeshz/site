@@ -14,17 +14,22 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn run content:build
+        run: pnpm run content:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

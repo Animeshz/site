@@ -2,27 +2,11 @@
 title: "Demystifying UEFI"
 description: "Easily understand everything you're missing about UEFI"
 created: 2023-05-10 2:03 PM
-tags: ["uefi", "demystifying"]
+image: /blogs/demystifying-uefi/processor-chip.jpg
+tags: ["demystifying", "uefi", "low-level"]
 ---
 
 # {{ $frontmatter.title }}
-
-<style>
-.tags>* {
-    margin-right: 0.4rem;
-}
-</style>
-
-<p style="font-size: 18px;">
-{{ $frontmatter.description }}
-</p>
-<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
-  <span class="tags">
-    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
-  </span>
-</p>
-
----
 
 ![Cover Image](/blogs/demystifying-uefi/processor-chip.jpg)
 
@@ -361,9 +345,9 @@ Working with UEFI has great potentials, there's projects like [grub2-theme-previ
 
 You can also make a custom portable pre-configured linux images, in a USB-drive that is loaded on the RAM using `root=live:<URL>` kernel parameter [more info on dracut man page](https://man7.org/linux/man-pages/man7/dracut.cmdline.7.html), that you can plug anywhere, and it'll contain all the configurations you like immediately after boot.
 
-## PostScript
-
-Read discussion on [r/embedded](https://www.reddit.com/r/embedded/comments/13dmyqo/demystifying_uefi_article), [r/linux](https://www.reddit.com/r/linux/comments/13dn6he/demystifying_uefi_building_unified_kernel_images) and [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/13dn3k8/demystifying_uefi_article).
+Backlinks:
+* [r/embedded](https://www.reddit.com/r/embedded/comments/13dmyqo/demystifying_uefi_article) | [r/linux](https://www.reddit.com/r/linux/comments/13dn6he/demystifying_uefi_building_unified_kernel_images) | [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/13dn3k8/demystifying_uefi_article)
+* [LinkedIn](https://www.linkedin.com/posts/animeshz_demystifying-uefi-activity-7062002173936644096-2qv6)
 
 <Quote author="Steve Jobs">Stay hungry, stay foolish.</Quote>
 

@@ -8,29 +8,20 @@ const { frontmatter } = useData()
 
 <template>
   <Layout>
-    <template #aside-outline-before>
-      <PageActions />
-    </template>
-
     <template #doc-footer-before>
-      <div v-if="frontmatter.patreon !== false">
-        <br>
-        <PatreonButton />
-      </div>
+      <!-- Donation Button? -->
     </template>
 
     <template #doc-before>
-      <div class="custom-block">
-        Cool Tip: Turn on dark mode for better experience!
-      </div>
     </template>
 
     <template #doc-after>
       <BlogNav />
+      <Comments />
     </template>
 
     <template #layout-bottom>
-      <!-- TODO: Add social links like https://fasterthanli.me -->
+      <!-- Social Links | Copyright? -->
     </template>
   </Layout>
 </template>

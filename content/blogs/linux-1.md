@@ -3,6 +3,7 @@ title: "Linux (1/2) - A near surface exploration"
 description: "A high-level overview of Linux and its potential"
 created: 2022-09-25 12:00 AM
 tags: ["linux"]
+draft: true
 ---
 
 # {{ $frontmatter.title }}

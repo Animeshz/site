@@ -1,10 +1,10 @@
 // https://alexanderle.com/create-an-rss-feed-from-scratch
 
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
-const { Feed } = require("feed")
-const { SitemapStream, streamToPromise } = require('sitemap')
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { Feed } from "feed";
+import { SitemapStream, streamToPromise } from 'sitemap';
 
 const rss_file = 'rss.xml'
 const atom_file = 'atom.xml'
@@ -15,6 +15,7 @@ async function* get_md_files(dir) {
     for (const dirent of dirents) {
         const res = path.resolve(dir, dirent.name)
         if (dirent.isFile() && dirent.name.endsWith('.md')) {
+            if (dirent.name == 'index.md') continue;
             yield res
         } else if (dirent.isDirectory()) {
             yield* get_md_files(res)
@@ -43,21 +44,20 @@ async function gen_feed(cfg, site_url, sitemap_stream) {
     const sitemap = new SitemapStream({ hostname: site_url })
     sitemap.pipe(sitemap_stream)
 
-    for await (const filename of get_md_files(cfg.srcDir)) {
-        const content = await fs.promises.readFile(filename, 'utf-8')
+    for await (const filename of get_md_files(cfg.srcDir + '/blogs')) {
+        const file_content = await fs.promises.readFile(filename, 'utf-8')
         const stat = await fs.promises.stat(filename)
-        const { data, excerpt } = matter(content, { excerpt: f => f.excerpt = (f.content.split('\n').find(e => e != '') || '').replace(/^#\s+/, '') })
+        const { data, excerpt } = matter(file_content, { excerpt: f => f.excerpt = (f.content.split('\n').find(e => e != '') || '').replace(/^#\s+/, '') })
         if (!data.draft) {
             const html_file = filename.replace(cfg.srcDir, '').replace(/^\//, '').replace(/\.md/, '.html')
             const link = site_url + cfg.site.base + html_file
-            // const page = cfg.outDir + '/' + html_file
             feed.addItem({
                 title: data.title || excerpt,
                 link: link,
                 description: data.description,
                 date: new Date(data.created || stat.birthtime),
-                // image: post.image
-                // content: await fs.promises.readFile(page, 'utf-8'),
+                image: (site_url + cfg.site.base + data?.image) ?? '',
+                content: data.description,
             });
 
             sitemap.write(link)

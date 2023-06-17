@@ -2,27 +2,11 @@
 title: "Unmasking the hidden gems of Void Linux"
 description: "Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it."
 created: 2023-05-25 2:51 PM
-tags: ["unmasking", "demystifying", "void-linux", "linux"]
+image: /blogs/void-linux/void-wall.png
+tags: ["demystifying", "linux"]
 ---
 
 # {{ $frontmatter.title }}
-
-<style>
-.tags>* {
-    margin-right: 0.4rem;
-}
-</style>
-
-<p style="font-size: 18px;">
-{{ $frontmatter.description }}
-</p>
-<p style="color: gray; font-size: 14px;">{{ $frontmatter.created }} -
-  <span class="tags">
-    <span v-for="tag in $frontmatter.tags">#{{tag}}</span>
-  </span>
-</p>
-
----
 
 <img alt="Void Linux Logo" src="/blogs/void-linux/void-wall.png" style="margin: auto;">
 
@@ -320,3 +304,7 @@ If you want you can go further down the rabbit-hole and be complete guru of linu
 Alot of helper scripts are life-saver, if anything goes bad, even deletion of /etc, you can rescue that (with xetcchanges), there's a complete control over the distribution, and hardly any risk is involved at any point of time.
 
 Hopefully, it gave you a broad perspective of potentials of linux and about void's philosphical differences from other distros. It should be enough for you to start using Linux how it should be!
+
+Backlinks:
+* [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/13rcz03/article_unmasking_the_hidden_gems_of_void_linux) | r/linux
+* [LinkedIn](https://www.linkedin.com/posts/animeshz_unmasking-the-hidden-gems-of-void-linux-activity-7067433287912165377-I7in)

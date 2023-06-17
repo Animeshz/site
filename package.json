@@ -1,7 +1,7 @@
 {
   "name": "site",
   "version": "0.1.0",
-  "description": "My website for documenting myself",
+  "description": "My website for open sourcing myself",
   "author": "Animesh Sahu <animeshsahu19@yahoo.com>",
   "repository": {
     "type": "git",
@@ -11,11 +11,14 @@
   "private": false,
   "devDependencies": {
     "cheap-watch": "^1.0.4",
+    "fast-glob": "^3.2.12",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0.3",
     "sitemap": "^7.1.1",
-    "vitepress": "^1.0.0-alpha.14",
-    "vue": "^3.2.39"
+    "vitepress": "1.0.0-beta.2",
+    "vue": "^3.3.4"
   },
   "scripts": {
     "content:dev": "vitepress dev content",
@@ -23,9 +26,14 @@
     "content:serve": "vitepress serve content"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1"
+    "@antv/g2plot": "^2.4.31",
+    "gitalk": "^1.8.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@antv/g-base": "0.5.11",
+      "@antv/path-util": "2.0.15",
+      "@antv/attr": "0.3.5"
+    }
   }
 }

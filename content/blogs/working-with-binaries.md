@@ -3,6 +3,7 @@ title: "Working with Binaries"
 description: "Running system-incompatible binaries"
 created: 2022-09-26 12:00 AM
 tags: ["low-level"]
+draft: true
 ---
 
 # {{ $frontmatter.title }}

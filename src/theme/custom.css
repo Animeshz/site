@@ -1,0 +1,57 @@
+:root {
+  /*
+   * Colors have been taken from (and modified): https://github.com/aadi58002/Linux-Blog/blob/main/content/.vitepress/theme/global.css
+   * Credits: aadi58002  (under CC-BY-4.0)
+   */
+  --vp-c-bg-mute: var(--vp-button-alt-bg);
+  --vp-c-green: #76acff;
+  --vp-c-green-light: #76acff;
+  --vp-c-green-lighter: #a0beff;
+  --vp-c-green-dark: #2b7fff;
+  --vp-c-green-darker: #0060f2;
+  --vp-c-green-dimm-1: rgba(39, 112, 222, 0.05);
+  --vp-c-green-dimm-2: rgba(39, 112, 222, 0.25);
+  --vp-c-green-dimm-3: rgba(39, 112, 222, 0.5);
+}
+
+p, li {
+  font-family: 'Klee One', cursive, var(--vp-font-family-base);
+}
+
+.vp-doc h2 {
+  margin-top: 32px;
+}
+
+/* To force footer in bottom */
+
+#VPContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#VPContent > .VPDoc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0 !important;
+}
+
+#VPContent > .VPDoc > .container {
+    flex-grow: 1;
+    display: flex;
+}
+
+#VPContent > .VPDoc > .container > .content {
+    /* Use this to set distance of footer from bottom of the page */
+    padding-bottom: 50px;
+}
+
+#VPContent > .VPDoc > .container > .content > .content-container {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#VPContent > .VPDoc > .container > .content > .content-container > main {
+   flex-grow: 1 !important; 
+}
