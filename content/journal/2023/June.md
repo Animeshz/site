@@ -12,6 +12,18 @@ At the time of writing, its been halfway the june has passed. And a lot has happ
 
 Had travelled Lucknow more than ever (with my Dad coming here before we leave for home). After that, we finally departed to Allahabad through Cab at 9AM for taking a direct flight to Raipur, which we finally reached at 6:30PM.
 
+## Entertainment
+
+Finished watching [The Flash Season 3](https://en.wikipedia.org/wiki/The_Flash_(season_3)), a SciFi series with alot of pressure handling going on with time-travel side-effects, working with detective and great visuals.
+
+<sub>The Flash is a character based on DC Comics.</sub>
+
+## Books
+
+Read first 2 chapters of [Ikigai](https://en.wikipedia.org/wiki/Ikigai). Start applying anti-aging secrets of city of Okinawa (situated in Japan, a city of centernarians - every 24.55% of people over there live over age of 100 years).
+
+Read [4 Hour Work Week](https://en.wikipedia.org/wiki/The_4-Hour_Workweek) halfway through (till chapter 7), start applying the principles which is what next 2 points below are.
+
 ## Reinstall Void on ZFS
 
 I've moved my setup to use [21.01 ZFS filesystem](/notes/20-29--DevEnvironment/21--Linux/21.01-ZFS.html), it has got me a lot of benefits such as extra storage (reported 1.48x compression ratio w/ lz4 compression method), pooled storage i.e. multiple volume all share same storage space, atomic r/w, snapshots, and many more (you could even merge two disks later).
