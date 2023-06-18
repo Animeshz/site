@@ -99,6 +99,7 @@ function sidebar() {
           .map(category => ({
             text: `<span style="font-weight: 700;">${category.name}</span>`,
             items: sync(`${category.path}/*`, { onlyFiles: true, objectMode: true, })
+              .filter(id => id.name.includes('.md'))
               .map(id => ({
                 text: id.name.replace('.md', ''),
                 link: `/notes/${bucket.name}/${category.name}/${id.name.replace('.md', '')}`
