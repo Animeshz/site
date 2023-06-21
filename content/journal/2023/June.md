@@ -58,4 +58,10 @@ I go ahead and fixed it by going deep into how it was implemented and how its de
 
 Threw away the legacy.
 
-Changed color-scheme, new way to handle indexes using [13.01 Emacs org-mode](http://localhost:5173/site/notes/10-19--Programming/11--Languages/13.01-Emacs.html), merge awesome into the notes section, added projects and this journal sections to the site. Changing the index & RSS generation of blogs into this org-mode is also queued for the future.
+Changed color-scheme, new way to handle indexes using [13.01 Emacs org-mode](https://animeshz.github.io/site/notes/10-19--Programming/11--Languages/13.01-Emacs.html), merge awesome into the notes section, added projects and this journal sections to the site. Changing the index & RSS generation of blogs into this org-mode is also queued for the future.
+
+## Migrate to logseq for note-taking.
+
+Previously I used to use google calendar for hourly journaling & idea note on android for quickly writing down ideas & a private discord server to dump links to, just cause it works from both mobile and desktop.
+
+I finally found a good app, [91.01 Note Taking Logseq](https://animeshz.github.io/site/notes/90-99--Miscellaneous/91--Curation/91.01-Note-Taking.html) that is cross-platform as well as effective for my note taking, for the reasons I wrote in the note.
