@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2023-06-21T15:05:26.173Z</updated>
+    <updated>2023-06-21T17:12:32.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -11,7 +11,7 @@
     </author>
     <link rel="alternate" href="https://animeshz.github.io/site/"/>
     <link rel="self" href="https://animeshz.github.io/site/atom.xml"/>
-    <subtitle>My website for open sourcing myself</subtitle>
+    <subtitle>I write about wide-variety of untouched topics in a simplified way.</subtitle>
     <rights>All rights reserved 2022, Animesh Sahu</rights>
     <entry>
         <title type="html"><![CDATA[Demystifying UEFI]]></title>
