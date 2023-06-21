@@ -19,7 +19,7 @@ gen_blog_list('content/blogs', 'src/theme/cache');
  */
 const config = {
   title: 'Animesh Sahu',
-  description: 'My website for open sourcing myself',
+  description: 'I write about wide-variety of untouched topics in a simplified way.',
 
   lang: 'en-IN',
   base: '/site/',
