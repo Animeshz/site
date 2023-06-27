@@ -4,7 +4,7 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Sun, 25 Jun 2023 09:23:21 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Jun 2023 19:41:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -26,6 +26,15 @@
             <pubDate>Tue, 27 Sep 2022 03:10:00 GMT</pubDate>
             <description><![CDATA[The first and last article you'll ever need to master git]]></description>
             <content:encoded><![CDATA[The first and last article you'll ever need to master git]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Using git for effective collaboration]]></title>
+            <link>https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html</link>
+            <guid>https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html</guid>
+            <pubDate>Wed, 28 Jun 2023 01:10:00 GMT</pubDate>
+            <description><![CDATA[Understanding branch, refs and rebase.]]></description>
+            <content:encoded><![CDATA[Understanding branch, refs and rebase.]]></content:encoded>
             <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
         </item>
         <item>

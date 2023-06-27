@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2023-06-25T09:23:21.640Z</updated>
+    <updated>2023-06-27T19:41:34.624Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -28,6 +28,14 @@
         <updated>2022-09-27T03:10:00.000Z</updated>
         <summary type="html"><![CDATA[The first and last article you'll ever need to master git]]></summary>
         <content type="html"><![CDATA[The first and last article you'll ever need to master git]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using git for effective collaboration]]></title>
+        <id>https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html</id>
+        <link href="https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html"/>
+        <updated>2023-06-28T01:10:00.000Z</updated>
+        <summary type="html"><![CDATA[Understanding branch, refs and rebase.]]></summary>
+        <content type="html"><![CDATA[Understanding branch, refs and rebase.]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Unmasking the hidden gems of Void Linux]]></title>
