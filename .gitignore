@@ -1,6 +1,7 @@
 .vscode/
 .cache/
 
+src/theme/cache/
 src/cache/
 node_modules/
 dist/

@@ -21,7 +21,10 @@ const config = {
         app.component('BlogList', BlogList);
         app.component('BlogMetadata', BlogMetadata);
         app.component('BlogNav', BlogNav);
-        app.component('Comments', Comments);
+        if (process.env.NODE_ENV === 'production') {
+	    // Prevent accidental comment-issue creation on localhost
+            app.component('Comments', Comments);
+	}
         app.component('Quote', Quote);
         app.component('WordCloud', WordCloud);
     }
