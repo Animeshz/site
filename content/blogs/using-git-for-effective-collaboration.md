@@ -161,7 +161,7 @@ put `r` or `reword` in front of a line to rename the commit (after saving and ex
 
 put `f` or `fixup` or `s` or `squash` in front of line to squash commit in this line to just above commit - 2 commits into 1 commit (if you forget some changes to commit add a new commit and perform this!). `squash` let's you change the commit message, whereas `fixup` doesn't.
 
-put `e` or `edit` in front of line to stop rebase at that commit let you change, run `git add .` and `git rebase --continue` afterwards to edit commit in between the history wow!
+put `e` or `edit` in front of line to stop rebase on that that commit, let you work on that point in history, run `git add .` and `git rebase --continue` afterwards, to edit commit in between the history wow!
 
 these are the major controls, you can also explore `exec` and `break` if you like!
 
