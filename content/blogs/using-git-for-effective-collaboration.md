@@ -192,5 +192,5 @@ If you've come to this point of the post, thanks alot for your attention! You're
 
 Backlinks:
 
-- [r/git](https://www.reddit.com/r/git/comments/14knxry/using_git_for_effective_collaboration) | [r/github](https://www.reddit.com/r/github/comments/14knzrq/using_git_for_effective_collaboration)
+- [r/git](https://www.reddit.com/r/git/comments/14kyky1/using_git_for_effective_collaboration) | [r/github](https://www.reddit.com/r/github/comments/14kyl9r/using_git_for_effective_collaboration)
 - [Linkedin](https://www.linkedin.com/posts/animeshz_using-git-for-effective-collaboration-activity-7079547033325322240-4Gj3)
