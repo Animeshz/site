@@ -6,7 +6,7 @@ updated: 2023-06-23 10:17 PM
 
 # June 2023
 
-At the time of writing, its been halfway the june has passed. And a lot has happened this month as my classes have ended after the endsem, with a break of this full month.
+At the time of writing, its ~~been halfway~~ (update: _almost the whole_) june has passed. And a lot has happened this month as my classes have ended after the endsem, with a break of this full month.
 
 ## Reached home 4th of June
 
@@ -65,3 +65,45 @@ Changed color-scheme, new way to handle indexes using [13.01 Emacs org-mode](htt
 Previously I used to use google calendar for hourly journaling & idea note on android for quickly writing down ideas & a private discord server to dump links to, just cause it works from both mobile and desktop.
 
 I finally found a good app, [91.01 Note Taking Logseq](https://animeshz.github.io/site/notes/90-99--Miscellaneous/91--Curation/91.01-Note-Taking.html) that is cross-platform as well as effective for my note taking, for the reasons I wrote in the note.
+
+## Entertainment (continue)
+
+Skipped Flash Season 4 with summary, completed Flash Season 5, and see summary of subsequent seasons instead to save more time, may watch final S8 & S9 sometime in future.
+
+## Capture and make everything searchable
+
+One of core principles of 4 Hour Work Week is that, Evernote used to solve problem for him by making the images captured searcable, easily clip the bottle / business-card / handwritten-notes and just search whatever you remembered about it and boom.
+
+However that comes only with Evernote premium, so I tried some HuggingFace models for OCR recognition and image captioning, found [Blip Image Captioning Base](https://huggingface.co/Salesforce/blip-image-captioning-base) works really great, although none of models I found were particularly great for OCR (text-recognition).
+
+At the end of it, found that Google Keep actually already has inbuilt OCR that's really good for even handwritten notes. Making images searchable, and doesn't coagulate gallary either. Also allows for option to extract the text into note, so its transparent to also view the detected text rather than just making images searchable.
+
+## Books (continue)
+
+Started [Everything is f*cked - A book about hope](https://markmanson.net/books/everything-is-fucked) by Mark Manson. He is one my favourite author, and this book goes even deep into the rabbithole of more of those fundamental concepts along with validations that his previous book might have seem to missing.
+
+And [12 months to $1M](https://summaries.com/blog/12-months-to-1-dollar-million) by Ryan Daniel. At the start, its been very dark, but I like to point one quote I liked the most.
+
+> That's why people hate on billionaires, or company that don't pay enough taxes: They believe that "top 1 percent" get rich by taking from others.<br><br>
+> The truth is that we create value. For every slice you take you have to bake a whole other pie.
+
+Not particularly book, but start understanding [Stoicism](https://www.youtube.com/watch?v=34fp5QO9Yz8&pp=ygUIc3RvaWNpc20%3D) (from different sources) for overcoming emotional-stress.
+
+## Resume
+
+With intern-season I've almost forgot to update my resume, and had made it earlier using AltaCV template (with those design and all).
+
+So I remade [my resume](https://www.linkedin.com/in/animeshz/overlay/1635530922297/single-media-viewer?type=DOCUMENT&profileId=ACoAADVBJAsBVJhjZH5jMP_OqJZDJYMT1Gdiwro&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BvmYB9zZXTKOnZjdkjHcbjw%3D%3D) in plain text format, over google docs.
+
+## Stack Overflow 2023 Survey Results
+
+Interesting to see [Phoenix](https://www.phoenixframework.org) is the most admired web framework and technology; more developers would choose to work with Phoenix again than those who have used the three most common: React, Node.js, and Next.js.
+
+It seemed fun that a lot of people want to shift to Notepad++, even those using VS Code right now, really interesting.
+
+## Other events towards the end of June
+
+- Celebrated birthday of my cousin on 26th of June, Gifted him an extra-fluid gel pen for writing anywhere and one of my favourite full-read book: Rework.
+- Written next blog post: [Using git for effective collaboration - Understanding branch, refs and rebase](https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html)
+- Start converting keyboard-mouse-kt project to use Nix instead of bulky Docker for the build [WIP].
+- Start on new project _rebase-my-life_ [WIP] which closely resembles to interactive git rebase, to run bulk operations on various tools like gmail (e.g. bulk unsub/delete using vim), generally for those apps which has list-like / table-like data structures involved.
