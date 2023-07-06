@@ -15,6 +15,7 @@ Here are all my (short) notes, organized in [Johnny Decimal](https://johnnydecim
 * [91.01-Note-Taking](</notes/90-99--Miscellaneous/91--Curation/91.01-Note-Taking.md>)
 * [91.02-Awesome-Resources](</notes/90-99--Miscellaneous/91--Curation/91.02-Awesome-Resources.md>)
 * [91.03-Awesome-Projects](</notes/90-99--Miscellaneous/91--Curation/91.03-Awesome-Projects.md>)
-### 92--Out-Of-Box-Thinking
-* [92.01-Counter-Intuitive](</notes/90-99--Miscellaneous/92--Out-Of-Box-Thinking/92.01-Counter-Intuitive.md>)
-* [92.02-Knowledgeful](</notes/90-99--Miscellaneous/92--Out-Of-Box-Thinking/92.02-Knowledgeful.md>)
+### 92--Learnings
+* [92.01-Counter-Intuitive](</notes/90-99--Miscellaneous/92--Learnings/92.01-Counter-Intuitive.md>)
+* [92.02-Out-Of-Box](</notes/90-99--Miscellaneous/92--Learnings/92.02-Out-Of-Box.md>)
+* [92.03-Health](</notes/90-99--Miscellaneous/92--Learnings/92.03-Health.md>)
