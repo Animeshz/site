@@ -5,9 +5,15 @@ created: 2023-07-11 07:24 PM
 
 # July 2023
 
-## Reach out to old friends
+At the time of writing, its been a third of July passed. Not much things have been done compared to previous month, but dedicated time for the file reorganization is paying off its ROI.
+
+## Reach out to good old friends
 
 I felt free for the first time with a long summer holiday as a result of finish of compressed semesters going on (mostly) continuous past last 1.5yrs. Reach out to my school mates and friends at my coaching institute, had fun.
+
+## Clean up Emails
+
+I have 7 email, and one even had 43k unreads xD. Pull each mail down to about 200.
 
 ## Reorganize all my files
 
@@ -24,15 +30,13 @@ Just edited the `index-generator.org` at root of my project to get a word-cloud 
 #+name: tag-list
 #+begin_src sh :results output
 
-# cd content/blogs
-# grep -L 'draft:\s*true' $(fd -tf '.md$') | grep -v 'index.md' | xargs grep tags | sed -E -e 's/.*tags: \[([^]]+)\].*/\1/' -e 's/[" ]//g' -e 's/,/\n/g' | sort | uniq -c | awk "{print \"{name: '\" \$2 \"', value: \" \$1 \"},\"}"
-
 # sort ~/dirs | sed -e 's/ /-/g' -e "s/'/\\\'/" | uniq -c | awk "{print \"{name: '\" \$2 \"', value: \" \$1 \"},\"}"
 cat ~/hdd-fd-dirs | grep -v '1TB-Mosi' | tr '/' '\n' | sort | sed -e 's/ /-/g' -e "s/'/\\\'/" | uniq -c | awk "{print \"{name: '\" \$2 \"', value: \" \$1 \"},\"}"
+
 #+end_src
 ```
 
-and it generated a beautiful view for me!
+and it generated a beautiful view for me! Part of which can be shown below:
 
 ![Word Cloud](./23-07-11-19h48m32s.jpg){ style="max-width: 400px;" }
 :::
