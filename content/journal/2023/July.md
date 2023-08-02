@@ -5,7 +5,7 @@ created: 2023-07-11 07:24 PM
 
 # July 2023
 
-At the time of writing, its been a third of July passed. Not much things have been done compared to previous month, but dedicated time for the file reorganization is paying off its ROI.
+At the time of writing, ~~its been a third of~~ the July has passed. Not much things have been done compared to previous month, but dedicated time for the file reorganization is paying off its ROI.
 
 ## Reach out to good old friends
 
@@ -139,3 +139,20 @@ With the above organization process, I've found various archived notes about dif
 
 With this, I've recently started to share my knowledge, in various forms, this small page of [bash tips](https://www.reddit.com/r/linux/comments/14vppt0/some_quick_bash_tips_thought_good_for_share) just got boomed on r/linux, with over 500 upvotes within the first 24 hrs, to my juniors as a member of Axios (our college's technical club) which I'm planning to post in public as well in the coming future gradually.
 
+## Back to college
+
+With eye checkup, and purchasing a formal dress, all the holidays are over now, we transitioned to 3rd year, and intern-season have started before travel. Started doing some DSA problems.
+
+Amazing incident happened, 2 hours before flight got the mail that flight cancelled xD. Alternative flight got booked right away while I was on phone, somehow with refreshes post 10 mins, I got an intersection RPR->IDR->LKO, where delayed flight of RPR->IDR (that was supposed to be at 10:30AM but went 2:00PM) matched up with IDR->LKO flight at 5:30PM. Somehow I reached the college in time.
+
+Rebuilt [resume](https://drive.google.com/file/d/1qY7w-1OMlAGQWaHG3yvSEVZQaik1mS7y/view?usp=drive_link) again, in latex standard format.
+
+Curated more nix resources.
+
+## Started a Nix RFC
+
+[[RFC 0157] More granular control over the system](https://github.com/NixOS/rfcs/pull/157).
+
+Proposing reduction of abstraction and transparency.
+
+So far, only this much has happened till now, most of the days went with blockings such as rainy day and travel. Hoping for more productive next month.
