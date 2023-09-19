@@ -51,7 +51,7 @@ So let's set up a remote building agent.
 
 ### Attempt #1
 
-For the time being, I would like to use github actions:
+For the time being, I would like to use github actions, a basic [Distributed Build](https://nixos.wiki/wiki/Distributed_build) setup:
 
 ```yaml
 name: Remote Build Agent
@@ -154,7 +154,7 @@ Then tried setting this on `/etc/nix/nix.conf`, but it wasn't working either, un
 
 And you know what? cache was directly getting downloaded into building machine (docker container in this case), but building the gnu's hello project pulled about 1.87G of things in docker and 1.4G in my machine, all GC-able, wth?
 
-I'm just fond of this type of nix abstraction, and I'm out, not wasting anymore of my data connection.
+I'm just not fond of this type of nix abstraction, and I'm out, not wasting anymore of my data connection.
 
 ### Attempt #3
 
@@ -179,12 +179,61 @@ Well, then, what's the point of `nix store copy`, `nix-copy-closure`? I'm not to
 Okay, so while trying this out I do know how nix works
 
 * `nix-instantiate -A derivation-attribute` or `nix-eval '<path.to.derivation>.drvPath'` inherently produce a derivation closure (bunch of `.drv` files) and output the requested root-derivation's path.
-* These closures can be copied form machine to machine, `nix-build <root-derivation>.drv` or `nix-store --realise <root-derivation>.drv` will recursively build (or realise as they say) the derivation on the store.
+* These closures can be copied from machine to machine, and then `nix build <root-derivation>.drv` or `nix-store --realise <root-derivation>.drv` will recursively build (or realise as they say) the derivation on the store.
 * This prints the built root-derivation's output path, closure of that can be copied from machine to machine.
 
 Also [reference #1 (reddit)](https://www.reddit.com/r/NixOS/comments/l5221x/comment/gm9xre8) and [reference #2 (gist)](https://gist.github.com/danbst/09c3f6cd235ae11ccd03215d4542f7e7) for the same.
 
 In either case the current nix-implementation require you to export/import (or copy) the whole closure of whatever be it derivation or the build output. There doesn't seem to be partial export and depend on build-cache / substituters for missing items.
+
+### Attempt #4
+
+After all this, I went to the [NixOS discord](https://discord.com/invite/RbvHtGa), and literally crushed mine and a few other's head for about 2 hours.
+
+Then I came to know about upstream caching, [cachix](https://www.cachix.org) provides.
+
+That is,
+
+> The interesting thing is that it automatically skipped over store paths cached by cache.nixos.org! This behavior can be configured on a per-cache basis.
+
+Then later came to know about [attic](https://github.com/zhaofengli/attic) self-hostable solution similar to cachix, which can use S3-backend for doing the similar thing. Later from its [issue #63](https://github.com/zhaofengli/attic/issues/63) I came to know about [ornac](https://github.com/linyinfeng/oranc) which is a similar prototype with Github's Container Registry (ghcr) - although not complete with garbage collection and other stuffs.
+
+I really hope attic will support (GitHub) OCI Container Registry in the future, as said with issue #63 above, but for the time being I would go with the oranc as temporary solution.
+
+So let's create a simple github action and a blocking script which pushes certain derivation to be built and exit as soon as its built on the server.
+
+```yaml
+name: Remote Build Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      derivation:
+        description: 'The derivation to be built'
+        required: true
+      package_repository:
+        description: 'Package repository to push to'
+        required: true
+        default: Animeshz/oranc-test
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup nix
+        uses: cachix/install-nix-action@v22
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Perform build
+        run: nix build '...'
+
+      - name: Oranc push
+        run: readlink -f result | oranc push --repository ${{ inputs.package_repository }}
+        env:
+          ORANC_USERNAME: ${{ env.GITHUB_REPOSITORY_OWNER }}
+          ORANC_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          ORANC_SIGNING_KEY: ${{ secrets.NIX_SIGNING_KEY }}
+```
 
 
 ## Step 2: Making a bootable ISO
