@@ -101,6 +101,8 @@ But it is still a big problem as they don't see much adoption. I personally pref
 
 I just couldn't agree more on [Open Letter to the Linux World](https://lkml.org/lkml/2014/8/12/459) in the Linux Kernel Mailing Archive.
 
+PS: [Devuan](https://www.devuan.org/) started as [this letter was reposted & shared by some high profile names](https://news.ycombinator.com/item?id=10368859).
+
 ### Reason #4: Upstream ISV packaging (Flatpak, Snap)
 
 If system has went down a wrong path, with all the directory structure and things almost about to burst.
@@ -144,7 +146,7 @@ Systems should be clean (almost empty root `/`) and built on top of Opt-In model
 
 ## Potential Solutions
 
-### A new vision of Linux Desktop
+### (Not) A new vision of Linux Desktop
 
 You know when this happens the first thought that comes into the mind is: fuck the world, I'll make my own distro that'll do everything better than current alternatives.
 
@@ -182,4 +184,5 @@ Post Read Material: [WebArchive - The state of art is terrible](https://web.arch
 
 Backlinks:
 
-TBA
+* [r/linux](https://www.reddit.com/r/linux/comments/16p3pb8/a_critical_analysis_of_linux_landscape_2023/)
+* [Linkedin](https://www.linkedin.com/posts/animeshz_a-critical-analysis-of-linux-landscape-2023-activity-7110885601578549248-8CjG/)
