@@ -4,12 +4,21 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Tue, 19 Sep 2023 11:34:51 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Sep 2023 06:56:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, Animesh Sahu</copyright>
         <atom:link href="https://animeshz.github.io/site/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[A Critical Analysis of Linux Landscape (2023)]]></title>
+            <link>https://animeshz.github.io/site/blogs/a-critical-analysis-of-linux-landscape.html</link>
+            <guid>https://animeshz.github.io/site/blogs/a-critical-analysis-of-linux-landscape.html</guid>
+            <pubDate>Fri, 22 Sep 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></description>
+            <content:encoded><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site/undefined" length="0" type="image//site/undefined"/>
+        </item>
         <item>
             <title><![CDATA[Demystifying UEFI]]></title>
             <link>https://animeshz.github.io/site/blogs/demystifying-uefi.html</link>

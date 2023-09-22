@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2023-09-19T11:34:51.893Z</updated>
+    <updated>2023-09-22T06:56:08.724Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -13,6 +13,14 @@
     <link rel="self" href="https://animeshz.github.io/site/atom.xml"/>
     <subtitle>I write about wide-variety of untouched topics in a simplified way.</subtitle>
     <rights>All rights reserved 2022, Animesh Sahu</rights>
+    <entry>
+        <title type="html"><![CDATA[A Critical Analysis of Linux Landscape (2023)]]></title>
+        <id>https://animeshz.github.io/site/blogs/a-critical-analysis-of-linux-landscape.html</id>
+        <link href="https://animeshz.github.io/site/blogs/a-critical-analysis-of-linux-landscape.html"/>
+        <updated>2023-09-22T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></summary>
+        <content type="html"><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Demystifying UEFI]]></title>
         <id>https://animeshz.github.io/site/blogs/demystifying-uefi.html</id>
