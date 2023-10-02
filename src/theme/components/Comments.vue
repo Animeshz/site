@@ -32,9 +32,15 @@ const runnable = () => {
       id: location.pathname.substring(0, 50), // Ensure uniqueness and length less than 50
       language: "en-IN",
       distractionFreeMode: true,
+      title: generateIssueTitle(),
     });
     gitalk.render("gitalk-container");
   }
+};
+
+const generateIssueTitle = () => {
+  const prefix = "[COMMENT]";
+  return `${prefix} ${document.title}`;
 };
 
 onContentUpdated(runnable);
