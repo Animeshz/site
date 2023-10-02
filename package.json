@@ -27,8 +27,7 @@
   },
   "dependencies": {
     "@antv/g2plot": "^2.4.31",
-    "gitalk": "^1.8.0",
-    "pnpm": "^8.8.0"
+    "gitalk": "^1.8.0"
   },
   "pnpm": {
     "overrides": {
