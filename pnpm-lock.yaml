@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 overrides:
@@ -15,7 +15,7 @@ dependencies:
     version: 2.4.31
   gitalk:
     specifier: ^1.8.0
-    version: 1.8.0(react-dom@15.7.0)(react@15.7.0)
+    version: 1.8.0
 
 devDependencies:
   cheap-watch:
@@ -41,54 +41,51 @@ devDependencies:
     version: 7.1.1
   vitepress:
     specifier: ^1.0.0-rc.20
-    version: 1.0.0-rc.20(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0)
+    version: 1.0.0-rc.20
   vue:
     specifier: ^3.3.4
     version: 3.3.4
 
 packages:
 
-  /@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)(search-insights@2.6.0):
+  /@algolia/autocomplete-core@1.9.3(algoliasearch@4.20.0):
     resolution: {integrity: sha512-009HdfugtGCdC4JdXUbVJClA0q0zh24yyePn+KUGk3rP7j8FEe/m5Yo/z65gn6nP/cM39PxpzqKrL7A6fP6PPw==}
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)(search-insights@2.6.0)
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(algoliasearch@4.20.0)
+      '@algolia/autocomplete-shared': 1.9.3(algoliasearch@4.20.0)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
     dev: true
 
-  /@algolia/autocomplete-plugin-algolia-insights@1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)(search-insights@2.6.0):
+  /@algolia/autocomplete-plugin-algolia-insights@1.9.3(algoliasearch@4.20.0):
     resolution: {integrity: sha512-a/yTUkcO/Vyy+JffmAnTWbr4/90cLzw+CC3bRbhnULr/EM0fGNvM13oQQ14f2moLMcVDyAx/leczLlAOovhSZg==}
     peerDependencies:
       search-insights: '>= 1 < 3'
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)
-      search-insights: 2.6.0
+      '@algolia/autocomplete-shared': 1.9.3(algoliasearch@4.20.0)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
     dev: true
 
-  /@algolia/autocomplete-preset-algolia@1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0):
+  /@algolia/autocomplete-preset-algolia@1.9.3(algoliasearch@4.20.0):
     resolution: {integrity: sha512-d4qlt6YmrLMYy95n5TB52wtNDr6EgAIPH81dvvvW8UmuWRgxEtY0NJiPwl/h95JtG2vmRM804M0DSwMCNZlzRA==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)
-      '@algolia/client-search': 4.20.0
+      '@algolia/autocomplete-shared': 1.9.3(algoliasearch@4.20.0)
       algoliasearch: 4.20.0
     dev: true
 
-  /@algolia/autocomplete-shared@1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0):
+  /@algolia/autocomplete-shared@1.9.3(algoliasearch@4.20.0):
     resolution: {integrity: sha512-Wnm9E4Ye6Rl6sTTqjoymD+l8DjSTHsHboVRYrKgEt8Q7UHm9nYbqhN/i0fhUYA3OAEH7WA8x3jfpnmJm3rKvaQ==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
     dependencies:
-      '@algolia/client-search': 4.20.0
       algoliasearch: 4.20.0
     dev: true
 
@@ -391,10 +388,10 @@ packages:
     resolution: {integrity: sha512-SPiDHaWKQZpwR2siD0KQUwlStvIAnEyK6tAE2h2Wuoq8ue9skzhlyVQ1ddzOxX6khULnAALDiR/isSF3bnuciA==}
     dev: true
 
-  /@docsearch/js@3.5.2(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0):
+  /@docsearch/js@3.5.2:
     resolution: {integrity: sha512-p1YFTCDflk8ieHgFJYfmyHBki1D61+U9idwrLh+GQQMrBSP3DLGKpy0XUJtPjAOPltcVbqsTjiPFfH7JImjUNg==}
     dependencies:
-      '@docsearch/react': 3.5.2(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0)
+      '@docsearch/react': 3.5.2
       preact: 10.15.1
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -404,7 +401,7 @@ packages:
       - search-insights
     dev: true
 
-  /@docsearch/react@3.5.2(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0):
+  /@docsearch/react@3.5.2:
     resolution: {integrity: sha512-9Ahcrs5z2jq/DcAvYtvlqEBHImbm4YJI8M9y0x6Tqg598P40HTEkX7hsMcIuThI+hTFxRGZ9hll0Wygm2yEjng==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
@@ -421,13 +418,10 @@ packages:
       search-insights:
         optional: true
     dependencies:
-      '@algolia/autocomplete-core': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)(search-insights@2.6.0)
-      '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.20.0)(algoliasearch@4.20.0)
+      '@algolia/autocomplete-core': 1.9.3(algoliasearch@4.20.0)
+      '@algolia/autocomplete-preset-algolia': 1.9.3(algoliasearch@4.20.0)
       '@docsearch/css': 3.5.2
       algoliasearch: 4.20.0
-      react: 15.7.0
-      react-dom: 15.7.0(react@15.7.0)
-      search-insights: 2.6.0
     transitivePeerDependencies:
       - '@algolia/client-search'
     dev: true
@@ -914,9 +908,6 @@ packages:
       is-array-buffer: 3.0.2
     dev: false
 
-  /asap@2.0.6:
-    resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
-
   /autosize@3.0.21:
     resolution: {integrity: sha512-xGFj5jTV4up6+fxRwtnAWiCIx/5N0tEnFn5rdhAkK1Lq2mliLMuGJgP5Bf4phck3sHGYrVKpYwugfJ61MSz9nA==}
     dev: false
@@ -1005,16 +996,6 @@ packages:
     resolution: {integrity: sha512-Nil2HI76Xux6sVGORvhSS8v66m+/h5CwFkBJDO+U5vWaMdNC0yXNCsGDPbzPhvqOEU5koebhdEvD372LI+IyLw==}
     dev: false
 
-  /core-js@1.2.7:
-    resolution: {integrity: sha512-ZiPp9pZlgxpWRu0M+YWbm6+aQ84XEfH1JRXvfOc/fILWI0VKhLC2LX13X1NYq4fULzLMq7Hfh43CSo2/aIaUPA==}
-    deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
-
-  /create-react-class@15.7.0:
-    resolution: {integrity: sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
@@ -1098,11 +1079,6 @@ packages:
     dependencies:
       minimatch: 3.1.2
     dev: false
-
-  /encoding@0.1.13:
-    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
-    dependencies:
-      iconv-lite: 0.6.3
 
   /es-abstract@1.21.2:
     resolution: {integrity: sha512-y/B5POM2iBnIxCiernH1G7rC9qQoM77lLIMQLuob0zhp8C56Po81+2Nj0WFKnd0pNReDTnkYryc+zhOzpEIROg==}
@@ -1235,17 +1211,6 @@ packages:
       reusify: 1.0.4
     dev: true
 
-  /fbjs@0.8.18:
-    resolution: {integrity: sha512-EQaWFK+fEPSoibjNy8IxUtaFOMXcWsY0JaVrQoZR9zC8N2Ygf9iDITPWjUTVIax95b6I742JFLqASHfsag/vKA==}
-    dependencies:
-      core-js: 1.2.7
-      isomorphic-fetch: 2.2.1
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      promise: 7.3.1
-      setimmediate: 1.0.5
-      ua-parser-js: 0.7.35
-
   /fecha@4.2.3:
     resolution: {integrity: sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw==}
     dev: false
@@ -1342,7 +1307,7 @@ packages:
       get-intrinsic: 1.2.1
     dev: false
 
-  /gitalk@1.8.0(react-dom@15.7.0)(react@15.7.0):
+  /gitalk@1.8.0:
     resolution: {integrity: sha512-/bWlUAeb0gXuo1SzBeduS07T4PEyL5WoRgxewUIg3liVUof5hUgW/hhx3ns2PJuiFkOxnsSuk1FPzwf6YESJaA==}
     dependencies:
       autosize: 3.0.21
@@ -1353,7 +1318,7 @@ packages:
       node-polyglot: 2.2.2
       preact: 8.1.0
       preact-compat: 3.16.0(preact@8.1.0)
-      react-flip-move: 2.9.14(react-dom@15.7.0)(react@15.7.0)
+      react-flip-move: 2.9.14
     transitivePeerDependencies:
       - react
       - react-dom
@@ -1450,12 +1415,6 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: false
-
-  /iconv-lite@0.6.3:
-    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      safer-buffer: 2.1.2
 
   /immutability-helper@2.9.1:
     resolution: {integrity: sha512-r/RmRG8xO06s/k+PIaif2r5rGc3j4Yhc01jSBfwPCXDLYZwp/yxralI37Df1mwmuzcCsen/E/ITKcTEvc1PQmQ==}
@@ -1589,10 +1548,6 @@ packages:
       call-bind: 1.0.2
     dev: false
 
-  /is-stream@1.1.0:
-    resolution: {integrity: sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==}
-    engines: {node: '>=0.10.0'}
-
   /is-string@1.0.7:
     resolution: {integrity: sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==}
     engines: {node: '>= 0.4'}
@@ -1624,14 +1579,9 @@ packages:
       call-bind: 1.0.2
     dev: false
 
-  /isomorphic-fetch@2.2.1:
-    resolution: {integrity: sha512-9c4TNAKYXM5PRyVcwUZrF3W09nQ+sO7+jydgs4ZGW9dhsLG2VOlISJABombdQqQRXCwuYG3sYV/puGf5rp0qmA==}
-    dependencies:
-      node-fetch: 1.7.3
-      whatwg-fetch: 3.6.2
-
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: false
 
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -1679,6 +1629,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
 
   /magic-string@0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
@@ -1736,12 +1687,6 @@ packages:
     hasBin: true
     dev: true
 
-  /node-fetch@1.7.3:
-    resolution: {integrity: sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==}
-    dependencies:
-      encoding: 0.1.13
-      is-stream: 1.1.0
-
   /node-polyglot@2.2.2:
     resolution: {integrity: sha512-SSQ9CjS0m19ipJltqAzPbBvl51X1Wi7seafr42Hu8wQpQCQsH1coz1R7iHO7ZaDaAf4qwpty4qyx6Tq4K86N1g==}
     dependencies:
@@ -1754,6 +1699,7 @@ packages:
   /object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
+    dev: false
 
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
@@ -1870,55 +1816,28 @@ packages:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: false
 
-  /promise@7.3.1:
-    resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==}
-    dependencies:
-      asap: 2.0.6
-
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
+    dev: false
 
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /react-dom@15.7.0(react@15.7.0):
-    resolution: {integrity: sha512-mpjXqC2t1FuYsILOLCj0kg6pbg460byZkVA/80VtDmKU/pYmoTdHOtaMcTRIDiyXLz4sIur0cQ04nOC6iGndJg==}
-    peerDependencies:
-      react: ^15.7.0
-    dependencies:
-      fbjs: 0.8.18
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.8.1
-      react: 15.7.0
-
-  /react-flip-move@2.9.14(react-dom@15.7.0)(react@15.7.0):
+  /react-flip-move@2.9.14:
     resolution: {integrity: sha512-XD8R8KPLa9GG3NM83FuWPJSGB9Emr2if9NQlJseZkE0YKd4cGq9gr74ehc/Erxr1nPo/Ln5uXf3LAImGG21TeQ==}
     peerDependencies:
       react: 0.13.x || 0.14.x || 15.x.x
       react-dom: 0.13.x || 0.14.x || 15.x.x
-    dependencies:
-      react: 15.7.0
-      react-dom: 15.7.0(react@15.7.0)
     dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-
-  /react@15.7.0:
-    resolution: {integrity: sha512-5/MMRYmpmM0sMTHGLossnJCrmXQIiJilD6y3YN3TzAwGFj6zdnMtFv6xmi65PHKRV+pehIHpT7oy67Sr6s9AHA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      create-react-class: 15.7.0
-      fbjs: 0.8.18
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.8.1
+    dev: false
 
   /regexp.prototype.flags@1.5.0:
     resolution: {integrity: sha512-0SutC3pNudRKgquxGoRGIz946MZVHqbNfPjBdxeOhBrdgDKlRoXmYLQN9xRbrR09ZXWeGAdPuif7egofn6v5LA==}
@@ -1996,16 +1915,8 @@ packages:
       is-regex: 1.1.4
     dev: false
 
-  /safer-buffer@2.1.2:
-    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-
   /sax@1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
-    dev: true
-
-  /search-insights@2.6.0:
-    resolution: {integrity: sha512-vU2/fJ+h/Mkm/DJOe+EaM5cafJv/1rRTZpGJTuFPf/Q5LjzgMDsqPdSaZsAe+GAWHHsfsu+rQSAn6c8IGtBEVw==}
-    engines: {node: '>=8.16.0'}
     dev: true
 
   /section-matter@1.0.0:
@@ -2015,9 +1926,6 @@ packages:
       extend-shallow: 2.0.1
       kind-of: 6.0.3
     dev: true
-
-  /setimmediate@1.0.5:
-    resolution: {integrity: sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==}
 
   /shiki@0.14.4:
     resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
@@ -2186,9 +2094,6 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /ua-parser-js@0.7.35:
-    resolution: {integrity: sha512-veRf7dawaj9xaWEu9HoTVn5Pggtc/qj+kqTOFvNiN1l0YdxwC1kvel57UCjThjGa3BHBihE8/UJAHI+uQHmd/g==}
-
   /uglify-js@2.8.29:
     resolution: {integrity: sha512-qLq/4y2pjcU3vhlhseXGGJ7VbFO4pBANu0kwl8VCa9KEI0V8VfZIx2Fy3w01iSTA/pGwKZSmu/+I4etLNDdt5w==}
     engines: {node: '>=0.8.0'}
@@ -2250,7 +2155,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0):
+  /vitepress@1.0.0-rc.20:
     resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==}
     hasBin: true
     peerDependencies:
@@ -2263,7 +2168,7 @@ packages:
         optional: true
     dependencies:
       '@docsearch/css': 3.5.2
-      '@docsearch/js': 3.5.2(@algolia/client-search@4.20.0)(react-dom@15.7.0)(react@15.7.0)(search-insights@2.6.0)
+      '@docsearch/js': 3.5.2
       '@types/markdown-it': 13.0.2
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.4.1(vue@3.3.4)
@@ -2339,9 +2244,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
     dev: false
-
-  /whatwg-fetch@3.6.2:
-    resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
 
   /which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
