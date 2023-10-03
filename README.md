@@ -10,7 +10,7 @@ You can find more about me or gain my knowledge in a concise manner here!
 
 #### Development/Deployment
 
-This website is powered by [Vitepress](https://vitepress.vuejs.org), a static-site generator (SSG) with Vue3.
+ This website is powered by [Vitepress](https://vitepress.vuejs.org), a static-site generator (SSG) with Vue3.
 
 In order to start the live server or build the website (output goes to `dist`):
 
