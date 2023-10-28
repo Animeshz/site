@@ -7,12 +7,6 @@ patreon: false
 created: 2022-08-31 12:00 AM
 ---
 
-::: danger Site redesign in progress
-Some parts of website may be broken
-:::
-
-<br>
-
 # 👋 Hi, I'm Animesh Sahu
 
 <p style="font-size: 18px;">
