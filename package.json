@@ -11,14 +11,14 @@
   "private": false,
   "devDependencies": {
     "cheap-watch": "^1.0.4",
-    "fast-glob": "^3.2.12",
+    "fast-glob": "^3.3.1",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-footnote": "^3.0.3",
     "sitemap": "^7.1.1",
-    "vitepress": "^1.0.0-rc.20",
-    "vue": "^3.3.4"
+    "vitepress": "1.0.0-rc.24",
+    "vue": "^3.3.7"
   },
   "scripts": {
     "content:dev": "vitepress dev content",

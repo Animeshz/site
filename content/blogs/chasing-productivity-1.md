@@ -2,7 +2,6 @@
 title: "Chasing productivity - Part 1: The nixification saga"
 description: "The first part of an intriguing journey: tapping into the nix module system."
 created: 2023-10-28 9:15 PM
-image: /blogs/git/cover.jpg
 tags: ["linux", "productivity", "nix", "story"]
 ---
 
@@ -32,11 +31,13 @@ The original purpose of me choosing to try linux: Productivity!
 There's a very bold statement given in the book [4 Hour Work Week](https://fourhourworkweek.com):
 
 <Quote author="Tim Ferris">
+
 ... Being efficient without regard to effectiveness is the default mode of the universe.
 
 I would consider the best door-to-door salesperson efficient - that is, refined and excellent at selling door-to-door without wasting time - but utterly ineffective. He or she would sell more using a better vehicle such as e-mail or direct mail.
 
 This is also true for the person who checks e-mail 30 times per day and develops an elaborate system of folder rules and sophisticated techniques for ensuring that each of those 30 brain farts moves as quickly as possible.
+
 </Quote>
 
 What I was trying to do was just an another example of this. The primary purpose was to improve my workflow, and be effective _to get the work done_. I was ignoring _to get the work done_ for the sake of making contact of getting work done simplified.
