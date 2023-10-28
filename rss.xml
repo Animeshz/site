@@ -4,7 +4,7 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Sat, 28 Oct 2023 15:46:32 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2023 17:55:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -26,7 +26,7 @@
             <pubDate>Sat, 28 Oct 2023 21:15:00 GMT</pubDate>
             <description><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></description>
             <content:encoded><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></content:encoded>
-            <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
+            <enclosure url="https://animeshz.github.io/site/undefined" length="0" type="image//site/undefined"/>
         </item>
         <item>
             <title><![CDATA[Demystifying UEFI]]></title>
