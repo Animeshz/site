@@ -18,6 +18,10 @@ p, li {
   font-family: 'Klee One', cursive, var(--vp-font-family-base);
 }
 
+.vp-doc a {
+    text-decoration: none;
+}
+
 .vp-doc h2 {
   margin-top: 32px;
 }
