@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2023-10-02T17:51:51.166Z</updated>
+    <updated>2023-10-28T15:46:32.360Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -20,6 +20,14 @@
         <updated>2023-09-22T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></summary>
         <content type="html"><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chasing productivity - Part 1: The nixification saga]]></title>
+        <id>https://animeshz.github.io/site/blogs/chasing-productivity-1.html</id>
+        <link href="https://animeshz.github.io/site/blogs/chasing-productivity-1.html"/>
+        <updated>2023-10-28T21:15:00.000Z</updated>
+        <summary type="html"><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></summary>
+        <content type="html"><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Demystifying UEFI]]></title>

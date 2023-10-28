@@ -4,7 +4,7 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Mon, 02 Oct 2023 17:51:51 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2023 15:46:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -18,6 +18,15 @@
             <description><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></description>
             <content:encoded><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></content:encoded>
             <enclosure url="https://animeshz.github.io/site/undefined" length="0" type="image//site/undefined"/>
+        </item>
+        <item>
+            <title><![CDATA[Chasing productivity - Part 1: The nixification saga]]></title>
+            <link>https://animeshz.github.io/site/blogs/chasing-productivity-1.html</link>
+            <guid>https://animeshz.github.io/site/blogs/chasing-productivity-1.html</guid>
+            <pubDate>Sat, 28 Oct 2023 21:15:00 GMT</pubDate>
+            <description><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></description>
+            <content:encoded><![CDATA[The first part of an intriguing journey: tapping into the nix module system.]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Demystifying UEFI]]></title>
