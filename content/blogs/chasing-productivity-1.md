@@ -223,3 +223,11 @@ Journey to nix has been really interesting, this is a really good quote I found 
 > my code is possible if people want it :) the real value of NixOS is hardware and OS config can be turned into libraries
 
 This is the part 1 of the chasing productivity series, I'd keep posting updates while also getting things done this time!
+
+## Further Reading
+
+Backlinks:
+
+- [r/linux](https://www.reddit.com/r/linux/comments/17ijsa2/chasing_productivity_part_1_the_nixification_saga)
+- [r/NixOS](https://www.reddit.com/r/NixOS/comments/17ijmld/chasing_productivity_part_1_the_nixification_saga)
+- [Linkedin](https://www.linkedin.com/posts/animeshz_chasing-productivity-part-1-the-nixification-activity-7124097146324172800-NiCk)
