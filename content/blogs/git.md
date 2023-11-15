@@ -206,6 +206,7 @@ git diff --staged  # if you ran 'git add .'
 git clone --depth=1 <url>
 
 # Unshallow (in case you need full history later)
+git fetch --depth=n  # latest n-commits OR
 git fetch --unshallow
 ```
 
