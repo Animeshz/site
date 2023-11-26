@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "sitemap": "^7.1.1",
     "vitepress": "1.0.0-rc.24",
     "vue": "^3.3.7"

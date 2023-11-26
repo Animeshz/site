@@ -32,6 +32,7 @@ const config = {
   markdown: {
     theme: 'material-theme-palenight',
     lineNumbers: true,
+    math: true,
 
     config: (md) => {
       const wordCount = str => str.length && str.split(/\s+\b/).length || 0;
