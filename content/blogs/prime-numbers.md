@@ -101,52 +101,17 @@ Apply the same algorithm on a periodic function to find its period, which is use
 
 It is even useful in time-series data analysis, chemistry as with calculations of isotopic distributions, solving differential equations and what not?
 
-## Rings & Field Arithmatic
+## Abstract Algebra
 
-Finite Field or Galios Field represented by $GF(p^m)$ is a really amazing thing. It is a part of abstract algebra where we remove the restrictions that we're playing with numbers but anything that exhibit certain properties that unreveals some interesting characteristics.
+When we're introduced to vectors, we're exposed to new operations, _dot and cross-products_.
 
-### Primes
+When we're exposed to $\mathbb{Z}$ (integers) we're exposed to _prime numbers_. This is because concept of prime numbers quite literally doesn't exist in the $\mathbb{R}$ (real) numbers.
 
-I define primes as
+And same goes to complex numbers, although they all possess some unique properties, we have to effectively learn and relate these properites in order to render them useful or comprehensible for our purpose.
 
-### Base & Extension Fields
+Ring theory exactly tackles this, by generalizing the number systems and studying them as a whole. And allows more systems to emerge from them.
 
-<!--
-111 ~ x^2+x+1
-
-C = R[i]
-
-17 === 27 === -3 === 7 (mod 10)
-Z/10Z = {Z, Z+1, Z+2, Z+3, Z+4, Z+5, Z+6, Z+7, Z+8, Z+9}
-
-Z_10 ~ Z/10Z = {[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]} ~ {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-
-https://math.stackexchange.com/questions/4216211/what-exactly-is-an-isomorphism
-auto-isomorphism with GF(p^m) with different primitive polynomials
-
-A polynomial is a ideal, primitive polynomial is maximal ideal
-6Z is not maximal ideal as 2Z and 3Z exist between Z and 6Z
-
-Field has only 2 ideals {0} and F.
-
-R[x]
-gcd(f(x), g(x)) = d(x)
-
-R[i][x] = C[x]  every poly is factorizable here
-
-R[x]/(x^2+1) basically means we're considering x^2+1 like it is 0, so x exactly behaves like i
-R[x]/(x^2+1) ~ C (algebraically)        a+bx <-> a+bi
-
-R[x]/(x^2) ~ R[\epsilon] (algebraically)        a+bx <-> a+bi
-
-https://www.youtube.com/watch?v=M-9_rZfVQVE&t=30m0s
-
-R^2 ~ C
-
-R[x]/(x-2) ~ R[2] ~ R
--->
-
-### Primitive Polynomials (multiple primes)
+But before getting deeper, I'd like to show a basic application of abstract algebra.
 
 ### Calculating higher powers
 
@@ -156,9 +121,7 @@ $$x = \frac{1 + \sqrt{5}}{2}$$
 
 And you've to tell $x^{12}$, how'd you do it?
 
-Now let's do some interesting things based on finding elements of a finite extension field. (While this certainly has nothing to do with GF, but this is completely based on GF element calculation).
-
-Let's say $x^2 - x - 1 = 0$ is the equation that has the above solution $x$, so if we divide $x^{12} = f(x).(x^2-x-1) + ax + b$, then regardless of what $f(x)$ quotient would be that part of the term will become 0, as dividend is 0 at the root of it.
+Now let's do some interesting things, let's say $x^2 - x - 1 = 0$ is the equation that has the above solution $x$, so if we divide $x^{12} = f(x).(x^2-x-1) + ax + b$, then regardless of what $f(x)$ quotient would be that part of the term will become 0, as dividend is 0 at the root of it.
 
 Thus we're trying to find the remainder $ax+b$ when $x^{12}$ is divided by $x^2-x-1$. But that's 12 steps, let's simplify.
 
@@ -181,6 +144,70 @@ $\alpha^{12} = (21\alpha + 13).(3\alpha + 2)$
 $\alpha^{12} = (144\alpha + 89)$
 
 Plugging in the value we get $171+72\sqrt5$, quite faster than manual multiplication right?
+
+### Rings & Field Arithmatic
+
+Integers have served us as an abstraction for counting objects for centuries, but sometimes things like complex numbers help us in understanding our world better. Rings help us generalize our view of different number systems.
+
+We define a ring such as $(Z, +, \times)$ along with units $\{1, -1\}$. Units serve as excluded numbers in prime factorization of any number so everything is kept unique. For example, $-5$ is prime as it cannot be factored any further, and since units are prohibited to be written in prime factorization.
+
+With this we're ready to define a few rings,
+
+$$\mathbb{Z}[i] = \{a+bi : a,b \in \mathbb{Z}\} \quad Units = \{\pm 1, \pm i\}$$
+
+$\mathbb{Z}[i]$ is read as "$\mathbb{Z}$ associated with $i$", i.e. sum of $\mathbb{Z}$ with as many powers of i and $\mathbb{Z}$.<br>Note that 2 is no longer prime in this number system, $2 = (1-i)(1+i)$.
+
+Let's go further,
+
+$$\mathbb{Z}[2] = \mathbb{Z} \quad Units = \{\pm 1\}$$
+$$\mathbb{Z}[2^{-1}] = \{\tfrac{a}{2^b} : b \in \mathbb{Z}^{\geq 0}\} \quad Units = \{\pm 2^n : n \in \mathbb{Z}\}$$
+$$\mathbb{R}[i] = \mathbb{C} \quad Units = \{\pm 1, \pm i\}$$
+
+Note that, $5\mathbb{Z} = \{5n : n \in \mathbb{Z}\}$ is a (subset of) $\subset \mathbb{Z}$, as it only contains multiples of 5, not all integers.
+
+#### Quotient Ring
+
+A quotient ring $\mathbb{Z}/5\mathbb{Z}$ is defined as $\{5\mathbb{Z}, \hspace{2pt} 5\mathbb{Z}+1, \hspace{2pt} 5\mathbb{Z}+2, \hspace{2pt} 5\mathbb{Z}+3, \hspace{2pt} 5\mathbb{Z}+4\}$, a remainder set of all the numbers of $\mathbb{Z}$ when divided by multiples of 5 ($5\mathbb{Z}$).
+
+It is isomorphic to $\mathbb{Z}_5 = \{0, 1, 2, 3, 4\}$ where all the elements are defined modulo 5. So $1 \hspace{2pt} (mod \hspace{2pt} 5)$ in reality is equivalent to $5\mathbb{Z}+1$.
+
+We encounter them all the time, even the wall-clock resets after 12 O'clock.
+
+#### Polynomial Ring
+
+$\mathbb{R}[x]$ is set of all polynomials with as many powers of x, with coefficients coming from $\mathbb{R}$.<br>$\mathbb{R}[x] = \{a_0 + a_1.x + a_2.x^2 + ... + a_n.x^n : a_i \in \mathbb{R}\}$
+
+$\mathbb{R}[x]/x$ is precisely isomorphic to $\mathbb{R}$ itself ($\mathbb{R}[x]/x \simeq \mathbb{R}$), because we're letting $x$ to behave like $0$.
+
+$\mathbb{R}[x]/(x^2+1) \simeq \mathbb{C}$, because we're letting $x$ to behave like $i$ (as $x^2+1=0$).<br>In its numeral system, $x^2 = -1$, $x^3 = -x$, $x^4 = 1$, $x$ behaves entirely like $i$, yet its abstract, not finalizing $x = i$ as its only solution, $(a+bx) \simeq (a+bi)$.<br>And even, $\mathbb{R}[x]/(x^2+4) \simeq \mathbb{C}$.
+
+Note that, $\mathbb{R}[x]/(x-2) \simeq \mathbb{R}[2] \simeq \mathbb{R}$, as we're just letting $x-2 = 0$, which happens to be R associate of 2.
+
+From here, we can also define $\mathbb{R}^2 \simeq \mathbb{C}$. This is obvious as there is a natural bijection $(a,b) \mapsto a+bi$.
+
+### Base & Extension Fields
+
+<!--
+111 ~ x^2+x+1
+
+https://math.stackexchange.com/questions/4216211/what-exactly-is-an-isomorphism
+auto-isomorphism with GF(p^m) with different primitive polynomials
+
+A polynomial is a ideal, primitive polynomial is maximal ideal
+6Z is not maximal ideal as 2Z and 3Z exist between Z and 6Z
+
+Field has only 2 ideals {0} and F.
+
+R[x]
+gcd(f(x), g(x)) = d(x)
+
+R[i][x] = C[x]  every poly is factorizable here
+
+R[x]/(x^2+1) basically means we're considering x^2+1 like it is 0, so x exactly behaves like i
+R[x]/(x^2+1) ~ C (algebraically)        a+bx <-> a+bi
+-->
+
+### Primitive Polynomials (multiple primes)
 
 
 ## Integer Factorization
