@@ -308,3 +308,4 @@ Hopefully, it gave you a broad perspective of potentials of linux and about void
 Backlinks:
 * [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/13rcz03/article_unmasking_the_hidden_gems_of_void_linux) | r/linux
 * [LinkedIn](https://www.linkedin.com/posts/animeshz_unmasking-the-hidden-gems-of-void-linux-activity-7067433287912165377-I7in)
+* [DistroWatch](https://distrowatch.com/void)
