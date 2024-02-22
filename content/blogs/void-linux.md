@@ -140,7 +140,7 @@ Just clone the [void-mklive](https://github.com/void-linux/void-mklive) reposito
 
 ```bash
 git clone https://github.com/void-linux/void-mklive && cd void-mklive
-sudo ./mklive.sh -a x86_64 \
+sudo ./build-x86-images.sh -b base -- -a x86_64 \
   -r 'https://mirrors.dotsrc.org/voidlinux/current' \  # custom mirror
   -p 'iwd bash dialog fish-shell neovim kitty starship chromium vscode gcc make rofi herbstluftwm grub grub-x86_64-efi xorg btop linux-firmware-intel mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel xf86-video-intel' \
   -C "acpi_osi='Windows 2020' net.ifnames=0 nvme.noacpi=1"
