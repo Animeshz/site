@@ -134,7 +134,7 @@ Used to create a copy of repository in your account within github/gitlab.
 
 There's a fork button in top of repository, tap to fork it! **You can only make changes in your account. If you want to contribute to others, you'd need to first fork it to your account make changes and then send a PR.**
 
-![Fork Btn](https://docs.github.com/assets/cb-23088/images/help/repository/fork_button.png)
+![Fork Btn](https://docs.github.com/assets/cb-40742/mw-1440/images/help/repository/fork-button.webp)
 
 ### Pull
 
