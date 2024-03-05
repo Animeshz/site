@@ -1,4 +1,4 @@
-#+STARTUP: overview hideblocks
+#+STARTUP: overview
 
 ** Info
 

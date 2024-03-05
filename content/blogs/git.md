@@ -210,6 +210,15 @@ git fetch --depth=n  # latest n-commits OR
 git fetch --unshallow
 ```
 
+**Update:** I now discourage this depth cloning, and prefer a better alternative shown in [this talk](https://www.youtube.com/watch?v=aolI_Rz0ZqY).
+
+```bash
+git clone --filter=blob:none <url>
+git clone --filter=tree:0 <url>    # even extreme
+```
+
+This will pull the commits, but not the data, and as you checkout or do stuff related to old commits it'll fetch them automatically on demand.
+
 ### Reverting
 
 You can revert to any commit in the past by:
