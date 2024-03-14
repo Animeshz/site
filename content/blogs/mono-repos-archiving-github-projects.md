@@ -177,11 +177,12 @@ it.
 1. Rebase way of doing it (way too slow),
     - https://stackoverflow.com/a/73314321/11377112
     - https://stackoverflow.com/a/69551810/11377112
-    - https://leyanlo.medium.com/how-to-move-one-git-repository-into-a-subdirectory-of-another-with-rebase-2b297b628c57.
     ```bash
     git -c rebase.instructionFormat='%s%nexec GIT_COMMITTER_DATE="%cD" GIT_AUTHOR_DATE="%aD" git commit --amend -m "bhao bhao: $(git show -s --format=%%s)"' rebase -i --root
     ```
 2. Manual patching with sed
     - https://medium.com/@TimHolzherr/how-to-move-your-git-repository-into-a-monorepo-without-loosing-its-history-9b9d2da27155
-3. Git filter-repo manual
+3. Using `git filter-branch`
+    - https://leyanlo.medium.com/how-to-move-one-git-repository-into-a-subdirectory-of-another-with-rebase-2b297b628c57.
+4. Git filter-repo manual
     - https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html
