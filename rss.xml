@@ -4,7 +4,7 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Wed, 06 Mar 2024 03:41:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Mar 2024 08:45:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -45,6 +45,15 @@
             <description><![CDATA[The first and last article you'll ever need to master git]]></description>
             <content:encoded><![CDATA[The first and last article you'll ever need to master git]]></content:encoded>
             <enclosure url="https://animeshz.github.io/site//blogs/git/cover.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Mono-Repos to the Rescue: Organizing and Archiving Old GitHub Projects]]></title>
+            <link>https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html</link>
+            <guid>https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html</guid>
+            <pubDate>Thu, 14 Mar 2024 14:10:00 GMT</pubDate>
+            <description><![CDATA[Declutterring the GitHub Profile]]></description>
+            <content:encoded><![CDATA[Declutterring the GitHub Profile]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/mono-repos-archiving-github-projects/poster-full.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Using git for effective collaboration]]></title>

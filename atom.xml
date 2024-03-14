@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2024-03-06T03:41:00.215Z</updated>
+    <updated>2024-03-14T08:45:35.516Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -44,6 +44,14 @@
         <updated>2022-09-27T03:10:00.000Z</updated>
         <summary type="html"><![CDATA[The first and last article you'll ever need to master git]]></summary>
         <content type="html"><![CDATA[The first and last article you'll ever need to master git]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mono-Repos to the Rescue: Organizing and Archiving Old GitHub Projects]]></title>
+        <id>https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html</id>
+        <link href="https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html"/>
+        <updated>2024-03-14T14:10:00.000Z</updated>
+        <summary type="html"><![CDATA[Declutterring the GitHub Profile]]></summary>
+        <content type="html"><![CDATA[Declutterring the GitHub Profile]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Using git for effective collaboration]]></title>
