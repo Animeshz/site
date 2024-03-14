@@ -186,3 +186,11 @@ it.
     - https://leyanlo.medium.com/how-to-move-one-git-repository-into-a-subdirectory-of-another-with-rebase-2b297b628c57.
 4. Git filter-repo manual
     - https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html
+
+## Further Reading
+
+Backlinks
+
+- [r/github](https://www.reddit.com/r/github/comments/1bei6h6/monorepos_to_the_rescue_organizing_and_archiving)
+- [HN](https://news.ycombinator.com/item?id=39702247)
+- [LinkedIn](https://www.linkedin.com/posts/animeshz_mono-repos-to-the-rescue-organizing-and-activity-7173990964946956288-0lQg)
