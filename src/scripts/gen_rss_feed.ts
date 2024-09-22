@@ -56,7 +56,7 @@ async function gen_feed(cfg, site_url, sitemap_stream) {
                 link: link,
                 description: data.description,
                 date: new Date(data.created || stat.birthtime),
-                image: (site_url + cfg.site.base + data?.image) ?? '',
+                image: data?.image ? (site_url + cfg.site.base + data.image) : '',
                 content: data.description,
             });
 

@@ -3,7 +3,6 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import footnote from 'markdown-it-footnote';
-import emoji from 'markdown-it-emoji';
 
 import {sync} from 'fast-glob';
 
@@ -37,7 +36,6 @@ const config = {
       const wordCount = str => str.length && str.split(/\s+\b/).length || 0;
 
       md.use(footnote);
-      md.use(emoji);
 
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options);
