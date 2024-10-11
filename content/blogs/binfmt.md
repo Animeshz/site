@@ -45,7 +45,7 @@ on your present laptop that's not arm?
 
 How cool is it?
 
-### Install and register qemu
+### Install and register qemu on binfmt_misc
 
 I'm surprised the setup is just a set of basic steps, yet docs are so frustratingly bad around it.
 
