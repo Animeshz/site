@@ -112,7 +112,7 @@ you can just set env variable `QEMU_LD_PREFIX` while running.
 ```bash
 $ sudo xbps-install cross-aarch64-linux-gnu-libc
 $ QEMU_LD_PREFIX=/usr/aarch64-linux-gnu ./main
-
+Hello World
 ```
 
 ## Misc Info
@@ -137,16 +137,16 @@ This is exactly how inside of WSL (Windows Subsystem for Linux), you can execute
 shell, running inside actual emulated linux kernel.
 
 ```bash
-clip.exe < file.txt
+$ clip.exe < file.txt
 ```
 
 ### Chrooting into Raspberry Pi
 
 ```bash
 # mount raspberry pi at /mnt/rpi
-sudo mount /dev/sda2 /mnt/rpi -o rw,uid=(id -u),gid=(id -g)
+$ sudo mount /dev/sda2 /mnt/rpi -o rw,uid=(id -u),gid=(id -g)
 
-sudo chroot /mnt/rpi
+$ sudo chroot /mnt/rpi
 ```
 
 You can perform
@@ -156,8 +156,6 @@ You can perform
 - or test a service
 
 before even booting first time, and what not?
-
-
 
 ## Further reading
 
