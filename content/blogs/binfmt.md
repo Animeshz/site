@@ -153,7 +153,7 @@ You can perform
 
 - apt update
 - install extra packages
-- or test a service
+- or test/enable a service
 
 before even booting first time, and what not?
 
