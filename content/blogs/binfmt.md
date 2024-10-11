@@ -174,4 +174,4 @@ See
 Backlinks:
 
 - [r/linux](https://www.reddit.com/r/linux/comments/1g15i3h/binfmt_the_hidden_secret_of_runtime_execution) | [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/1g15iio/binfmt_the_hidden_secret_of_runtime_execution)
-- [Linkedin](k)
+- [Linkedin](https://www.linkedin.com/posts/animeshz_binfmt-the-hidden-secret-of-runtime-execution-activity-7250432617991290880-OsiU)
