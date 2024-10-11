@@ -49,7 +49,7 @@ How cool is it?
 
 I'm surprised the setup is just a set of basic steps, yet docs are so frustratingly bad around it.
 
-I have automated it in a [script](https://github.com/Animeshz/scripts/raw/main/main/qemu-binfmt), you may also read it
+I have automated it in a [script](https://raw.githubusercontent.com/Animeshz/scripts/refs/heads/main/main/qemu-binfmt), you may also read it
 if you like.
 
 ```bash
@@ -173,5 +173,5 @@ See
 
 Backlinks:
 
-- r/linux | r/voidlinux
-- Linkedin
+- [r/linux](https://www.reddit.com/r/linux/comments/1g15i3h/binfmt_the_hidden_secret_of_runtime_execution) | [r/voidlinux](https://www.reddit.com/r/voidlinux/comments/1g15iio/binfmt_the_hidden_secret_of_runtime_execution)
+- [Linkedin](k)
