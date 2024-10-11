@@ -4,7 +4,7 @@
         <title>Animesh Sahu</title>
         <link>https://animeshz.github.io/site/</link>
         <description>I write about wide-variety of untouched topics in a simplified way.</description>
-        <lastBuildDate>Sun, 22 Sep 2024 14:00:41 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Oct 2024 08:36:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -17,6 +17,15 @@
             <pubDate>Fri, 22 Sep 2023 12:00:00 GMT</pubDate>
             <description><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></description>
             <content:encoded><![CDATA[Is the Linux Ecosystem Heading in the Right Direction?]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[BinFmt: The hidden secret of runtime execution]]></title>
+            <link>https://animeshz.github.io/site/blogs/binfmt.html</link>
+            <guid>https://animeshz.github.io/site/blogs/binfmt.html</guid>
+            <pubDate>Thu, 10 Oct 2024 23:40:00 GMT</pubDate>
+            <description><![CDATA[A kernel feature that nobody talks about.]]></description>
+            <content:encoded><![CDATA[A kernel feature that nobody talks about.]]></content:encoded>
+            <enclosure url="https://animeshz.github.io/site//blogs/binfmt/cover.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Chasing productivity - Part 1: The nixification saga]]></title>
