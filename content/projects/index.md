@@ -63,3 +63,5 @@ TODO
 * [32.04 - KMyMail](https://github.com/Animeshz/KMyMail) - Kotlin wrapper for 10minutemail.com with async kotlinx.coroutines support.
 
 </details>
+
+**Note: Some of these projects are archived under https://github.com/Animeshz/archives-public, will update the page soon with updated link.**
