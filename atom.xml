@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title>Animesh Sahu</title>
-    <updated>2026-02-18T16:07:34.501Z</updated>
+    <updated>2026-02-18T16:59:04.846Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Animesh Sahu</name>
@@ -25,6 +25,7 @@
         <title type="html"><![CDATA[BinFmt: The hidden secret of runtime execution]]></title>
         <id>https://animeshz.github.io/site/blogs/binfmt.html</id>
         <link href="https://animeshz.github.io/site/blogs/binfmt.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/binfmt/cover.jpg" type="image/jpg"/>
         <updated>2024-10-10T23:40:00.000Z</updated>
         <summary type="html"><![CDATA[A kernel feature that nobody talks about.]]></summary>
         <content type="html"><![CDATA[A kernel feature that nobody talks about.]]></content>
@@ -41,6 +42,7 @@
         <title type="html"><![CDATA[Demystifying UEFI]]></title>
         <id>https://animeshz.github.io/site/blogs/demystifying-uefi.html</id>
         <link href="https://animeshz.github.io/site/blogs/demystifying-uefi.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/demystifying-uefi/processor-chip.jpg" type="image/jpg"/>
         <updated>2023-05-10T14:03:00.000Z</updated>
         <summary type="html"><![CDATA[Easily understand everything you're missing about UEFI]]></summary>
         <content type="html"><![CDATA[Easily understand everything you're missing about UEFI]]></content>
@@ -49,6 +51,7 @@
         <title type="html"><![CDATA[Learn Git - The easy way]]></title>
         <id>https://animeshz.github.io/site/blogs/git.html</id>
         <link href="https://animeshz.github.io/site/blogs/git.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/git/cover.jpg" type="image/jpg"/>
         <updated>2022-09-27T03:10:00.000Z</updated>
         <summary type="html"><![CDATA[The first and last article you'll ever need to master git]]></summary>
         <content type="html"><![CDATA[The first and last article you'll ever need to master git]]></content>
@@ -57,6 +60,7 @@
         <title type="html"><![CDATA[Mono-Repos to the Rescue: Organizing and Archiving Old GitHub Projects]]></title>
         <id>https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html</id>
         <link href="https://animeshz.github.io/site/blogs/mono-repos-archiving-github-projects.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/mono-repos-archiving-github-projects/poster-full.png" type="image/png"/>
         <updated>2024-03-14T14:10:00.000Z</updated>
         <summary type="html"><![CDATA[Declutterring the GitHub Profile]]></summary>
         <content type="html"><![CDATA[Declutterring the GitHub Profile]]></content>
@@ -65,6 +69,7 @@
         <title type="html"><![CDATA[Using git for effective collaboration]]></title>
         <id>https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html</id>
         <link href="https://animeshz.github.io/site/blogs/using-git-for-effective-collaboration.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/git/cover.jpg" type="image/jpg"/>
         <updated>2023-06-28T01:10:00.000Z</updated>
         <summary type="html"><![CDATA[Understanding branch, refs and rebase.]]></summary>
         <content type="html"><![CDATA[Understanding branch, refs and rebase.]]></content>
@@ -73,6 +78,7 @@
         <title type="html"><![CDATA[Unmasking the hidden gems of Void Linux]]></title>
         <id>https://animeshz.github.io/site/blogs/void-linux.html</id>
         <link href="https://animeshz.github.io/site/blogs/void-linux.html"/>
+        <link rel="enclosure" href="https://animeshz.github.io/site//blogs/void-linux/void-wall.png" type="image/png"/>
         <updated>2023-05-25T14:51:00.000Z</updated>
         <summary type="html"><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></summary>
         <content type="html"><![CDATA[Void Linux, is arguably one of the most underrated Linux distributions with incredible scripting potential. The article delves deep into some of my favorite features of it.]]></content>
